@@ -2,8 +2,8 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <footer className="c-space pt-7 pb-3 border-t border-black-300 flex justify-between items-center flex-wrap gap-5">
-      <div className="text-white-500 flex gap-2">
+    <footer className="c-space pt-7 pb-3 border-t border-darkish neu-bg-light flex justify-between items-center flex-wrap gap-5 w-screen">
+      <div className="text-darkish flex gap-2">
         <p>Terms & Conditions</p>
         <p>|</p>
         <p>Privacy Policy</p>
@@ -21,8 +21,8 @@ const Footer = () => {
         </div>
       </div>
 
-      <p className="text-white-500">Marina Majdenić . All rights reserved.</p>
-       <p className="text-white-500">thanks to: 2024 Adrian Hajdin. </p>
+      <p className="head-text">Marina Majdenić  All rights reserved.</p>
+       <p className="text-darkish">thanks: 2024 Adrian Hajdin. </p>
     </footer>
   );
 };

@@ -18,7 +18,7 @@ const ComputerScreen = (props) => {
               receiveShadow
               geometry={nodes.Object_4.geometry}
               material={materials.black_with_noise}
-            ><meshBasicMaterial map={txt} /></mesh>   
+            />
             <group
               name="monitor_back_plate_2"
               position={[0, -0.14, -0.03]}
@@ -122,7 +122,7 @@ const ComputerScreen = (props) => {
               position={[0.3, -0.13, -0.02]}
               rotation={[Math.PI / 2, 0, 0]}
               scale={0.28}
-            />
+           />
             <mesh
               name="Object_28"
               castShadow
@@ -131,7 +131,7 @@ const ComputerScreen = (props) => {
               material={materials.material_0}
               position={[-0.11, -0.19, -0.02]}
               scale={[0.3, 0.94, 0.94]}
-            />
+          ><meshBasicMaterial map={txt} /></mesh>
           </group>
         </group>
       </group>

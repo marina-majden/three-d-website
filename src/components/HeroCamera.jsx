@@ -8,14 +8,14 @@ const HeroCamera = ({ children, isMobile }) => {
     useFrame((state, delta) => {
         easing.damp3(state.camera.position, [0, 0, 20], 0.25, delta)
  
-    if(!isMobile) {
-         easing.dampE(groupRef.current.rotation, [-state.pointer.y / 3, -state.pointer.x / 5, 0], 0.25, delta)
-    }
+
+         easing.dampE(groupRef.current.rotation, [-state.pointer.y / 9, -state.pointer.x / 8, 0], 0.25, delta)
+    
    })
 
     return ( 
-        // scaling of group element will scale the whole 3d graphics
-        <group ref={groupRef} scale={isMobile ? 1 : 1.2}>{children}</group>
+        // scaling of this element will scale the whole 3d graphics
+        <group ref={groupRef} scale={isMobile ? 0.9 : 1.2} >{children}</group>
       );
 }
  

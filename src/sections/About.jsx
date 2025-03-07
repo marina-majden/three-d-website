@@ -17,21 +17,21 @@ const About = () => {
         <section className="c-space my-20">
             <div className="grid xl:grid-cols-3 xl:grid-rows-6 md:grid-cols-2 grid-cols-1 gap-5 h-full">
                 <div className="col-span-1 xl:row-span-3">
-                    <div className="grid-container">
-                        <img src="../assets/grid1.png" alt="grid-1" className="w-full sm:h-[276px] h-fit object-contain" />
+                    <div className="grid-container neu-bg-light">
+                        <img src="/assets/review2.png" alt="grid-1" className="w-full sm:h-[276px] h-fit object-contain" />
                         <div>
-                            <p className="grid-headtext">Hi, I'm Marina</p>
-                            <p className="grid-subtext">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa, nostrum fugit! Obcaecati, libero saepe deserunt praesentium nesciunt assumenda modi quod quaerat qui esse debitis exercitationem sit veniam, repudiandae, recusandae quia.</p>
+                            <p className="grid-headtext text-darkish">Hi, I'm Marina</p>
+                            <p className="grid-subtext text-dark">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa, nostrum fugit! Obcaecati, libero saepe deserunt praesentium nesciunt assumenda modi quod quaerat qui esse debitis exercitationem sit veniam, repudiandae, recusandae quia.</p>
                         </div>
 
                     </div>
                 </div>
                 <div className="col-span-1 xl:row-span-3">
-                    <div className="grid-container">
-                        <img src="/assets/grid2.png" alt="grid-2" className="w-full sm:w-[276px] h-fit object-contain" />
+                    <div className="grid-container neu-bg-light">
+                        <img src="/assets/review1.png" alt="grid-2" className="w-full sm:w-[276px] h-fit object-contain" />
                         <div>
-                            <p className="grid-headtext">Tech Stack</p>
-                            <p className="grid-subtext">I specialize in JavaScript with focus on React</p>
+                            <p className="grid-headtext text-light">Tech Stack</p>
+                            <p className="grid-subtext text-white">I specialize in JavaScript with focus on React</p>
                         </div>
                     </div>
                 </div>
@@ -45,38 +45,38 @@ const About = () => {
                                 backgroundImageOpacity={0.5}
                                 showAtmosphere
                                 showGraticules
-                                globeImageUrl="//unpkg.com/three-globe/example/img/earth-night.jpg"
+                                globeImageUrl="//unpkg.com/three-globe/example/img/earth-day.jpg"
                                 bumpImageUrl="//unpkg.com/three-globe/example/img/earth-topology.png"
-                                labelsData={[{ lat: 40, lng: -100, text: "I'm here!", color: 'white', size: 20 }]}
+                                labelsData={[{ lat: 80, lng: 45, text: "I'm here!", color: 'white', size: 20 }]}
 
                             />
                         </div>
                         <div>
                             <p className="grid-headtext">I work remotely</p>
                             <p className="grid-subtext">Based in Croatia</p>
-                            <Button name="Contact me" isBeam containerClass="w-full mt-10" />
+                            <Button name="Contact me" isBeam containerClass="w-full mt-10 glass-bg-dark" />
                         </div>
                     </div>
                 </div>
                 <div className="xl:col-span-2 xl:row-span-3">
-                    <div className="grid-container">
-                        <img src="/assets/grid3.png" alt="grid-3" className="w-full sm:h-[266px] h-fit object-contain" />
+                    <div className="grid-container neu-bg-light">
+                        <img src="/assets/review1.png" alt="grid-3" className="w-full sm:h-[266px] h-fit object-contain" />
                         <div>
-                            <p className="grid-headtext">My passion for coding</p>
-                            <p className="grid-subtext">I love solving problems and creating by coding</p>
+                            <p className="grid-headtext text-darkish">My passion for coding</p>
+                            <p className="grid-subtext text-dark">I love solving problems and creating by coding</p>
                         </div>
                     </div>
                 </div>
                 <div className="xl:col-span-1 xl:row-span-2">
-                    <div className="grid-container">
-                        <img src="/assets/grid4.png" alt="grid-4" className="w-full md:h-[126px] sm:h-[276px] h-fit object-cover sm:object-top" />
+                    <div className="grid-container neu-bg-light">
+                        <img src="/assets/left-arrow.png" alt="grid-4" className="w-fit h-fit object-contain" />
                         <div className="space-y-2">
-                            <p className="grid-subtext text-center">
+                            <p className="grid-subtext text-center text-darkish">
                                 Contact me
                             </p>
                             <div className="copy-container" onClick={handleCopy}>
                                 <img src={hasCopied ? 'assets/tick.svg' : 'assets/copy.svg'} alt="copy" />
-                                <p className="lg:text-2xl md:text-xl font-medium text-gray_gradient text-white">marina.majden@gmail.com</p>
+                                <p className="lg:text-2xl md:text-xl font-medium text-brands_gradient">marina.majden@gmail.com</p>
                             </div>
                         </div>
                     </div>

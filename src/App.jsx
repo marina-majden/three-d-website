@@ -1,11 +1,11 @@
 import React from 'react'
 import Navbar from './sections/Navbar'
 import Hero from './sections/Hero'
-import About from './sections/About';
+import About from './sections/About'
 import Projects from './sections/Projects'
-/* import Experience from './sections/Experience' */
-import Contact from './sections/contact';
-import Footer from './sections/Footer';
+import Contact from './sections/Contact'
+import Footer from './sections/Footer'
+
 
 const App = () => {
   return (  
@@ -15,7 +15,9 @@ const App = () => {
       <About />
       <Projects />
       <Contact />
+     
       <Footer />
+   
     </main>  
     );
 }

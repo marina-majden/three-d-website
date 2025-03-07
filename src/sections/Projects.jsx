@@ -3,7 +3,7 @@ import { myProjects } from '../constants/index'
 import { Canvas } from "@react-three/fiber";
 import { Center, OrbitControls } from "@react-three/drei";
 import CanvasLoader from "../components/CanvasLoader";
-import ComputerScreen from "../components/ComputerScreen";
+
 
 const projectCount = myProjects.length
 
@@ -59,18 +59,18 @@ const Projects = () => {
                         </button>
                     </div>
                 </div>
-                <div className="border border-black-300 bg-black-200 rounded-lg h-96 md:h-full">
+                <div className="h-96 md:h-full">
                     <Canvas>
                         <ambientLight intensity={Math.PI} />
                         <directionalLight position={[10, 10, 5]} />
                         <Center>
                             <Suspense fallback={<CanvasLoader />}>
-                            <group scale={2} position={[0, -3, 0]} rotation={[0, -0.1, 0]}>
-                                <ComputerScreen texture={currentProject.texture} />
+                            <group scale={2} position={[1, 1, 1]} rotation={[0, -0.1, 0]}>
+                               
                             </group>
                             </Suspense>
                         </Center>
-                         <OrbitControls maxPolarAngle={Math.PI / 2} enableZoom={false} />
+                         <OrbitControls enableZoom={false} />
                     </Canvas>
                 </div>
             </div>
