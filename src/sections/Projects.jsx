@@ -3,7 +3,7 @@ import { myProjects } from '../constants/index'
 import { Canvas } from "@react-three/fiber";
 import { Center, OrbitControls } from "@react-three/drei";
 import CanvasLoader from "../components/CanvasLoader";
-import Computer from "../components/Computer";
+import ComputerScreen from "../components/ComputerScreen";
 
 const projectCount = myProjects.length
 
@@ -66,7 +66,7 @@ const Projects = () => {
                         <Center>
                             <Suspense fallback={<CanvasLoader />}>
                             <group scale={2} position={[0, -3, 0]} rotation={[0, -0.1, 0]}>
-                                <Computer texture={currentProject.texture} />
+                                <ComputerScreen texture={currentProject.texture} />
                             </group>
                             </Suspense>
                         </Center>

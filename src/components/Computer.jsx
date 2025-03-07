@@ -26,9 +26,6 @@ const Computer = (props) => {
     })
   }, [txt]);
  
-
-
-
   return (
     <group ref={group} {...props} dispose={null}>
       <group name="Scene">
