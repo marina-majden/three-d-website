@@ -14,8 +14,8 @@ const HeroCamera = ({ children, isMobile }) => {
    })
 
     return ( 
-        // scaling of group element will scale the entire 3d graphics
-        <group ref={groupRef} scale={isMobile ? 1: 1.2}>{children}</group>
+        // scaling of group element will scale the whole 3d graphics
+        <group ref={groupRef} scale={isMobile ? 1 : 1.2}>{children}</group>
       );
 }
  

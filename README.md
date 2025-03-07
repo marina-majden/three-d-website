@@ -28,3 +28,7 @@ If you are developing a production application, we recommend using TypeScript an
 ### npm instal maath
 
 - different Math functions
+
+### npm install react-globe.gl
+
+- package for 3d globe

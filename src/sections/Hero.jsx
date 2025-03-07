@@ -10,6 +10,7 @@ import ReactLogo from "../components/ReactLogo";
 import Cube from "../components/Cube";
 import Rings from "../components/Ring";
 import HeroCamera from "../components/HeroCamera";
+import Button from "../components/Button";
 
 // Math function enables rotating model clockwise by 90 degrees
 
@@ -18,7 +19,7 @@ const Hero = () => {
     const isSmall = useMediaQuery({ maxWidth: 440})
     const isMobile = useMediaQuery({ maxWidth: 768})
     const isTablet = useMediaQuery({ minWidth: 769, maxWidth: 1024})
-    
+    // manually calculated sizes from helper functions
     const sizes = calculateSizes(isSmall, isMobile, isTablet) 
 
     return ( 
@@ -37,16 +38,21 @@ const Hero = () => {
                                     scale={sizes.deskScale}
                                     rotation={[0, -Math.PI, 0]} />
                             </HeroCamera>
-                                <group>
-                                    <Target position={sizes.targetPosition} />
-                                    <ReactLogo position={sizes.reactLogoPosition} />
-                                    <Cube position={sizes.cubePosition} />
-                                    <Rings position={sizes.ringPosition} />
-                                </group>
+                            <group>
+                                <Target position={sizes.targetPosition} />
+                                <ReactLogo position={sizes.reactLogoPosition} />
+                                <Cube position={sizes.cubePosition} />
+                                <Rings position={sizes.ringPosition} />
+                            </group>
                             <ambientLight intensity={1} />
                             <directionalLight position={[10, 10, 10]} intensity={0.5} />
                         </Suspense>
                     </Canvas>
+            </div>
+            <div className="absolute bottom-7 left-0 right-0 w-full z-10 c-space">
+                <a href="#contact" className="w-fit">
+                    <Button name="Let's talk!" isBeam containerClass="sm:w-full w-fit sm:min-w-96" />
+                </a>
             </div>
         </section>
      );
