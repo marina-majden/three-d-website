@@ -24,3 +24,7 @@ If you are developing a production application, we recommend using TypeScript an
 ### npm install @gsap/react gsap 
 
 - animations
+
+### npm instal maath
+
+- different Math functions
