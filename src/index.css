@@ -17,17 +17,42 @@
   --color-white-700: #d6d9e9;
   --color-white-800: #e4e4e6;
   --color-white: #ffffff;
+  
+  --color-brand: #1fb6c6;
+  --color-text: #95b0b4;
+--color-accent: #ab9ddd;
+--color-heading: #ada9bb;
+--color-brand-2: #0091a1;
+--color-brand-3: #006e7e;
+--color-brand-4: #004d5c;
+--color-background: #002d3c;
+
 
   --background-image-terminal: url('/assets/terminal.png');
 }
+html[data-theme="dark"] {
+  --color-brand: #1fb6c6;
+  --color-text: #002d3c;
+--color-accent: #ab9ddd;
+--color-heading: #ada9bb;
+--color-brand-2: #0091a1;
+--color-brand-3: #006e7e;
+--color-brand-4: #004d5c;
+--color-background: #95b0b4;
 
+}
 * {
   scroll-behavior: smooth;
 }
+html {
+   color-scheme: light dark; 
+   accent-color: var(--color-brand);
+}
 
 body {
-  background: #010103;
+  background: var(--color-background);
   font-family: 'General Sans', sans-serif;
+  color: var(--color-text);
 }
 
 @layer base {
@@ -176,7 +201,7 @@ body {
   @apply w-12 h-12 rounded-full flex justify-center items-center bg-black-300 border border-black-200;
 }
 
-@layer utilities {
+/* @layer utilities {
   * {
     scroll-behavior: smooth;
   }
@@ -185,7 +210,7 @@ body {
     background: #010103;
     font-family: 'General Sans', sans-serif;
   }
-}
+} */
 
 .waving-hand {
   animation-name: wave-animation;
