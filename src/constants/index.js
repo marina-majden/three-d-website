@@ -58,11 +58,11 @@ export const clientReviews = [
 
 export const myProjects = [
   {
-    title: 'Podcastr - AI Podcast Platform',
-    desc: 'Podcastr is a revolutionary Software-as-a-Service platform that transforms the way podcasts are created. With advanced AI-powered features like text-to-multiple-voices functionality, it allows creators to generate diverse voiceovers from a single text input.',
+    title: 'Song Finder — Music Discovery Web App',
+    desc: 'Developed a responsive, user-centric web application leveraging core technologies (HTML5, CSS3, JavaScript) to empower users in exploring music effortlessly. Integrated with the iTunes API to enable real-time searches for tracks, artists, and albums, delivering instant results including song previews, high-quality artwork, and metadata. Features dynamic DOM manipulation for seamless content updates, error handling for robust user feedback, and a clean interface optimized for usability. Demonstrates proficiency in RESTful API integration, asynchronous JavaScript (Fetch API), and modern front-end development practices.',
     subdesc:
-      'Built as a unique Software-as-a-Service app with Next.js 14, Tailwind CSS, TypeScript, Framer Motion and Convex, Podcastr is designed for optimal performance and scalability.',
-    href: 'https://www.youtube.com/watch?v=zfAb95tJvZQ',
+      'One of my first projects made in basic web technologies; HTML, CSS and vanilla JS',
+    href: 'https://https://song-finder-itunes.netlify.app/',
     texture: '/textures/project/project1.mp4',
     logo: '/assets/project-logo1.png',
     logoStyle: {
@@ -74,28 +74,28 @@ export const myProjects = [
     tags: [
       {
         id: 1,
-        name: 'React.js',
-        path: '/assets/react.svg',
+        name: 'HTML',
+        path: '/assets/html.svg',
       },
       {
         id: 2,
-        name: 'TailwindCSS',
-        path: 'assets/tailwindcss.png',
+        name: 'CSS',
+        path: 'assets/css.png',
       },
       {
         id: 3,
-        name: 'TypeScript',
-        path: '/assets/typescript.png',
+        name: 'JavaScript',
+        path: '/assets/javascript.png',
       },
       {
         id: 4,
-        name: 'Framer Motion',
+        name: 'REST API',
         path: '/assets/framer.png',
       },
     ],
   },
   {
-    title: 'LiveDoc - Real-Time Google Docs Clone',
+    title: 'Chat App',
     desc: 'LiveDoc is a powerful collaborative app that elevates the capabilities of real-time document editing. As an enhanced version of Google Docs, It supports millions of collaborators simultaneously, ensuring that every change is captured instantly and accurately.',
     subdesc:
       'With LiveDoc, users can experience the future of collaboration, where multiple contributors work together in real time without any lag, by using Next.js and Liveblocks newest features.',
@@ -132,11 +132,11 @@ export const myProjects = [
     ],
   },
   {
-    title: 'CarePulse - Health Management System',
-    desc: 'An innovative healthcare platform designed to streamline essential medical processes. It simplifies patient registration, appointment scheduling, and medical record management, providing a seamless experience for both healthcare providers and patients.',
+    title: 'Quizzy',
+    desc: 'Developed a dynamic single-page quiz application using React Vite, featuring state-driven question flow, real-time answer validation, and score tracking. Implements modern React patterns including hooks (useState, useRef) for state management and DOM interaction. Demonstrates clean component architecture with zero external dependencies. Deployed via Netlify for seamless CI/CD integration.',
     subdesc:
-      'With a focus on efficiency, CarePulse integrantes complex forms and SMS notifications, by using Next.js, Appwrite, Twillio and Sentry that enhance operational workflows.',
-    href: 'https://www.youtube.com/watch?v=lEflo_sc82g',
+      'Cute quizz that tests your general knowledge!',
+    href: 'https://song-finder-itunes.netlify.app/',
     texture: '/textures/project/project3.mp4',
     logo: '/assets/project-logo3.png',
     logoStyle: {
@@ -171,11 +171,11 @@ export const myProjects = [
     ],
   },
   {
-    title: 'Horizon - Online Banking Platform',
-    desc: 'Horizon is a comprehensive online banking platform that offers users a centralized finance management dashboard. It allows users to connect multiple bank accounts, monitor real-time transactions, and seamlessly transfer money to other users.',
+    title: 'Quote of the Day',
+    desc: 'Engineered a modern React application that delivers inspirational quotes through seamless API integration. Leveraged the Quotable API to fetch random quotes with author attribution, implementing clean state management and asynchronous data fetching. Features instant quote generation, error boundary handling, and a minimalist UI focused on content clarity. ',
     subdesc:
-      'Built with Next.js 14 Appwrite, Dwolla and Plaid, Horizon ensures a smooth and secure banking experience, tailored to meet the needs of modern consumers.',
-    href: 'https://www.youtube.com/watch?v=PuOVqP_cjkE',
+      'Built with React, deployed with Netlify.',
+    href: 'https://cute-quote-today.netlify.app/',
     texture: '/textures/project/project4.mp4',
     logo: '/assets/project-logo4.png',
     logoStyle: {
@@ -197,12 +197,12 @@ export const myProjects = [
       },
       {
         id: 3,
-        name: 'TypeScript',
+        name: 'REST API',
         path: '/assets/typescript.png',
       },
       {
         id: 4,
-        name: 'Framer Motion',
+        name: 'Netlify',
         path: '/assets/framer.png',
       },
     ],
