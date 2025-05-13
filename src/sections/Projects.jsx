@@ -9,8 +9,8 @@ const projectCount = myProjects.length
 
 const Projects = () => {
     const [selectedProjectIndex, setSelectedProjectIndex] = useState(0)
-
     const currentProject = myProjects[selectedProjectIndex]
+    const [selectedImage, setSelectedImage] = useState(null);
 
     const handleNavigation = (direction) => {
         setSelectedProjectIndex((prevIndex) => {
@@ -21,12 +21,17 @@ const Projects = () => {
             }
         })
     }
+
+    const handleImageClick = (image) => {
+        setSelectedImage(image);
+    };
+
     return (
         <section className="c-space my-20">
             <p className="head-text">My work</p>
-            <div className="grid lg:grid-cols-2 grid-cols-1 mt-12 gap-5 w-full">
-                <div className="flex flex-col gap-5 relative sm:p-10 py-10 px-5 shadow-2xl shadow-black-200">
-                    <div className="absoulte top-0 right-0">
+            <div className="grid lg:grid-cols-2 grid-cols-1 mt-12 gap-5 w-full h-max-screen">
+                <div className="flex flex-col gap-5 relative sm:p-10 py-10 px-5">
+                    <div className="absolute top-0 right-0">
                         <img src={currentProject.spotlight} alt="spotlight" className="w-full h-96 object-cover rounded-xl" />
                     </div>
                     <div className="p-3 backdrop-filter backdrop-blur-3xl w-fit rounded-lg" style={currentProject.logoStyle}>
@@ -53,18 +58,45 @@ const Projects = () => {
                     <div className="flex justify-between items-center mt-7">
                         <button className="arrow-btn" onClick={() => handleNavigation('previous')}>
                             <img src="/assets/left-arrow.png" alt="left arrow" className="w-4 h-4" />
+                            <p>Previous project</p>
                         </button>
                         <button className="arrow-btn" onClick={() => handleNavigation('next')}>
                             <img src="/assets/right-arrow.png" alt="right arrow" className="w-4 h-4" />
+                            <p>Next project</p>
                         </button>
                     </div>
                 </div>
-                <div className="border border-black-300 bg-background-darker rounded-lg h-96 md:h-full">
-
-                    <div className="w-full h-full flex flex-col items-center mt-4">
+                <div className="border border-black bg-brand rounded-lg flex flex-col justify-between p-2 h-full">
+                    {/* First child div: Display selected image */}
+                    <div className="overflow-y-clip h-full w-auto mx-auto">
+                        {selectedImage ? (
+                            <img
+                                src={selectedImage.path}
+                                alt={selectedImage.name}
+                                className="rounded-md object-contain overflow-y-clip h-full w-auto mx-auto project-image"
+                            />
+                        ) : (
+                            <img
+                                src={currentProject.images[0].path}
+                                alt={currentProject.images[0].name}
+                                className="rounded-md object-contain overflow-y-clip h-full w-auto mx-auto"
+                            />
+                        )}
+                    </div>
+                    {/* Second child div: Display all images */}
+                    <div className="w-full flex flex-wrap justify-evenly items-center project-images">
                         {currentProject.images.map((image, index) => (
-                            <div key={index} className="project-image w-3/4 m-6 shadow-md hover:w-full transition-all duration-300">
-                                <img src={image.path} alt={image.name} className="w-full h-full object-cover rounded-md" />
+                            <div
+                                key={index}
+                                className="w-3/10 h-max cursor-pointer relative object-cover border-accent"
+                                onClick={() => handleImageClick(image)}
+                            >
+                                <img
+                                    src={image.path}
+                                    alt={image.name}
+                                    className="rounded-xs w-full aspect-square overflow-y-hidden"
+                                />
+                                <p className="absolute bg-black-300/50 text-white bottom-0 left-0 w-full p-2">{image.name}</p>
                             </div>
                         ))}
                     </div>

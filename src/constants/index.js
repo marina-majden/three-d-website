@@ -75,39 +75,39 @@ export const myProjects = [
       {
         id: 1,
         name: 'HTML',
-        path: '/assets/html.svg',
+        path: '/assets/html5.svg',
       },
       {
         id: 2,
         name: 'CSS',
-        path: 'assets/css.png',
+        path: '/assets/css.svg',
       },
       {
         id: 3,
         name: 'JavaScript',
-        path: '/assets/javascript.png',
+        path: '/assets/js.svg',
       },
       {
         id: 4,
-        name: 'REST API',
-        path: '/assets/framer.png',
+        name: 'Netlify',
+        path: '/assets/netlify.svg',
       },
     ],
     images: [
       {
         id: 1,
         name: 'Song Finder Desktop',
-        path: '/assets/song-finder-pc.png',
+        path: '/assets/song-finder-pc.jpeg',
       },
       {
         id: 2,
         name: 'Song Finder Mobile',
-        path: '/assets/song-finder-mobile.png',
+        path: '/assets/song-finder-mobile.jpeg',
       },
       {
         id: 3,
         name: 'Song Finder Tablet',
-        path: '/assets/song-finder-tablet.png',
+        path: '/assets/song-finder-tablet.jpeg',
       },
       ],
   },
@@ -116,7 +116,7 @@ export const myProjects = [
     desc: 'LiveDoc is a powerful collaborative app that elevates the capabilities of real-time document editing. As an enhanced version of Google Docs, It supports millions of collaborators simultaneously, ensuring that every change is captured instantly and accurately.',
     subdesc:
       'With LiveDoc, users can experience the future of collaboration, where multiple contributors work together in real time without any lag, by using Next.js and Liveblocks newest features.',
-    href: 'https://www.youtube.com/watch?v=y5vE8y_f_OM',
+    href: 'https://oldschool-chatroom.netlify.app',
     texture: '/textures/project/project2.mp4',
     logo: '/assets/project-logo2.png',
     logoStyle: {
@@ -134,7 +134,7 @@ export const myProjects = [
       {
         id: 2,
         name: 'TailwindCSS',
-        path: 'assets/tailwindcss.png',
+        path: '/assets/tailwindcss.png',
       },
       {
         id: 3,
@@ -143,25 +143,25 @@ export const myProjects = [
       },
       {
         id: 4,
-        name: 'Framer Motion',
-        path: '/assets/framer.png',
+        name: 'Netlify',
+        path: '/assets/netlify.svg',
       },
     ],
     images: [
       {
         id: 1,
         name: 'Song Finder Desktop',
-        path: '/assets/song-finder-pc.png',
+        path: '/assets/song-finder-pc.jpeg',
       },
       {
         id: 2,
         name: 'Song Finder Mobile',
-        path: '/assets/song-finder-mobile.png',
+        path: '/assets/song-finder-mobile.jpeg',
       },
       {
         id: 3,
         name: 'Song Finder Tablet',
-        path: '/assets/song-finder-tablet.png',
+        path: '/assets/song-finder-tablet.jpeg',
       },
       ],
   },
@@ -207,17 +207,17 @@ export const myProjects = [
       {
         id: 1,
         name: 'Song Finder Desktop',
-        path: '/assets/song-finder-pc.png',
+        path: '/assets/song-finder-pc.jpeg',
       },
       {
         id: 2,
         name: 'Song Finder Mobile',
-        path: '/assets/song-finder-mobile.png',
+        path: '/assets/song-finder-mobile.jpeg',
       },
       {
         id: 3,
         name: 'Song Finder Tablet',
-        path: '/assets/song-finder-tablet.png',
+        path: '/assets/song-finder-tablet.jpeg',
       },
       ],
   },
@@ -254,24 +254,24 @@ export const myProjects = [
       {
         id: 4,
         name: 'Netlify',
-        path: '/assets/framer.png',
+        path: '/assets/netlify.svg',
       },
     ],
     images: [
       {
         id: 1,
         name: 'Song Finder Desktop',
-        path: '/assets/song-finder-pc.png',
+        path: '/assets/song-finder-pc.jpeg',
       },
       {
         id: 2,
         name: 'Song Finder Mobile',
-        path: '/assets/song-finder-mobile.png',
+        path: '/assets/song-finder-mobile.jpeg',
       },
       {
         id: 3,
         name: 'Song Finder Tablet',
-        path: '/assets/song-finder-tablet.png',
+        path: '/assets/song-finder-tablet.jpeg',
       },
       ],
   },
@@ -315,17 +315,17 @@ export const myProjects = [
       {
         id: 1,
         name: 'Song Finder Desktop',
-        path: '/assets/song-finder-pc.png',
+        path: '/assets/song-finder-pc.jpeg',
       },
       {
         id: 2,
         name: 'Song Finder Mobile',
-        path: '/assets/song-finder-mobile.png',
+        path: '/assets/song-finder-mobile.jpeg',
       },
       {
         id: 3,
         name: 'Song Finder Tablet',
-        path: '/assets/song-finder-tablet.png',
+        path: '/assets/song-finder-tablet.jpeg',
       },
       ],
   },

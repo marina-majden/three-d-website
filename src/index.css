@@ -156,11 +156,19 @@ html[data-theme=dark] {
 
 @utility arrow-btn {
     /* projects section  */
-    @apply w-14 h-14 p-3 cursor-pointer active:scale-95 transition-all rounded-full text-accent bg-background;
+    @apply w-14 h-14 p-3 cursor-pointer active:scale-95 transition-all rounded-full text-accent bg-brand;
 }
 
 @utility tech-logo {
     @apply w-10 h-10 rounded-md p-2 bg-background-lighter backdrop-filter backdrop-blur-lg flex justify-center items-center;
+}
+
+@utility project-images {
+    @apply h-full w-auto mx-auto bg-black-200 border border-border;
+}
+
+@utility project-image {
+    @apply w-full h-full rounded-lg bg-black-200 border border-border;
 }
 
 @utility client-container {
