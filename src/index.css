@@ -18,34 +18,33 @@
     --color-white-800: #e4e4e6;
     --color-white: #ffffff;
 
-    --color-brand:hsl(170, 65%, 75%);
-    --color-text: #3C3E42;
-    --color-text-mild:rgb(73, 75, 82);
-    --color-accent:hsl(247, 60%, 77%);
+    --color-brand: hsl(170, 65%, 75%);
+    --color-text: #3c3e42;
+    --color-text-mild: rgb(73, 75, 82);
+    --color-accent: hsl(247, 60%, 77%);
     --color-heading: #626773;
-    --color-brand-2:hsl(170, 60%, 70%);
-    --color-brand-3:hsl(210, 69.80%, 76%);
-    --color-border:hsl(228, 82.40%, 90.20%);
-    --color-border-dark: #6E86E6;
-    --color-background:hsl(210, 20%, 92%);
-    --color-background-lighter:hsl(210, 20%, 95%);
-    --color-background-darker:hsl(210, 20%, 87%);
+    --color-brand-2: hsl(170, 60%, 70%);
+    --color-brand-3: hsl(210, 69.8%, 76%);
+    --color-border: hsl(228, 82.4%, 90.2%);
+    --color-border-dark: #6e86e6;
+    --color-background: hsl(210, 20%, 92%);
+    --color-background-lighter: hsl(210, 20%, 95%);
+    --color-background-darker: hsl(210, 20%, 87%);
     --image-terminal: url("/assets/terminal-light.png");
 }
 
-
-html[data-theme=dark]{
-    --color-brand:hsl(170, 55.50%, 55.10%);
-    --color-text:rgb(225, 229, 230);
-    --color-text-mild:rgb(211, 214, 219);
-    --color-accent:hsl(266, 37.90%, 42.90%);
-    --color-heading:rgb(229, 223, 250);
-    --color-brand-2:hsl(266, 31.80%, 33.90%);
-    --color-brand-3:hsl(210, 69.80%, 40%);
-    --color-border:rgb(83, 76, 136);
-    --color-background:hsl(210, 5%, 17%);
-    --color-background-lighter:hsl(210, 5%, 20%);
-    --color-background-darker:hsl(210, 5%, 13%);
+html[data-theme="dark"] {
+    --color-brand: hsl(170, 55.5%, 55.1%);
+    --color-text: rgb(225, 229, 230);
+    --color-text-mild: rgb(211, 214, 219);
+    --color-accent: hsl(266, 37.9%, 42.9%);
+    --color-heading: rgb(229, 223, 250);
+    --color-brand-2: hsl(266, 31.8%, 33.9%);
+    --color-brand-3: hsl(210, 69.8%, 40%);
+    --color-border: rgb(83, 76, 136);
+    --color-background: hsl(210, 5%, 17%);
+    --color-background-lighter: hsl(210, 5%, 20%);
+    --color-background-darker: hsl(210, 5%, 13%);
 
     --image-terminal: url("/assets/terminal.png");
 }
@@ -53,7 +52,9 @@ html[data-theme=dark]{
 * {
     scroll-behavior: smooth;
 }
-*, ::before, ::after {
+*,
+::before,
+::after {
     box-sizing: border-box;
 }
 html {
@@ -62,18 +63,17 @@ html {
     color: var(--color-text);
     background-color: var(--color-background);
 }
-html[data-theme=dark] {
+html[data-theme="dark"] {
     background-color: var(--color-background-lighter);
 }
 .terminal-image {
     background-image: var(--background-image-terminal);
-    background-repeat: no-repeat;   
+    background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     background-color: var(--color-background);
 }
-
 
 @layer base {
     *,
@@ -96,7 +96,7 @@ html[data-theme=dark] {
     @apply sm:text-4xl text-3xl font-semibold text-gray_gradient;
 }
 @utility header-navbar {
-  @apply bg-background text-text w-screen;
+    @apply bg-background text-text w-screen;
 }
 
 @utility nav-ul {
@@ -156,19 +156,11 @@ html[data-theme=dark] {
 
 @utility arrow-btn {
     /* projects section  */
-    @apply w-14 h-14 p-3 cursor-pointer active:scale-95 transition-all rounded-full text-accent bg-brand;
+    @apply cursor-pointer active:scale-95 transition-all ring ring-accent/50 w-16 h-9 px-4 py-2 rounded-xl text-text bg-brand-3 hover:bg-brand-2;
 }
 
 @utility tech-logo {
-    @apply w-10 h-10 rounded-md p-2 bg-background-lighter backdrop-filter backdrop-blur-lg flex justify-center items-center;
-}
-
-@utility project-images {
-    @apply h-full w-auto mx-auto bg-black-200 border border-border;
-}
-
-@utility project-image {
-    @apply w-full h-full rounded-lg bg-black-200 border border-border;
+    @apply w-12 h-12 rounded-md p-2 bg-background-lighter backdrop-filter backdrop-blur-lg flex justify-center items-center;
 }
 
 @utility client-container {
