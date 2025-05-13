@@ -32,11 +32,11 @@ const Navbar = () => {
 
     return (
         <header className='fixed top-0 left-0 right-0 z-50'>
-            <div className='header-navbar max-w-7xl mx-auto'>
+            <div className='header-navbar'>
                 <div className='flex justify-between items-center py-5 mx-auto c-space'>
                     <a
                         href='/'
-                        className='font-bold text-xl text-brand transition-colors'>
+                        className='font-bold text-3xl text-brand transition-colors'>
                         Marina
                     </a>
                     <label className='toggle-theme'>

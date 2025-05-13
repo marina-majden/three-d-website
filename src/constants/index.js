@@ -93,6 +93,23 @@ export const myProjects = [
         path: '/assets/framer.png',
       },
     ],
+    images: [
+      {
+        id: 1,
+        name: 'Song Finder Desktop',
+        path: '/assets/song-finder-pc.png',
+      },
+      {
+        id: 2,
+        name: 'Song Finder Mobile',
+        path: '/assets/song-finder-mobile.png',
+      },
+      {
+        id: 3,
+        name: 'Song Finder Tablet',
+        path: '/assets/song-finder-tablet.png',
+      },
+      ],
   },
   {
     title: 'Chat App',
@@ -130,6 +147,23 @@ export const myProjects = [
         path: '/assets/framer.png',
       },
     ],
+    images: [
+      {
+        id: 1,
+        name: 'Song Finder Desktop',
+        path: '/assets/song-finder-pc.png',
+      },
+      {
+        id: 2,
+        name: 'Song Finder Mobile',
+        path: '/assets/song-finder-mobile.png',
+      },
+      {
+        id: 3,
+        name: 'Song Finder Tablet',
+        path: '/assets/song-finder-tablet.png',
+      },
+      ],
   },
   {
     title: 'Quizzy',
@@ -169,6 +203,23 @@ export const myProjects = [
         path: '/assets/framer.png',
       },
     ],
+    images: [
+      {
+        id: 1,
+        name: 'Song Finder Desktop',
+        path: '/assets/song-finder-pc.png',
+      },
+      {
+        id: 2,
+        name: 'Song Finder Mobile',
+        path: '/assets/song-finder-mobile.png',
+      },
+      {
+        id: 3,
+        name: 'Song Finder Tablet',
+        path: '/assets/song-finder-tablet.png',
+      },
+      ],
   },
   {
     title: 'Quote of the Day',
@@ -206,6 +257,23 @@ export const myProjects = [
         path: '/assets/framer.png',
       },
     ],
+    images: [
+      {
+        id: 1,
+        name: 'Song Finder Desktop',
+        path: '/assets/song-finder-pc.png',
+      },
+      {
+        id: 2,
+        name: 'Song Finder Mobile',
+        path: '/assets/song-finder-mobile.png',
+      },
+      {
+        id: 3,
+        name: 'Song Finder Tablet',
+        path: '/assets/song-finder-tablet.png',
+      },
+      ],
   },
   {
     title: 'Imaginify - AI Photo Manipulation App',
@@ -243,6 +311,23 @@ export const myProjects = [
         path: '/assets/framer.png',
       },
     ],
+    images: [
+      {
+        id: 1,
+        name: 'Song Finder Desktop',
+        path: '/assets/song-finder-pc.png',
+      },
+      {
+        id: 2,
+        name: 'Song Finder Mobile',
+        path: '/assets/song-finder-mobile.png',
+      },
+      {
+        id: 3,
+        name: 'Song Finder Tablet',
+        path: '/assets/song-finder-tablet.png',
+      },
+      ],
   },
 ];
 

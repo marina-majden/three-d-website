@@ -32,8 +32,8 @@ const Projects = () => {
                     <div className="p-3 backdrop-filter backdrop-blur-3xl w-fit rounded-lg" style={currentProject.logoStyle}>
                         <img src={currentProject.logo} alt="logo" className="w-10 h-10 shadow-sm" />
                     </div>
-                    <div className="flex flex-col gap-5 text-white-600 my-5">
-                        <p className="text-white text-2xl font-semibold animatedText">{currentProject.title}</p>
+                    <div className="flex flex-col gap-5 my-5">
+                        <p className="text-2xl font-semibold animatedText">{currentProject.title}</p>
                         <p className="animatedText">{currentProject.desc}</p>
                         <p className="animatedText">{currentProject.subdesc}</p>
                     </div>
@@ -45,7 +45,7 @@ const Projects = () => {
                                 </div>
                             ))}
                         </div>
-                        <a className="flex items-center gap-2 cursor-pointer text-white-600" href={currentProject.href} target="_blank" rel="noreferrer">
+                        <a className="flex items-center gap-2 cursor-pointer" href={currentProject.href} target="_blank" rel="noreferrer">
                             <p>Check Live Site</p>
                             <img src="/assets/arrow-up.png" alt="arrow" />
                         </a>
@@ -59,7 +59,18 @@ const Projects = () => {
                         </button>
                     </div>
                 </div>
-                <div className="border border-black-300 bg-black-200 rounded-lg h-96 md:h-full">
+                <div className="border border-black-300 bg-background-darker rounded-lg h-96 md:h-full">
+
+                    <div className="w-full h-full flex flex-col items-center mt-4">
+                        {currentProject.images.map((image, index) => (
+                            <div key={index} className="project-image w-3/4 m-6 shadow-md hover:w-full transition-all duration-300">
+                                <img src={image.path} alt={image.name} className="w-full h-full object-cover rounded-md" />
+                            </div>
+                        ))}
+                    </div>
+
+
+
                     {/*   <Canvas>
                         <ambientLight intensity={Math.PI} />
                         <directionalLight position={[10, 10, 5]} />

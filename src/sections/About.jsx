@@ -17,9 +17,9 @@ const About = () => {
         <section className="c-space my-20">
             <div className="grid xl:grid-cols-3 xl:grid-rows-6 md:grid-cols-2 grid-cols-1 gap-5 h-full">
                 <div className="col-span-1 xl:row-span-3">
-                    <div className="grid-container">
+                    <div className="grid-container bg-brand text-text">
                         <img src="../assets/grid1.png" alt="grid-1" className="w-full sm:h-[276px] h-fit object-contain" />
-                        <div>
+                        <div >
                             <p className="grid-headtext">Hi, I'm Marina</p>
                             <p className="grid-subtext">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa, nostrum fugit! Obcaecati, libero saepe deserunt praesentium nesciunt assumenda modi quod quaerat qui esse debitis exercitationem sit veniam, repudiandae, recusandae quia.</p>
                         </div>
@@ -27,7 +27,7 @@ const About = () => {
                     </div>
                 </div>
                 <div className="col-span-1 xl:row-span-3">
-                    <div className="grid-container">
+                    <div className="grid-container bg-brand-3 text-text">
                         <img src="/assets/grid2.png" alt="grid-2" className="w-full sm:w-[276px] h-fit object-contain" />
                         <div>
                             <p className="grid-headtext">Tech Stack</p>
@@ -36,7 +36,7 @@ const About = () => {
                     </div>
                 </div>
                 <div className="col-span-1 xl:row-span-4">
-                    <div className="grid-container">
+                    <div className="grid-container bg-accent text-text">
                         <div className="rounded-3xl w-full sm:h-[326px] h-fit flex justify-center items-center">
                             <Globe
                                 height={326}
@@ -58,8 +58,8 @@ const About = () => {
                         </div>
                     </div>
                 </div>
-                <div className="xl:col-span-2 xl:row-span-3">
-                    <div className="grid-container">
+                <div className="xl:col-span-2 xl:row-span-3 ">
+                    <div className="grid-container bg-brand-2 text-text">
                         <img src="/assets/grid3.png" alt="grid-3" className="w-full sm:h-[266px] h-fit object-contain" />
                         <div>
                             <p className="grid-headtext">My passion for coding</p>
@@ -68,7 +68,7 @@ const About = () => {
                     </div>
                 </div>
                 <div className="xl:col-span-1 xl:row-span-2">
-                    <div className="grid-container">
+                    <div className="grid-container bg-brand-3 text-text">
                         <img src="/assets/grid4.png" alt="grid-4" className="w-full md:h-[126px] sm:h-[276px] h-fit object-cover sm:object-top" />
                         <div className="space-y-2">
                             <p className="grid-subtext text-center">

@@ -4,21 +4,23 @@ import Navbar from './sections/Navbar'
 import About from './sections/About';
 import Projects from './sections/Projects'
 import Experience from './sections/Experience'
-import Contact from './sections/contact';
+import Contact from './sections/Contact';
 import Footer from './sections/Footer';
 
 const App = () => {
   return (
-    <main className="main-space max-w-7xl mx-auto">
+    <>
       <Navbar />
-      {/*   <Hero />*/}
-      <About />
-      <Projects />
-      {/*  <Experience /> */}
+      <main className="main-space max-w-7xl mx-auto">
 
-      <Contact />
-      <Footer />
-    </main>
+        {/*   <Hero />*/}
+        <About />
+        <Projects />
+        {/*  <Experience /> */}
+
+        <Contact />
+
+      </main>   <Footer /></>
   );
 }
 
