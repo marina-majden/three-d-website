@@ -28,9 +28,9 @@ const Projects = () => {
 
     return (
         <section className='c-space my-20'>
-            <p className='head-text'>My work</p>
+            <p className='head-text text-gradient'>My work and PROJECTS</p>
             <div className='grid lg:grid-cols-2 grid-cols-1 mt-12 gap-5 w-full h-max-screen h-[90vh]'>
-                <div className='flex flex-col gap-5 relative sm:p-10 py-10 px-5 rounded-xs shadow-lg shadow-accent/50'>
+                <div className='flex flex-col justify-between gap-5 relative sm:p-10 py-10 px-5 rounded-md shadow-md shadow-border-dark/50 bg-background'>
                     <div className='absolute top-0 right-0'>
                         <img
                             src={currentProject.spotlight}
@@ -63,7 +63,7 @@ const Projects = () => {
                             ))}
                         </div>
                         <a
-                            className='flex items-center gap-2 cursor-pointer ring hover:ring-accent/50 transition-all duration-300 ease-in-out rounded-md p-2 bg-background-darker text-text'
+                            className='flex items-center gap-2 cursor-pointer ring transition-all duration-300 ease-in-out rounded-md p-2 bg-background-darker hover:bg-background-darker/70 text-text'
                             href={currentProject.href}
                             target='_blank'
                             rel='noreferrer'>
@@ -71,16 +71,16 @@ const Projects = () => {
                             <img src='/assets/arrow-up.png' alt='arrow' />
                         </a>
                     </div>
-                    <div className='flex flex-row align-middle justify-between items-center mt-7'>
+                    <div className='flex flex-row justify-between items-center mt-7'>
                         <button
                             className='arrow-btn'
                             onClick={() => handleNavigation("previous")}>
                             <img
                                 src='/assets/left-arrow.png'
                                 alt='left arrow'
-                                className='w-4 h-4'
+                                className='w-5 h-5 rounded-full'
                             />
-                            <p>Previous</p>
+
                         </button>
                         <button
                             className='arrow-btn'
@@ -88,26 +88,63 @@ const Projects = () => {
                             <img
                                 src='/assets/right-arrow.png'
                                 alt='right arrow'
-                                className='w-4 h-4'
+                                className='w-5 h-5 rounded-full'
                             />
-                            <p>Next</p>
+
                         </button>
                     </div>
                 </div>
+                <div className='flex flex-col items-center content-stretch'>
+                    <div className="w-full h-[420px] flex justify-center items-center rounded-md">
+                        {selectedImage ? (
+                            <img
+                                src={selectedImage.path}
+                                alt={selectedImage.name}
+                                className="h-full object-contain rounded-md"
+                            />
+                        ) : (
+                            <img
+                                src={currentProject.images[0].path}
+                                alt={currentProject.images[0].name}
+                                className="h-full object-contain rounded-md"
+                            />
+                        )}
+                    </div>
+                    <div className="flex flex-row gap-1 mt-2">
+                        {currentProject.images.map((image, index) => (
+                            <div
+                                key={index}
+                                className="w-1/3 max-h-full cursor-pointer relative border-2 border-black-300/50 overflow-hidden"
+                                onClick={() => handleImageClick(image)}
+                            >
+                                <img
+                                    src={image.path}
+                                    alt={image.name}
+                                    className="w-full h-40 object-cover rounded-xs"
+                                />
+                                <p className="absolute bg-black-300/70 text-white bottom-0 left-0 w-full p-2">
+                                    {image.name}
+                                </p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
 
-                <div className='grid grid-cols-3 grid-rows-3 gap-2 h-full '>
+                {/*  <div className='grid grid-cols-3 grid-rows-3 gap-2 h-9/10 max-h-full'>
                     <div className='col-span-3 row-span-2'>
                         {selectedImage ? (
                             <img
                                 src={selectedImage.path}
                                 alt={selectedImage.name}
                                 className='rounded-md'
+                                style={{ height: "500px" }}
                             />
                         ) : (
                             <img
                                 src={currentProject.images[0].path}
                                 alt={currentProject.images[0].name}
                                 className='rounded-md'
+                                style={{ height: "500px" }}
                             />
                         )}
                     </div>
@@ -120,8 +157,8 @@ const Projects = () => {
                             <img
                                 src={image.path}
                                 alt={image.name}
-                                className='rounded-xs object-cover'
-                                style={{ maxHeight: "200px" }}
+                                className='rounded-xs'
+                                style={{ height: "150px" }}
                             />
                             <p className='absolute bg-black-300/50 text-white bottom-0 left-0 w-full p-2'>
                                 {image.name}
@@ -129,7 +166,7 @@ const Projects = () => {
                         </div>
                     ))}
                 </div>
-
+ */}
                 {/* <div className='border border-black bg-brand rounded-lg flex flex-col justify-between p-2 max-h-screen h-9/10'>
                     {/* First child div: Display selected image 
                     <div className='h-3/5 w-full mx-auto'>

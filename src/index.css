@@ -1,9 +1,22 @@
 @import url("https://fonts.cdnfonts.com/css/general-sans") layer(base);
+@import url('https://fonts.googleapis.com/css2?family=Bakbak+One&family=Economica:ital,wght@0,400;0,700;1,400;1,700&family=Geologica:wght@100..900&family=Noto+Sans+Display:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Sen:wght@400..800&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap') layer(base);
+@import url('https://fonts.googleapis.com/css2?family=Changa+One:ital@0;1&family=Comfortaa:wght@300..700&family=Dela+Gothic+One&family=Golos+Text:wght@400..900&family=Protest+Strike&family=Righteous&family=Space+Grotesk:wght@300..700&family=Tilt+Neon&display=swap') layer(base);
+
 
 @import "tailwindcss";
 
 @theme {
+    --font-noto: Noto Sans Display, sans-serif;
+    --font-tilt: Tilt Neon, sans-serif;
+    --font-outfit: Outfit, sans-serif;
+    --font-comfortaa: Comfortaa, sans-serif;
+
     --font-generalsans: General Sans, sans-serif;
+    --font-golos: Golos Text, sans-serif;
+    --font-righteous: Righteous, sans-serif;
+   
+    
+    
 
     --color-black-100: #010103;
     --color-black-200: #0e0e10;
@@ -18,33 +31,37 @@
     --color-white-800: #e4e4e6;
     --color-white: #ffffff;
 
-    --color-brand: hsl(170, 65%, 75%);
-    --color-text: #3c3e42;
+    --color-brand: hsl(170, 47.40%, 54.50%);
+    --color-text:hsl(220, 4.80%, 20%);
     --color-text-mild: rgb(73, 75, 82);
-    --color-accent: hsl(247, 60%, 77%);
+    --color-grey: hsl(227, 5%, 45%);
+    --color-accent: hsl(258, 49.80%, 44.50%);
     --color-heading: #626773;
-    --color-brand-2: hsl(170, 60%, 70%);
-    --color-brand-3: hsl(210, 69.8%, 76%);
-    --color-border: hsl(228, 82.4%, 90.2%);
-    --color-border-dark: #6e86e6;
-    --color-background: hsl(210, 20%, 92%);
-    --color-background-lighter: hsl(210, 20%, 95%);
-    --color-background-darker: hsl(210, 20%, 87%);
+    --color-brand-2: hsl(170, 60%, 80%);
+    --color-brand-3: hsl(210, 69.8%, 85%);
+    --color-brand-4: hsl(247, 60%, 86%);
+    --color-border: hsl(228, 82.4%, 80.2%);
+    --color-border-dark:hsla(227, 42.90%, 73.90%, 0.85);
+    --color-background: hsl(210, 20%, 89%);
+    --color-background-lighter: hsl(210, 30%, 93%);
+    --color-background-darker: hsl(210, 20%, 85%);
     --image-terminal: url("/assets/terminal-light.png");
 }
 
 html[data-theme="dark"] {
-    --color-brand: hsl(170, 55.5%, 55.1%);
+
     --color-text: rgb(225, 229, 230);
     --color-text-mild: rgb(211, 214, 219);
-    --color-accent: hsl(266, 37.9%, 42.9%);
+    --color-grey: hsl(227, 5%, 29%);
     --color-heading: rgb(229, 223, 250);
-    --color-brand-2: hsl(266, 31.8%, 33.9%);
-    --color-brand-3: hsl(210, 69.8%, 40%);
-    --color-border: rgb(83, 76, 136);
-    --color-background: hsl(210, 5%, 17%);
-    --color-background-lighter: hsl(210, 5%, 20%);
-    --color-background-darker: hsl(210, 5%, 13%);
+    --color-brand-2: hsl(263, 25%, 9%);
+    --color-brand-3: hsl(210, 55%, 7%);
+    --color-brand-4: hsl(247, 30%, 9%);
+    --color-border: hsl(247, 30%, 35%);
+    --color-border-dark: hsla(183, 80.40%, 18.00%, 0.45);
+    --color-background: hsl(210, 5%, 12%);
+    --color-background-lighter: hsl(210, 5%, 18%);
+    --color-background-darker: hsl(210, 5%, 6%);
 
     --image-terminal: url("/assets/terminal.png");
 }
@@ -61,11 +78,12 @@ html {
     color-scheme: light dark;
     accent-color: var(--color-brand);
     color: var(--color-text);
-    background-color: var(--color-background);
+    background-color: var(--color-background-darker);
+    font-family: var(--font-noto);
+    font-weight: 400;
+ 
 }
-html[data-theme="dark"] {
-    background-color: var(--color-background-lighter);
-}
+
 .terminal-image {
     background-image: var(--background-image-terminal);
     background-repeat: no-repeat;
@@ -74,6 +92,16 @@ html[data-theme="dark"] {
     background-attachment: fixed;
     background-color: var(--color-background);
 }
+.text-gradient {
+    --tw-gradient-position: to right in oklab;
+    background-image: linear-gradient(var(--tw-gradient-stops));
+    --tw-gradient-from: var(--color-brand);
+    --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
+    --tw-gradient-from-position: 60%;
+    --tw-gradient-via: var(--color-accent);
+    --tw-gradient-via-stops: var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-via) var(--tw-gradient-via-position), var(--tw-gradient-to) var(--tw-gradient-to-position);
+    --tw-gradient-stops: var(--tw-gradient-via-stops);
+}
 
 @layer base {
     *,
@@ -81,7 +109,7 @@ html[data-theme="dark"] {
     ::before,
     ::backdrop,
     ::file-selector-button {
-        border-color: var(--color-gray-200, currentColor);
+        border-color: var(--color-accent, currentColor);
     }
 }
 
@@ -93,10 +121,10 @@ html[data-theme="dark"] {
 }
 
 @utility head-text {
-    @apply sm:text-4xl text-3xl font-semibold text-gray_gradient;
+    @apply sm:text-4xl text-3xl font-semibold;
 }
 @utility header-navbar {
-    @apply bg-background text-text w-screen;
+    @apply *:font-tilt tracking-wide bg-background text-text border-b-1 border-background-lighter w-screen;
 }
 
 @utility nav-ul {
@@ -104,24 +132,24 @@ html[data-theme="dark"] {
 }
 
 @utility nav-li {
-    @apply *:font-generalsans max-sm:w-full max-sm:rounded-md py-2 max-sm:px-5;
+    @apply *:font-tilt tracking-wide max-sm:w-full max-sm:rounded-md py-2 max-sm:px-5;
 }
 
 @utility nav-li_a {
-    @apply text-lg md:text-base text-text hover:text-accent uppercase transition-colors;
+    @apply text-xl md:text-lg text-text hover:text-accent transition-colors duration-200 ease-in-out;
 }
 
 @utility nav-sidebar {
-    @apply absolute left-0 right-0 bg-black-200 backdrop-blur-xs transition-all duration-300 ease-in-out overflow-hidden z-20 mx-auto sm:hidden block;
+    @apply *:font-tilt tracking-wide absolute left-0 right-0 bg-black-200 backdrop-blur-xs transition-all duration-300 ease-in-out overflow-hidden z-20 mx-auto sm:hidden block;
 }
 
-@utility text-gray_gradient {
+@utility text-gradient {
     @apply bg-linear-to-r from-brand from-60% via-brand-2 via-60% to-accent to-100% bg-clip-text text-transparent;
 }
 
 @utility btn {
     /* button component */
-    @apply flex gap-4 items-center justify-center cursor-pointer p-3 rounded-md bg-accent transition-all active:scale-95 text-text mx-auto;
+    @apply flex gap-4 items-center justify-center cursor-pointer p-3 rounded-md bg-background border-1 border-brand transition-all hover:scale-101 active:scale-97 hover:border-brand-2 hover:bg-background/60 text-text mx-auto;
 }
 
 @utility btn-ping {
@@ -139,15 +167,15 @@ html[data-theme="dark"] {
 
 @utility grid-container {
     /* about section */
-    @apply w-full h-full border bg-background text-text border-border rounded-lg sm:p-7 p-4 flex flex-col gap-5;
+    @apply w-full h-full text-text border-border-dark/70 border-1 rounded-lg sm:p-7 p-4 flex flex-col gap-5;
 }
 
 @utility grid-headtext {
-    @apply text-xl font-semibold mb-2 text-text font-generalsans;
+    @apply text-xl font-semibold mb-2 text-text text-gradient;
 }
 
 @utility grid-subtext {
-    @apply text-text-mild text-base font-generalsans;
+    @apply text-text-mild text-base;
 }
 
 @utility copy-container {
@@ -156,7 +184,7 @@ html[data-theme="dark"] {
 
 @utility arrow-btn {
     /* projects section  */
-    @apply cursor-pointer active:scale-95 transition-all ring ring-accent/50 w-16 h-9 px-4 py-2 rounded-xl text-text bg-brand-3 hover:bg-brand-2;
+    @apply cursor-pointer hover:scale-101 active:scale-95 transition-all p-5 rounded-full bg-grey/65 hover:bg-grey/75;
 }
 
 @utility tech-logo {
@@ -228,7 +256,7 @@ html[data-theme="dark"] {
 
 @utility social-icon {
     /*  footer */
-    @apply w-12 h-12 rounded-full flex justify-center items-center bg-text border border-border;
+    @apply cursor-pointer hover:scale-101 active:scale-98 transition-all rounded-full bg-grey hover:bg-grey/75 w-12 h-12 flex justify-center items-center border border-background;
 }
 
 .waving-hand {
