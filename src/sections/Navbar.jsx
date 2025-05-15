@@ -1,6 +1,6 @@
 import React from "react";
 import "./Navbar.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import menu from "../assets/menu.svg";
 import close from "../assets/close.svg";
 import { navLinks } from "../constants";
@@ -18,16 +18,26 @@ const NavItems = () => {
         </ul>
     );
 };
+const getInitialTheme = () => {
+    const savedTheme = localStorage.getItem("themeMode");
+    if (savedTheme) return savedTheme;
+    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    return prefersDark ? "dark" : "light";
+};
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
+    const [themeMode, setThemeMode] = useState(getInitialTheme);
+
+    useEffect(() => {
+        localStorage.setItem("themeMode", themeMode);
+        document.documentElement.dataset.theme = themeMode;
+    }, [themeMode]);
+
     const toggleMenu = () => setIsOpen((prevIsOpen) => !prevIsOpen);
-    const [themeMode, setThemeMode] = useState("light");
 
     const toggleTheme = () => {
         setThemeMode((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
-        document.documentElement.dataset.theme =
-            themeMode === "light" ? "dark" : "light";
     };
 
     return (
@@ -44,6 +54,8 @@ const Navbar = () => {
                             className='input'
                             type='checkbox'
                             onClick={toggleTheme}
+                            checked={themeMode === "dark"}
+                            readOnly
                         />
                         <span className='slider'></span>
                     </label>

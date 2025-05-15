@@ -2,8 +2,8 @@ import { PerspectiveCamera } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import React, { Suspense } from "react";
 import { Center, OrbitControls } from "@react-three/drei";
-import ComputerScreen from "../components/ComputerScreen";
-
+import Computer from "../components/Computer";
+import DemoComputer from "../components/DemoComputer";
 
 import HackerRoom from '../components/HackerRoom'
 import CanvasLoader from "../components/CanvasLoader";
@@ -15,6 +15,7 @@ import Cube from "../components/Cube";
 import Rings from "../components/Ring";
 import HeroCamera from "../components/HeroCamera";
 import Button from "../components/Button";
+import Developer from "../components/Developer";
 
 // Math function enables rotating model clockwise by 90 degrees
 
@@ -37,11 +38,12 @@ const Hero = () => {
                     <ambientLight intensity={Math.PI} />
                     <directionalLight position={[10, 10, 5]} />
                     <Center>
-                        <Suspense fallback={<CanvasLoader />}>
+                        <Developer />
+                        {/*   <Suspense fallback={<CanvasLoader />}>
                             <group scale={2} position={[0, -3, 0]} rotation={[0, -0.1, 0]}>
-                                <ComputerScreen />
+                                <Computer />
                             </group>
-                        </Suspense>
+                        </Suspense> */}
                     </Center>
                     <OrbitControls maxPolarAngle={Math.PI / 2} enableZoom={false} />
                 </Canvas>

@@ -16,10 +16,18 @@ const Developer = ({ animationName = 'idle', ...props }) => {
   const { animations: clappingAnimation } = useFBX('/models/animations/clapping.fbx');
   const { animations: victoryAnimation } = useFBX('/models/animations/victory.fbx');
 
-  idleAnimation[0].name = 'idle';
-  saluteAnimation[0].name = 'salute';
-  clappingAnimation[0].name = 'clapping';
-  victoryAnimation[0].name = 'victory';
+  const allLoaded =
+    idleAnimation.length &&
+    saluteAnimation.length &&
+    clappingAnimation.length &&
+    victoryAnimation.length;
+
+  if (allLoaded) {
+    idleAnimation[0].name = 'idle';
+    saluteAnimation[0].name = 'salute';
+    clappingAnimation[0].name = 'clapping';
+    victoryAnimation[0].name = 'victory';
+  }
 
   const { actions } = useAnimations(
     [idleAnimation[0], saluteAnimation[0], clappingAnimation[0], victoryAnimation[0]],
@@ -27,9 +35,15 @@ const Developer = ({ animationName = 'idle', ...props }) => {
   );
 
   useEffect(() => {
-    actions[animationName].reset().fadeIn(0.5).play();
-    return () => actions[animationName].fadeOut(0.5).play();
-  }, [animationName]);
+    if (actions && actions[animationName]) {
+      actions[animationName].reset().fadeIn(0.5).play();
+      return () => {
+        if (actions[animationName] && actions[animationName].fadeOut) {
+          actions[animationName].fadeOut(0.5).play();
+        }
+      };
+    }
+  }, [animationName, actions]);
 
   return (
     <group ref={group} {...props} dispose={null}>
