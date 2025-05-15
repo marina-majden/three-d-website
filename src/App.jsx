@@ -12,7 +12,7 @@ const App = () => {
         <>
             <Navbar />
             <main className='main-space max-w-7xl mx-auto'>
-                <Hero />
+                {/* <Hero /> */}
                 <About />
                 <Projects />
                 {/*  <Experience /> */}

@@ -29,8 +29,8 @@ const Hero = () => {
     return (
         <section className="min-h-screen w-full flex flex-col relative">
             <div className="w-full mx-auto flex flex-col sm:mt-36 mt-20 c-space gap-3">
-                <p className="sm:text-3xl text-2xl font-medium text-white text-center font-generalsans">Hi! <span className="waving-hand">👋</span> I'm Marina, a web-developer and a teacher based in Croatia.</p>
-                <p className="hero_tag text-gray_gradient">Building web-sites, user-interfaces and more</p>
+                <p className="sm:text-3xl text-2xl font-medium text-text/80 text-center">Hi! <span className="waving-hand">👋</span> I'm Marina, a web-developer and a teacher based in Croatia.</p>
+                <p className="hero_tag gradient-text">Building web-sites, user-interfaces and more</p>
             </div>
             <div className="w-full h-full absolute inset-0">
                 <Canvas>

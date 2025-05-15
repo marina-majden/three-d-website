@@ -1,10 +1,37 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Globe from 'react-globe.gl'
 import Button from "../components/Button";
 
 const About = () => {
 
     const [hasCopied, setHasCopied] = useState(false)
+    const [isDarkMode, setIsDarkMode] = useState(false); // State to track theme
+
+    useEffect(() => {
+        const observer = new MutationObserver(() => {
+            const currentTheme = document.documentElement.dataset.theme || "light";
+            setIsDarkMode(currentTheme === "dark");
+        });
+
+        observer.observe(document.documentElement, {
+            attributes: true,
+            attributeFilter: ["data-theme"],
+        });
+
+        return () => observer.disconnect();
+    }, []);
+
+    const globeEl = useRef();
+
+    useEffect(() => {
+        globeEl.current.controls().autoRotate = false;
+        globeEl.current.controls().enableRotate = true;
+        globeEl.current.controls().autoRotateSpeed = 0.6;
+        globeEl.current.controls().enableZoom = true;
+        globeEl.current.pointOfView({ lat: 46.0, lng: 16.0, altitude: 1.5 }, 4000);
+    }, []);
+
+
 
     const handleCopy = () => {
         navigator.clipboard.writeText('marina.majden@gmail.com')
@@ -17,7 +44,7 @@ const About = () => {
         <section className="c-space my-20">
             <div className="grid xl:grid-cols-3 xl:grid-rows-6 md:grid-cols-2 grid-cols-1 gap-5 h-full">
                 <div className="col-span-1 xl:row-span-3">
-                    <div className="grid-container bg-brand-2 text-text">
+                    <div className="grid-container glass-light">
                         <img src="../assets/grid1.png" alt="grid-1" className="w-full sm:h-[276px] h-fit object-contain" />
                         <div >
                             <p className="grid-headtext">Hi, I'm Marina</p>
@@ -27,7 +54,7 @@ const About = () => {
                     </div>
                 </div>
                 <div className="col-span-1 xl:row-span-3">
-                    <div className="grid-container bg-brand-3 text-text">
+                    <div className="grid-container glass-light">
                         <img src="/assets/grid2.png" alt="grid-2" className="w-full sm:w-[276px] h-fit object-contain" />
                         <div>
                             <p className="grid-headtext">Tech Stack</p>
@@ -36,30 +63,38 @@ const About = () => {
                     </div>
                 </div>
                 <div className="col-span-1 xl:row-span-4">
-                    <div className="grid-container bg-brand-4 text-text">
-                        <div className="rounded-3xl w-full sm:h-[326px] h-fit flex justify-center items-center">
+                    <div className="grid-container glass-light">
+                        <div className="rounded-3xl w-full sm:h-[326px] h-fit flex justify-center items-center cursor-grab">
                             <Globe
+                                ref={globeEl}
                                 height={326}
                                 width={326}
                                 backgroundColor="rgba(0,0,0,0)"
                                 backgroundImageOpacity={0.5}
-                                showAtmosphere
+                                showAtmosphere={true}
                                 showGraticules
-                                globeImageUrl="//unpkg.com/three-globe/example/img/earth-night.jpg"
+                                globeImageUrl={
+                                    isDarkMode
+                                        ? "//unpkg.com/three-globe/example/img/earth-night.jpg"
+                                        : "//unpkg.com/three-globe/example/img/earth-day.jpg"
+                                } // Dynamically change the globe image
                                 bumpImageUrl="//unpkg.com/three-globe/example/img/earth-topology.png"
-                                labelsData={[{ lat: 40, lng: -100, text: "I'm here!", color: 'white', size: 20 }]}
-
+                                labelsData={[{ lat: 46, lng: 16, text: "I'm here!" }]}
+                                labelColor={() => "white"}
+                                labelDotRadius={1}
+                                labelSize={3}
+                                labelAltitude={0.02}
                             />
                         </div>
                         <div>
-                            <p className="grid-headtext">I work remotely</p>
-                            <p className="grid-subtext">Based in Croatia</p>
-                            <Button name="Contact me" isBeam containerClass="w-full mt-10" />
+                            <p className="grid-headtext">Able to work remotely or</p>
+                            <p className="grid-subtext">on-site in Zagreb, Croatia</p>
+                            <Button name="Contact me" isBeam containerClass="w-full mt-10" className="btn" />
                         </div>
                     </div>
                 </div>
                 <div className="xl:col-span-2 xl:row-span-3 ">
-                    <div className="grid-container bg-brand-3 text-text">
+                    <div className="grid-container glass-light">
                         <img src="/assets/grid3.png" alt="grid-3" className="w-full sm:h-[266px] h-fit object-contain" />
                         <div>
                             <p className="grid-headtext">My passion for coding</p>
@@ -68,7 +103,7 @@ const About = () => {
                     </div>
                 </div>
                 <div className="xl:col-span-1 xl:row-span-2">
-                    <div className="grid-container bg-brand-2 text-text">
+                    <div className="grid-container glass-light">
                         <img src="/assets/grid4.png" alt="grid-4" className="w-full md:h-[126px] sm:h-[276px] h-fit object-cover sm:object-top" />
                         <div className="space-y-2">
                             <a href="#contact" className="grid-subtext text-center">

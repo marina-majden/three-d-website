@@ -28,9 +28,9 @@ const Projects = () => {
 
     return (
         <section className='c-space my-20'>
-            <p className='head-text text-gradient'>My work and PROJECTS</p>
-            <div className='grid lg:grid-cols-2 grid-cols-1 mt-12 gap-5 w-full h-max-screen h-[90vh]'>
-                <div className='flex flex-col justify-between gap-5 relative sm:p-10 py-10 px-5 rounded-md shadow-md shadow-border-dark/50 bg-background'>
+            <p className='head-text gradient-text'>My work and PROJECTS</p>
+            <div className='grid lg:grid-cols-2 grid-cols-1 mt-12 gap-5 w-full'>
+                <div className='flex flex-col justify-between gap-5 relative sm:p-10 py-10 px-5 rounded-md shadow-md shadow-border-dark/50 glass-light-no-border'>
                     <div className='absolute top-0 right-0'>
                         <img
                             src={currentProject.spotlight}
@@ -48,7 +48,7 @@ const Projects = () => {
                         />
                     </div>
                     <div className='flex flex-col gap-5 my-5'>
-                        <p className='text-2xl font-semibold animatedText'>
+                        <p className='text-2xl font-semibold animatedText gradient-text'>
                             {currentProject.title}
                         </p>
                         <p className='animatedText'>{currentProject.desc}</p>
@@ -63,7 +63,7 @@ const Projects = () => {
                             ))}
                         </div>
                         <a
-                            className='flex items-center gap-2 cursor-pointer ring transition-all duration-300 ease-in-out rounded-md p-2 bg-background-darker hover:bg-background-darker/70 text-text'
+                            className='flex items-center gap-2 cursor-pointer ring transition-all duration-300 ease-in-out rounded-md p-2 btn'
                             href={currentProject.href}
                             target='_blank'
                             rel='noreferrer'>
@@ -71,7 +71,7 @@ const Projects = () => {
                             <img src='/assets/arrow-up.png' alt='arrow' />
                         </a>
                     </div>
-                    <div className='flex flex-row justify-between items-center mt-7'>
+                    <div className='flex flex-row justify-between items-stretch mt-7'>
                         <button
                             className='arrow-btn'
                             onClick={() => handleNavigation("previous")}>
@@ -94,7 +94,7 @@ const Projects = () => {
                         </button>
                     </div>
                 </div>
-                <div className='flex flex-col items-center content-stretch'>
+                <div className='flex flex-col items-center content-start justify-start glass-light-no-border'>
                     <div className="w-full h-[420px] flex justify-center items-center rounded-md">
                         {selectedImage ? (
                             <img

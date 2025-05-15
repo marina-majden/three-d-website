@@ -32,12 +32,12 @@ const Navbar = () => {
 
     return (
         <header className='fixed top-0 left-0 right-0 z-50'>
-            <div className='header-navbar'>
+            <div className='header-navbar glass-light-no-border'>
                 <div className='flex justify-between items-center py-5 mx-auto c-space'>
                     <a
                         href='/'
-                        className='font-bold text-3xl text-brand transition-colors'>
-                        Marina
+                        className='font-bold text-3xl gradient-text'>
+                        MARINA
                     </a>
                     <label className='toggle-theme'>
                         <input
