@@ -143,9 +143,9 @@ html {
     }
 }
 
-/* @utility main-space {
-    @apply bg-background text-text;
-} */
+@utility main-space {
+    @apply mt-10 max-w-4/5;
+}
 @utility c-space {
     @apply sm:px-10 px-5;
 }

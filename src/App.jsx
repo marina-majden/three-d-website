@@ -1,6 +1,6 @@
 import React from "react";
 import Navbar from "./sections/Navbar";
-import Hero from './sections/Hero';
+import Hero from './sections/Heroo';
 import About from "./sections/About";
 import Projects from "./sections/Projects";
 import Experience from "./sections/Experience";
@@ -11,8 +11,8 @@ const App = () => {
     return (
         <>
             <Navbar />
-            <main className='main-space max-w-7xl mx-auto'>
-                {/* <Hero /> */}
+            <main className='main-space mx-auto'>
+                <Hero />
                 <About />
                 <Projects />
                 {/*  <Experience /> */}
