@@ -21,7 +21,9 @@ const NavItems = () => {
 const getInitialTheme = () => {
     const savedTheme = localStorage.getItem("themeMode");
     if (savedTheme) return savedTheme;
-    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const prefersDark = window.matchMedia(
+        "(prefers-color-scheme: dark)"
+    ).matches;
     return prefersDark ? "dark" : "light";
 };
 
@@ -41,13 +43,11 @@ const Navbar = () => {
     };
 
     return (
-        <header className='fixed top-0 left-0 right-0 z-50'>
-            <div className='header-navbar glass-light-no-border'>
+        <header className='fixed top-0 left-0 right-0 z-40'>
+            <div className='header-navbar bg-transparent'>
                 <div className='flex justify-between items-center py-5 mx-auto c-space'>
-                    <a
-                        href='/'
-                        className='font-bold text-3xl gradient-text'>
-                        MARINA
+                    <a href='/' className='font-bold text-3xl gradient-text'>
+                        H A R D CORE
                     </a>
                     <label className='toggle-theme'>
                         <input
@@ -75,8 +75,9 @@ const Navbar = () => {
                 </div>
             </div>
             <div
-                className={`nav-sidebar ${isOpen ? "max-h-screen" : "max-h-0"
-                    }`}>
+                className={`nav-sidebar ${
+                    isOpen ? "max-h-screen" : "max-h-0"
+                }`}>
                 <nav className='p-5'>
                     <NavItems />
                 </nav>

@@ -40,9 +40,9 @@
     --color-grey: hsl(227, 5%, 45%);
     --color-accent: hsl(258, 49.80%, 44.50%);
     --color-heading: #626773;
-    --color-brand-2-bg: hsl(180, 93.40%, 88.00%);
-    --color-brand-3-bg: hsl(211, 90.20%, 92.00%);
-    --color-brand-4-bg: hsl(227, 93.00%, 83.10%);
+    --color-brand-2-bg: hsl(66, 94%, 83%);
+    --color-brand-3-bg: hsl(60, 88%, 90%);
+    --color-brand-4-bg: hsl(78, 92%, 85%);
     --color-brand-2: hsl(170, 85.40%, 92.00%);
     --color-brand-3: hsl(210, 69.8%, 89%);
     --color-brand-4: hsl(247, 60%, 89%);
@@ -80,6 +80,9 @@ html[data-theme="dark"] {
 --glass-bg: rgba(17, 25, 40, 0.65);
 --glass-border: 1px solid  rgba(5, 83, 94, 0.46);
     --image-terminal: url("/assets/terminal.png");
+
+    background-size: 400% 400%;
+	animation: gradient 20s ease infinite;
 }
 
 * {
@@ -97,16 +100,20 @@ html {
     background-color: var(--color-background-darker);
     background-image: var(--image-background);
     background-image: linear-gradient(-45deg, var(--color-brand-2-bg), var(--color-brand-3-bg), var(--color-brand-4-bg));
-    /* background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab); */
-	background-size: 400% 400%;
-	animation: gradient 20s ease infinite;
+	
 	height: 100vh;
     font-family: var(--font-noto);
     font-weight: 400;
-  
- 
+    /* background: 
+    repeating-radial-gradient(#777676 0 0.0001%,#a9a7a7 0 0.0002%) 50% 0/2500px 2500px,
+    repeating-conic-gradient(#838282 0 0.0001%,#c3c0c0 0 0.0002%) 60% 60%/2500px 2500px;
+  background-blend-mode: screen; */
+
 }
 
+@keyframes b{
+  100% {background-position: 50% 0, 60% 50%}
+}
 .glass-light {
     backdrop-filter: blur(25px) saturate(161%);
     -webkit-backdrop-filter: blur(25px) saturate(161%);
@@ -149,12 +156,16 @@ html {
 @utility c-space {
     @apply sm:px-10 px-5;
 }
-@utility gradient-text {
-    @apply bg-gradient-to-tr from-purple-800 via-sky-700 to-cyan-700 text-transparent bg-clip-text;
-}
 @utility head-text {
-    @apply sm:text-4xl text-3xl font-semibold;
+    @apply sm:text-2xl text-3xl font-semibold text-left;
 }
+@utility gradient-text {
+    @apply bg-gradient-to-r from-purple-800 via-sky-700 to-cyan-700 text-transparent bg-clip-text text-7xl font-bold;
+}
+@utility gradient-text-2 {
+    @apply bg-gradient-to-r from-pink-800 via-indigo-700 to-sky-600 text-transparent bg-clip-text text-8xl font-extrabold;
+}
+
 @utility header-navbar {
     @apply *:font-tilt tracking-wide text-text border-0 w-screen;
 }
