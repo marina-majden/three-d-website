@@ -1,6 +1,10 @@
 import React, { useState, useEffect, useRef } from "react";
 import Globe from 'react-globe.gl'
 import Button from "../components/Button";
+import Character from "../components/Character";
+import TechStackCircle from "../components/TechStackCircle";
+
+
 
 const About = () => {
 
@@ -45,21 +49,20 @@ const About = () => {
             <div className="grid xl:grid-cols-3 xl:grid-rows-6 md:grid-cols-2 grid-cols-1 gap-5 h-full">
                 <div className="col-span-1 xl:row-span-3">
                     <div className="grid-container glass-light">
-                        <img src="../assets/grid1.png" alt="grid-1" className="w-full sm:h-[276px] h-fit object-contain" />
-                        <div >
-                            <p className="grid-headtext">Hi, I'm Marina</p>
-                            <p className="grid-subtext">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa, nostrum fugit! Obcaecati, libero saepe deserunt praesentium nesciunt assumenda modi quod quaerat qui esse debitis exercitationem sit veniam, repudiandae, recusandae quia.</p>
-                        </div>
+
+
+                        <Character />
+
 
                     </div>
                 </div>
                 <div className="col-span-1 xl:row-span-3">
                     <div className="grid-container glass-light">
-                        <img src="/assets/grid2.png" alt="grid-2" className="w-full sm:w-[276px] h-fit object-contain" />
-                        <div>
-                            <p className="grid-headtext">Tech Stack</p>
-                            <p className="grid-subtext">I specialize in JavaScript with focus on React</p>
-                        </div>
+
+                        <TechStackCircle
+
+                        />
+
                     </div>
                 </div>
                 <div className="col-span-1 xl:row-span-4">

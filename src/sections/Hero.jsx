@@ -51,11 +51,11 @@ const Hero = () => {
                         {" "}
                         very mure{" "}
                     </span>
-                    <p className='hero_tag'>
-                        <span className='gradient-text-2 font-outfit font-extrabold text-left'>
-                            very opscure
-                        </span>
-                    </p>
+
+                    <span className=' hero_tag gradient-text-2 font-outfit font-extrabold text-left'>
+                        very opscure
+                    </span>
+
                 </p>
             </div>
 
