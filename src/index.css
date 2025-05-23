@@ -5,6 +5,7 @@
 
 @import "tailwindcss";
 
+
 @theme {
     --font-noto: Noto Sans Display, sans-serif;
     --font-tilt: Tilt Neon, sans-serif;
@@ -51,7 +52,6 @@
     --glass-border: 1px solid rgba(131, 234, 248, 0.43);
 
     --image-background: background-image: linear-gradient(45deg, var(--color-brand-2), var(--color-brand-3), var(--color-brand-4));
-    --image-terminal: url("/assets/terminal-light.png");
 
     --color-primary:rgb(143, 236, 229);
     --colorsecondary:rgb(124, 190, 247);
@@ -60,7 +60,7 @@
 
 html[data-theme="dark"] {
 
-    --color-text: rgb(225, 229, 230);
+    --color-text: rgb(189, 201, 204);
     --color-text-mild: rgb(211, 214, 219);
     --color-text-dark: hsla(240, 12.50%, 9.40%, 0.57);
     --color-grey: hsl(227, 5%, 29%);
@@ -78,13 +78,11 @@ html[data-theme="dark"] {
     --color-background-darker: hsl(210, 5%, 6%);
 --glass-bg: rgba(17, 25, 40, 0.65);
 --glass-border: 1px solid  rgba(5, 83, 94, 0.46);
-    --image-terminal: url("/assets/terminal.png");
     
     --color-secondary:rgb(1, 21, 22);
     --color-accent:rgb(49, 5, 58);
 --color-primary:rgb(7, 12, 58);
-    background-size: 400% 400%;
-	animation: gradient 20s ease infinite;
+   
 }
 
 * {
@@ -106,23 +104,25 @@ html {
 	height: 100vh;
     font-family: var(--font-noto);
     font-weight: 400;
-    /* background: 
+/*     background: 
     repeating-radial-gradient(#777676 0 0.0001%,#a9a7a7 0 0.0002%) 50% 0/2500px 2500px,
     repeating-conic-gradient(#838282 0 0.0001%,#c3c0c0 0 0.0002%) 60% 60%/2500px 2500px;
   background-blend-mode: screen; */
+
   background: radial-gradient(at 20.851293103448278% 17.708333333333336%,var(--color-primary) 0px, transparent 50%), radial-gradient(at 59.752155172413794% 80%,var(--color-secondary) 0px, transparent 50%), radial-gradient(at 65.67887931034483% 31.25%,var(--color-accent) 0px, transparent 50%), radial-gradient(at 18.049568965517242% 71.04166666666667%,var(--color-primary) 0px, transparent 50%), var(--color-background-darker);
     background-size: 100% 100%;
-
+ 
     background-repeat: no-repeat;
     background-attachment: fixed;
     animation: b 10s ease infinite;
 
 }
-.bg {
+.bg-color {
     
     background: radial-gradient(at 20.851293103448278% 17.708333333333336%, #2f1b41 0px, transparent 50%), radial-gradient(at 59.752155172413794% 80%, #872341 0px, transparent 50%), radial-gradient(at 65.67887931034483% 31.25%, #be3144 0px, transparent 50%), radial-gradient(at 18.049568965517242% 71.04166666666667%, #f05941 0px, transparent 50%), #2f1b41;
     
 }
+
 @keyframes b{
   100% {background-position: 50% 0, 60% 50%}
 }
@@ -173,19 +173,19 @@ html {
 }
 
 @utility main-space {
-    @apply mt-10 max-w-4/5;
+    @apply mt-10 max-w-full mx-auto;
 }
 @utility c-space {
     @apply sm:px-10 px-5;
 }
 @utility head-text {
-    @apply sm:text-2xl text-3xl font-semibold text-left;
+    @apply sm:text-2xl text-4xl text-left font-outfit font-extrabold;
 }
 @utility gradient-text {
-    @apply bg-gradient-to-r from-purple-800 via-sky-700 to-cyan-700 text-transparent bg-clip-text text-7xl font-bold;
+    @apply bg-gradient-to-r  from-pink-700 via-purple-800 to-sky-700 text-transparent bg-clip-text text-8xl font-bold;
 }
 @utility gradient-text-2 {
-    @apply bg-gradient-to-r from-pink-800 via-indigo-700 to-sky-600 text-transparent bg-clip-text text-8xl font-extrabold;
+    @apply bg-gradient-to-r from-pink-800 via-indigo-700 to-sky-600 text-transparent bg-clip-text text-9xl font-extrabold;
 }
 
 @utility header-navbar {

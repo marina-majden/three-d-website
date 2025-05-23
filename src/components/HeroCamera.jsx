@@ -8,19 +8,10 @@ const HeroCamera = ({ isMobile, children }) => {
     useFrame((state, delta) => {
         easing.damp3(state.camera.position, [0, 0, 10], 0.2, delta);
 
-
         if (!isMobile) {
             easing.dampE(
                 group.current.rotation,
-                [-state.pointer.y / 3, state.pointer.x / 4, 0],
-                0.25,
-                delta
-            );
-        }
-        if (isMobile) {
-            easing.dampE(
-                group.current.rotation,
-                [-state.pointer.y / 4, state.pointer.x / 3, 0],
+                [-state.pointer.y / 1.8, state.pointer.x / 6, 0],
                 0.25,
                 delta
             );

@@ -3,7 +3,7 @@ import "./Navbar.css";
 import { useState, useEffect } from "react";
 import menu from "../assets/menu.svg";
 import close from "../assets/close.svg";
-import logo from "/assets/logo_transparent.png";
+import logo from "/assets/logo-white.png";
 import { navLinks } from "../constants";
 
 const NavItems = () => {
