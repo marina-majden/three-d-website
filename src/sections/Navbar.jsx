@@ -3,6 +3,7 @@ import "./Navbar.css";
 import { useState, useEffect } from "react";
 import menu from "../assets/menu.svg";
 import close from "../assets/close.svg";
+import logo from "/assets/logo_transparent.png";
 import { navLinks } from "../constants";
 
 const NavItems = () => {
@@ -44,11 +45,9 @@ const Navbar = () => {
 
     return (
         <header className='fixed top-0 left-0 right-0 z-40'>
-            <div className='header-navbar bg-transparent'>
+            <div className='header-navbar glass-light-no-border'>
                 <div className='flex justify-between items-center py-5 mx-auto c-space'>
-                    <a href='/' className='font-bold text-3xl gradient-text'>
-                        H A R D CORE
-                    </a>
+                    <img src={logo} alt='logo' className='w-14 h-14' />
                     <label className='toggle-theme'>
                         <input
                             className='input'
@@ -75,9 +74,8 @@ const Navbar = () => {
                 </div>
             </div>
             <div
-                className={`nav-sidebar ${
-                    isOpen ? "max-h-screen" : "max-h-0"
-                }`}>
+                className={`nav-sidebar ${isOpen ? "max-h-screen" : "max-h-0"
+                    }`}>
                 <nav className='p-5'>
                     <NavItems />
                 </nav>

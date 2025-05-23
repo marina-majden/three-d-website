@@ -24,14 +24,14 @@ const Hero = () => {
             positionX: { value: 0, min: -30, max: 30, step: 1 },
             positionY: { value: 0, min: -30, max: 30, step: 1 },
             positionZ: { value: 0, min: -30, max: 30, step: 1 },
-            rotationX: { value: 0.1, min: -5, max: 5, step: 0.05 },
+            rotationX: { value: 0, min: -0.15, max: 0.75, step: 0.05 },
             rotationY: {
                 value: -0.1,
                 min: -0.6,
-                max: 0.9,
+                max: 0.6,
                 step: 0.1,
             },
-            rotationZ: { value: 0, min: -5, max: 5, step: 0.05 },
+
             visible: true,
         };
     }, []);
@@ -42,21 +42,26 @@ const Hero = () => {
         <section
             className='min-h-screen w-full flex flex-col relative'
             id='home'>
-            <div className='w-full mx-auto flex flex-col sm:mt-36 mt-20 c-space gap-3'>
-                <p className='sm:text-xl text-6xl font-outfit text-left text-text font-extrabold'>
-                    minimalism is dead <span className='waving-hand'>💀</span>
-                </p>
-                <p className='hero_tag'>
-                    <span className='gradient-text font-outfit text-left'>
-                        {" "}
-                        very mure{" "}
-                    </span>
+            <div className='w-full mx-auto flex flex-col justify-between sm:mt-36 mt-20 c-space gap-3'>
+                <div>
+                    <p className='sm:text-xl text-6xl font-outfit text-left text-text font-extrabold'>
+                        minimalism is dead <span className='waving-hand'>💀</span>
+                    </p>
+                </div>
+                <div>
+                    <p className='hero_tag'>
+                        <span className='gradient-text font-outfit text-left'>
+                            {" "}
+                            very mure{" "}
+                        </span>
 
-                    <span className=' hero_tag gradient-text-2 font-outfit font-extrabold text-left'>
-                        very opscure
-                    </span>
+                        <span className=' hero_tag gradient-text-2 font-outfit font-extrabold text-left'>
+                            very opscure
+                        </span>
 
-                </p>
+                    </p>
+                </div>
+
             </div>
 
             <div className='w-full h-full absolute inset-0'>
@@ -66,11 +71,17 @@ const Hero = () => {
                         <PerspectiveCamera makeDefault position={[0, 0, 30]} />
                         <HeroCamera isMobile={isMobile}>
                             <Statue
+                                scale={sizes.statueScale}
+                                position={sizes.statuePosition}
+                                rotation={[cont.rotationX, cont.rotationY, 0]}
+                                visible={cont.visible}
+                            />
+                            {/* <Statue
                                 scale={1.35}
                                 position={[4, -3.5, 0]}
                                 rotation={[0, cont.rotationY, 0]}
                                 visible={cont.visible}
-                            />
+                            /> */}
                         </HeroCamera>
                         <ambientLight intensity={1} />
                         <directionalLight

@@ -9,7 +9,7 @@ import Footer from "./sections/Footer";
 const App = () => {
     return (
         <>
-            <Navbar />
+            {/* <Navbar /> */}
             <main className='main-space mx-auto'>
                 <Hero />
                 <About />
