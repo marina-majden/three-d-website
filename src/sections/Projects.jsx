@@ -1,9 +1,6 @@
 import React, { Suspense, useState } from "react";
 import { myProjects } from "../constants/index";
-import { Canvas } from "@react-three/fiber";
-import { Center, OrbitControls } from "@react-three/drei";
-import CanvasLoader from "../components/CanvasLoader";
-import ComputerScreen from "../components/ComputerScreen";
+
 
 const projectCount = myProjects.length;
 
@@ -105,7 +102,7 @@ const Projects = () => {
                         ) : (
                             <img
                                 src={currentProject.images[0].path}
-                                alt={currentProject.images[0].name}
+                                alt={currentProject.name}
                                 className="h-full object-contain rounded-md"
                             />
                         )}

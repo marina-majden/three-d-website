@@ -53,60 +53,7 @@ export const clientReviews = [
 ];
 
 export const myProjects = [
-    {
-        title: "Song Finder — Music Discovery Web App",
-        desc: "Developed a responsive, user-centric web application leveraging core technologies (HTML5, CSS3, JavaScript) to empower users in exploring music effortlessly. Integrated with the iTunes API to enable real-time searches for tracks, artists, and albums, delivering instant results including song previews, high-quality artwork, and metadata. Features dynamic DOM manipulation for seamless content updates, error handling for robust user feedback, and a clean interface optimized for usability. Demonstrates proficiency in RESTful API integration, asynchronous JavaScript (Fetch API), and modern front-end development practices.",
-        subdesc:
-            "One of my first projects made in basic web technologies; HTML, CSS and vanilla JS",
-        href: "https://https://song-finder-itunes.netlify.app/",
-        texture: "/textures/project/project1.mp4",
-        logo: "/assets/project-logo1.png",
-        logoStyle: {
-            backgroundColor: "#2A1816",
-            border: "0.2px solid #36201D",
-            boxShadow: "0px 0px 60px 0px #AA3C304D",
-        },
-        spotlight: "/assets/spotlight1.png",
-        tags: [
-            {
-                id: 1,
-                name: "HTML",
-                path: "/assets/html5.svg",
-            },
-            {
-                id: 2,
-                name: "CSS",
-                path: "/assets/css.svg",
-            },
-            {
-                id: 3,
-                name: "JavaScript",
-                path: "/assets/js.svg",
-            },
-            {
-                id: 4,
-                name: "Netlify",
-                path: "/assets/netlify.svg",
-            },
-        ],
-        images: [
-            {
-                id: 1,
-                name: "Song Finder Desktop",
-                path: "/assets/song-finder-pc.jpeg",
-            },
-            {
-                id: 2,
-                name: "Song Finder Mobile",
-                path: "/assets/song-finder-mobile.jpeg",
-            },
-            {
-                id: 3,
-                name: "Song Finder Tablet",
-                path: "/assets/song-finder-tablet.jpeg",
-            },
-        ],
-    },
+   
     {
         title: "Chat App",
         desc: "LiveDoc is a powerful collaborative app that elevates the capabilities of real-time document editing. As an enhanced version of Google Docs, It supports millions of collaborators simultaneously, ensuring that every change is captured instantly and accurately.",
@@ -146,26 +93,80 @@ export const myProjects = [
         images: [
             {
                 id: 1,
+                name: "Logo",
+                path: "/assets/chat-app-logo.png",
+            },
+            {
+                id: 2,
+                name: "Chat App Desktop",
+                path: "/assets/chatapp-desktop.jpg",
+            },
+            {
+                id: 3,
+                name: "Chat App Mobile",
+                path: "/assets/chatapp-mobile.jpg",
+            },
+        ],
+    },
+    {
+        title: "Song Finder — Music Discovery Web App",
+        desc: "Developed a responsive, user-centric web application leveraging core technologies (HTML5, CSS3, JavaScript) to empower users in exploring music effortlessly. Integrated with the iTunes API to enable real-time searches for tracks, artists, and albums, delivering instant results including song previews, high-quality artwork, and metadata. Features dynamic DOM manipulation for seamless content updates, error handling for robust user feedback, and a clean interface optimized for usability. Demonstrates proficiency in RESTful API integration, asynchronous JavaScript (Fetch API), and modern front-end development practices.",
+        subdesc:
+            "One of my first projects made in basic web technologies; HTML, CSS and vanilla JS",
+        href: "https://https://song-finder-itunes.netlify.app/",
+        texture: "/textures/project/project1.mp4",
+        logo: "/assets/project-logo1.png",
+        logoStyle: {
+            backgroundColor: "#2A1816",
+            border: "0.2px solid #36201D",
+            boxShadow: "0px 0px 60px 0px #AA3C304D",
+        },
+        spotlight: "/assets/spotlight1.png",
+        tags: [
+            {
+                id: 1,
+                name: "HTML",
+                path: "/assets/html5.svg",
+            },
+            {
+                id: 2,
+                name: "CSS",
+                path: "/assets/css.svg",
+            },
+            {
+                id: 3,
+                name: "JavaScript",
+                path: "/assets/js.svg",
+            },
+            {
+                id: 4,
+                name: "Netlify",
+                path: "/assets/netlify.svg",
+            },
+        ],
+        images: [
+            {
+                id: 1,
+                name: "Song Finder Icon",
+                path: "/assets/songfinder-logo.png",
+            },
+            {
+                id: 2,
                 name: "Song Finder Desktop",
                 path: "/assets/song-finder-pc.jpeg",
             },
             {
-                id: 2,
+                id: 3,
                 name: "Song Finder Mobile",
                 path: "/assets/song-finder-mobile.jpeg",
-            },
-            {
-                id: 3,
-                name: "Song Finder Tablet",
-                path: "/assets/song-finder-tablet.jpeg",
             },
         ],
     },
     {
         title: "Quizzy",
-        desc: "Developed a dynamic single-page quiz application using React Vite, featuring state-driven question flow, real-time answer validation, and score tracking. Implements modern React patterns including hooks (useState, useRef) for state management and DOM interaction. Demonstrates clean component architecture with zero external dependencies. Deployed via Netlify for seamless CI/CD integration.",
+        desc: "Developed a dynamic single-page quiz application using React Vite, featuring state-driven question flow, real-time answer validation, and score tracking. Implements modern React patterns including hooks (useState, useRef) for state management and DOM interaction. Demonstrates clean component architecture with zero external dependencies. Deployed via GitHub Pages.",
         subdesc: "Cute quizz that tests your general knowledge!",
-        href: "https://song-finder-itunes.netlify.app/",
+        href: "https://marina-majden.github.io/quizzy/",
         texture: "/textures/project/project3.mp4",
         logo: "/assets/project-logo3.png",
         logoStyle: {
@@ -201,13 +202,13 @@ export const myProjects = [
         images: [
             {
                 id: 1,
-                name: "Song Finder Desktop",
-                path: "/assets/song-finder-pc.jpeg",
+                name: "Logo",
+                path: "/assets/quiz-app-blur.png",
             },
             {
                 id: 2,
-                name: "Song Finder Mobile",
-                path: "/assets/song-finder-mobile.jpeg",
+                name: "quizzy desktop",
+                path: "/assets/quizgame-interface.jpg",
             },
             {
                 id: 3,
@@ -254,18 +255,18 @@ export const myProjects = [
         images: [
             {
                 id: 1,
-                name: "Song Finder Desktop",
-                path: "/assets/song-finder-pc.jpeg",
+                name: "Logo",
+                path: "/assets/logo-white.png",
             },
             {
                 id: 2,
-                name: "Song Finder Mobile",
-                path: "/assets/song-finder-mobile.jpeg",
+                name: "QotD desktop",
+                path: "/assets/quote-interface.jpg",
             },
             {
                 id: 3,
-                name: "Song Finder Tablet",
-                path: "/assets/song-finder-tablet.jpeg",
+                name: "Quote Mobile",
+                path: "/assets/squote-interface-mobile.png",
             },
         ],
     },
