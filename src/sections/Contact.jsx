@@ -2,8 +2,6 @@ import emailjs from '@emailjs/browser';
 import React, { useRef, useState } from 'react';
 import useAlert from '../hooks/useAlert.js';
 import Alert from '../components/Alert.jsx';
-import terminal from '../assets/terminal.png';
-import terminalLight from '../assets/terminal-light.png';
 
 const Contact = () => {
   const formRef = useRef();
@@ -11,8 +9,6 @@ const Contact = () => {
   const { alert, showAlert, hideAlert } = useAlert();
   const [loading, setLoading] = useState(false);
   const [form, setForm] = useState({ name: '', email: '', message: '' });
-
-  const isLightMode = document.documentElement.dataset.theme === 'light';
 
 
   const handleChange = ({ target: { name, value } }) => {
@@ -72,9 +68,9 @@ const Contact = () => {
       {alert.show && <Alert {...alert} />}
 
       <div className="relative min-h-screen flex items-center justify-center flex-col">
-        <img src={isLightMode ? terminalLight : terminal} alt="terminal-bg" className="absolute min-h-screen bg-background" />
 
-        <div className="contact-container">
+
+        <div className="contact-container rounded-2xl p-8 sm:p-12 lg:p-16">
           <h3 className="head-text">Let's talk</h3>
           <p className="text-lg mt-3">
             Whether you’re looking to build a new website, improve your existing platform, or bring a unique project to

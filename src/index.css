@@ -20,18 +20,13 @@
   --color-primary: #6fe7dd;
   --color-secondary: #3490de;
   --color-accent: #6639a6;
+  
+  
   --text: #102221;
   --background: #f7fdfd;
-  --primary: #6fe7dd;
-  --secondary: #3490de;
-  --accent: #6639a6;
 
-  --text: #f7f6fc;
-  --background: #0e0b1d;
-  --primary: #614bc3;
-  --secondary: #33bbc5;
-  --accent: #85e6c5;
-    
+
+
 
     --color-brand: rgb(84, 194, 176);
     --color-text:hsl(220, 4.80%, 20%);
@@ -57,6 +52,10 @@
 
     --image-background: background-image: linear-gradient(45deg, var(--color-brand-2), var(--color-brand-3), var(--color-brand-4));
     --image-terminal: url("/assets/terminal-light.png");
+
+    --color-primary:rgb(143, 236, 229);
+    --colorsecondary:rgb(124, 190, 247);
+    --color-accent:rgb(179, 133, 243);
 }
 
 html[data-theme="dark"] {
@@ -80,7 +79,10 @@ html[data-theme="dark"] {
 --glass-bg: rgba(17, 25, 40, 0.65);
 --glass-border: 1px solid  rgba(5, 83, 94, 0.46);
     --image-terminal: url("/assets/terminal.png");
-
+    
+    --color-secondary:rgb(1, 21, 22);
+    --color-accent:rgb(49, 5, 58);
+--color-primary:rgb(7, 12, 58);
     background-size: 400% 400%;
 	animation: gradient 20s ease infinite;
 }
@@ -98,9 +100,9 @@ html {
     accent-color: var(--color-brand);
     color: var(--color-text);
     background-color: var(--color-background-darker);
-/*     background-image: var(--image-background);
+/*     background-image: var(--image-background); 
     background-image: linear-gradient(-45deg, var(--color-brand-2-bg), var(--color-brand-3-bg), var(--color-brand-4-bg));
-	 */
+	*/
 	height: 100vh;
     font-family: var(--font-noto);
     font-weight: 400;
@@ -108,8 +110,8 @@ html {
     repeating-radial-gradient(#777676 0 0.0001%,#a9a7a7 0 0.0002%) 50% 0/2500px 2500px,
     repeating-conic-gradient(#838282 0 0.0001%,#c3c0c0 0 0.0002%) 60% 60%/2500px 2500px;
   background-blend-mode: screen; */
- /*  background: radial-gradient(at 20.851293103448278% 17.708333333333336%,var(--color-brand) 0px, transparent 50%), radial-gradient(at 59.752155172413794% 80%,var(--color-secondary) 0px, transparent 50%), radial-gradient(at 65.67887931034483% 31.25%,var(--color-accent) 0px, transparent 50%), radial-gradient(at 18.049568965517242% 71.04166666666667%,var(--color-primary) 0px, transparent 50%), var(--color-background-darker);
-    background-size: 100% 100%; */
+  background: radial-gradient(at 20.851293103448278% 17.708333333333336%,var(--color-primary) 0px, transparent 50%), radial-gradient(at 59.752155172413794% 80%,var(--color-secondary) 0px, transparent 50%), radial-gradient(at 65.67887931034483% 31.25%,var(--color-accent) 0px, transparent 50%), radial-gradient(at 18.049568965517242% 71.04166666666667%,var(--color-primary) 0px, transparent 50%), var(--color-background-darker);
+    background-size: 100% 100%;
 
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -290,11 +292,7 @@ html {
 
 @utility contact-container {
     /* contact section */
-    @apply max-w-xl relative z-10 sm:px-10 px-5 mt-12;
-}
-
-@utility terminal-image {
-    @apply bg-(image:--image-terminal) bg-no-repeat bg-cover bg-center;
+    @apply max-w-xl relative z-10 sm:px-10 px-5 mt-12 bg-background rounded-lg shadow-2xl;
 }
 
 @utility field-label {
@@ -302,7 +300,7 @@ html {
 }
 
 @utility field-input {
-    @apply w-full px-5 py-2 min-h-14 rounded-lg placeholder:text-text text-lg text-text shadow-2xl focus:outline-hidden;
+    @apply w-full px-5 py-2 min-h-14 rounded-lg bg-background-lighter placeholder:text-text text-lg text-text shadow-2xl focus:outline-hidden;
 }
 
 @utility field-btn {
