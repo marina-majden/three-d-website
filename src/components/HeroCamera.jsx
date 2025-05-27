@@ -6,16 +6,19 @@ const HeroCamera = ({ isMobile, children }) => {
     const group = useRef();
 
     useFrame((state, delta) => {
-        easing.damp3(state.camera.position, [0, 0, 10], 0.2, delta);
+        easing.damp3(state.camera.position, [0, 0, 11], 0.2, delta);
 
-        if (!isMobile) {
-            easing.dampE(
-                group.current.rotation,
-                [-state.pointer.y / 1.8, state.pointer.x / 6, 0],
-                0.25,
-                delta
-            );
-        }
+        /*   if (!isMobile) {
+              easing.dampE(
+                  group.current.rotation,
+                  [0, -state.pointer.x / 3, 0],
+                  0.25,
+                  delta
+              );
+          }
+   */
+
+
     });
 
     return <group ref={group}>{children}</group>;

@@ -3,7 +3,8 @@ import "./Navbar.css";
 import { useState, useEffect } from "react";
 import menu from "../assets/menu.svg";
 import close from "../assets/close.svg";
-import logo from "/assets/logo-white.png";
+import logo from "../assets/logo.svg";
+import logoDark from "../assets/logo-dark.svg";
 import { navLinks } from "../constants";
 
 const NavItems = () => {
@@ -42,12 +43,17 @@ const Navbar = () => {
     const toggleTheme = () => {
         setThemeMode((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
     };
+    // toggle logo image based on the theme mode; logo.svg is the light mode logo and logo-dark.svg is the dark mode logo
+
+    const logoSrc = themeMode === "dark" ? logoDark : logo;
+
+
 
     return (
         <header className='fixed top-0 left-0 right-0 z-40'>
             <div className='header-navbar glass-light-no-border'>
                 <div className='flex justify-between items-center py-5 mx-auto c-space'>
-                    <img src={logo} alt='logo' className='w-14 h-14' />
+                    <img src={logoSrc} alt='logo' className='w-14 h-14' />
                     <label className='toggle-theme'>
                         <input
                             className='input'
