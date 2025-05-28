@@ -100,8 +100,9 @@ const About = () => {
                     <div className="grid-container glass-light">
                         <img src="/assets/grid3.png" alt="grid-3" className="w-full sm:h-[266px] h-fit object-contain" />
                         <div>
-                            <p className="grid-headtext">My passion for coding</p>
-                            <p className="grid-subtext">I love solving problems and creating by coding</p>
+                            <p className="grid-headtext">Marina Majdenić</p>
+                            <p className="grid-subtext">I'm a front-end and web developer with a strong focus on building responsive, dynamic interfaces using React. I also have experience connecting front-end applications with various back-end technologies to create seamless, full-featured web solutions. Whether you're looking for a freelancer for your next project or a developer to join your team, I'm open to both opportunities.
+                                Let’s build something great together — feel free to reach out!</p>
                         </div>
                     </div>
                 </div>

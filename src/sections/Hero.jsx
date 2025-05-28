@@ -54,19 +54,19 @@ const Hero = () => {
                         minimalism is dead <span className='waving-hand'>💀</span>
                     </p>
                 </div>
-                <div>
-                    <p className='gradient-text'>
+                <div className='z-50'>
+                    <p className='gradient-text headlines'>
                         very mure
                     </p>
 
-                    <p className='gradient-text-2'>
+                    <p className='gradient-text-2 headlines'>
                         very opscure
                     </p>
                 </div>
             </div>
 
             <div className='w-full h-full absolute inset-0'>
-                <Canvas className='w-full h-full'>
+                <Canvas className='w-full h-full z-40'>
 
                     <Suspense fallback={<CanvasLoader />}>
                         <PerspectiveCamera makeDefault position={[0, 0, 30]} />
@@ -76,7 +76,6 @@ const Hero = () => {
                                 position={sizes.statuePosition}
                             />
                             <Leva hidden />
-
                         </HeroCamera>
                         <ambientLight intensity={1} />
                         <directionalLight

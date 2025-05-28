@@ -23,31 +23,21 @@ const TechStackCircle = () => {
     ];
 
     return (
-        <div className="h-full w-full mx-auto"> {/* Increased container size */}
-            <div className="relative  w-full h-full inset-0 mx-auto p-0 m-0">
+        <div className="h-full w-full mx-auto">
+            <div className=" w-full h-full inset-0 mx-auto p-0 m-0 flex flex-row flex-wrap justify-around items-center align-middle">
                 {icons.map((icon, index) => {
-                    const angle = (360 / icons.length) * index;
-                    const transform = ` translate(${200}%, ${200}%)`;
 
                     return (
                         <div
                             key={index}
-                            className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
+                            className="flex justify-center items-center max-w-1/4 m-2"
                         >
-                            <div className=" rounded-full h-12 w-12"
-                                style={{
-                                    transform: `rotate(${angle}deg) translateX(8rem) rotate(-${angle}deg)`,
-                                    transformOrigin: 'center center',
+                            <img
+                                src={icon.Component}
+                                alt={icon.name}
+                                className="w-12 md:w-14 lg:w-16 h-16 object-contain"
+                            />
 
-                                }}
-                            >
-                                <img
-                                    src={icon.Component}
-                                    alt={icon.name}
-                                    className="w-12 h-12 object-contain"
-
-                                />
-                            </div>
                         </div>
                     );
                 })}

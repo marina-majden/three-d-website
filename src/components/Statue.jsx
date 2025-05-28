@@ -6,58 +6,11 @@ import { easing } from 'maath'
 import { useControls } from 'leva'
 
 
-function Statue(props) {
+function Statue({ ...props }) {
     const group = useRef()
     const { nodes, materials, animations } = useGLTF('/models/scene.gltf')
     const { actions } = useAnimations(animations, group)
     const haloRef = useRef()
-
-    useEffect(() => {
-        if (haloRef.current) {
-            haloRef.current.rotation.z = 0.01
-            const animateHalo = () => {
-                haloRef.current.rotation.z += 0.01 // Adjust the speed of rotation here
-                requestAnimationFrame(animateHalo)
-            }
-            animateHalo()
-
-        }
-    }, [])
-
-    // Rotate the whole model left-right on user mouse interaction
-    useEffect(() => {
-        if (!props.isMobile) {
-            const handleMouseMove = (event) => {
-                {
-                    const x = event.clientX / window.innerWidth - 0.5; // Normalize to [-0.5, 0.5]
-                    group.current.rotation.y = x * Math.PI; // Rotate based on mouse position and on touch and hold on mobile devices
-                    group.current.rotation.x = 0; // Keep the x rotation fixed
-                }
-            };
-            window.addEventListener('mousemove', handleMouseMove);
-            return () => {
-                window.removeEventListener('mousemove', handleMouseMove);
-            };
-        }
-        else {
-            const handleTouchMove = (event) => {
-                if (event.touches && event.touches.length > 0) {
-                    const y = event.touches[0].clientY / window.innerHeight - 0.5; // Normalize to [-0.5, 0.5]
-                    group.current.rotation.y = x * Math.PI; // Rotate based on touch position
-                    group.current.rotation.x = 0; // Keep the x rotation fixed
-                }
-            };
-            window.addEventListener('touchstart', handleTouchMove);
-            window.addEventListener('touchend', () => {
-                group.current.rotation.y = 0; // Reset rotation on touch end
-            });
-            window.addEventListener('touchcancel', () => {
-                group.current.rotation.y = 0; // Reset rotation on touch cancel
-            });
-
-        }
-
-    }, [])
 
     useFrame((state, delta) => {
         easing.damp3(state.camera.position, [0, 0, 11], 0.2, delta);
@@ -71,6 +24,67 @@ function Statue(props) {
         }
 
     });
+    useEffect(() => {
+        if (haloRef.current) {
+            haloRef.current.rotation.z = 0.01
+            const animateHalo = () => {
+                haloRef.current.rotation.z += 0.01 // Adjust the speed of rotation here
+                requestAnimationFrame(animateHalo)
+            }
+            animateHalo()
+
+        }
+    }, [])
+
+    // Rotate the whole model left-right on user mouse interaction
+    if (!props.isMobile) {
+        useEffect(() => {
+
+            const handleMouseMove = (event) => {
+                {
+                    const x = event.clientX / window.innerWidth - 0.5; // Normalize to [-0.5, 0.5]
+                    group.current.rotation.y = -x * Math.PI; // Rotate based on mouse position and on touch and hold on mobile devices
+                    group.current.rotation.x = 0; // Keep the x rotation fixed
+                }
+            };
+            window.addEventListener('mousemove', handleMouseMove);
+            return () => {
+                window.removeEventListener('mousemove', handleMouseMove);
+            };
+        }, [])
+    }
+    else if (props.isMobile) {
+        useEffect(() => {
+
+            const handleMouseMove = (event) => {
+                {
+                    const x = event.clientX / window.innerWidth - 0.5; // Normalize to [-0.5, 0.5]
+                    group.current.rotation.y = x * Math.PI; // Rotate based on mouse position and on touch and hold on mobile devices
+                    group.current.rotation.x = 0; // Keep the x rotation fixed
+                }
+            };
+            window.addEventListener('mousemove', handleMouseMove);
+            return () => {
+                window.removeEventListener('mousemove', handleMouseMove);
+            };
+        }, [])
+        /*  const [direction, setDirection] = useState(1);
+ 
+         useFrame(() => {
+             if (group.current) {
+                 group.current.rotation.y += 0.002 * direction;
+                 if (group.current.rotation.y > 0.5) {
+                     group.current.rotation.y = 0.5;
+                     setDirection(-1);
+                 } else if (group.current.rotation.y < -0.5) {
+                     group.current.rotation.y = -0.5;
+                     setDirection(1);
+                 }
+             }
+         })
+  */
+    }
+
 
     return (
         <group ref={group} {...props} dispose={null}>

@@ -89,9 +89,6 @@ html {
     accent-color: var(--color-brand);
     color: var(--color-text);
     background-color: var(--color-background-darker);
-/*     background-image: var(--image-background); 
-    background-image: linear-gradient(-45deg, var(--color-brand-2-bg), var(--color-brand-3-bg), var(--color-brand-4-bg));
-	*/
 	height: 100vh;
     font-family: var(--font-body);
     font-weight: 400;
@@ -99,12 +96,10 @@ html {
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    animation: b 10s ease infinite;
+    /* animation: b 10s ease infinite; */
 }
 .bg-color {
-    
     background: radial-gradient(at 20.851293103448278% 17.708333333333336%, #2f1b41 0px, transparent 50%), radial-gradient(at 59.752155172413794% 80%, #872341 0px, transparent 50%), radial-gradient(at 65.67887931034483% 31.25%, #be3144 0px, transparent 50%), radial-gradient(at 18.049568965517242% 71.04166666666667%, #f05941 0px, transparent 50%), #2f1b41;
-    
 }
 .bg-noide {
      background: 
@@ -138,6 +133,49 @@ html {
     -webkit-backdrop-filter: blur(25px) saturate(161%);
     background-color: var(--glass-bg);
 }
+.headlines {
+    stroke-color:white; 
+    stroke-width: 0.5px;
+
+   
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color:var(--color-text); 
+
+    animation: textAnimate 5s infinite alternate;
+    -webkit-animation: textAnimateWebkit 5s infinite alternate;
+  
+}
+
+
+@-webkit-keyframes textAnimateWebkit {
+  0% {
+    -webkit-text-fill-color: hsl(189, 68%, 75%);
+    stroke-dasharray: 0 50%;
+    stroke-dashoffset:  20%;
+  }
+  100% {
+    -webkit-text-fill-color: hsla(189, 68%, 75%,0%);
+    stroke-dasharray: 50% 0;
+    stroke-dashoffset: -20%;
+  }
+}
+
+@keyframes textAnimate {
+  0% {
+    stroke-color: white;
+    stroke-width: 2px;
+    stroke-dasharray: 0 50%;
+    stroke-dashoffset:  20%;
+    fill:hsl(189, 68%, 75%);
+  }
+  100% {
+    stroke-dasharray: 50% 0;
+    stroke-dashoffset: -20%;
+    fill: hsla(189, 68%, 75%,00%);
+  }
+}
+
 
 @keyframes gradient {
 	0% {
@@ -163,10 +201,14 @@ html {
 }
 
 @utility main-space {
-    @apply mt-10 max-w-screen w-4/5 mx-auto;
+    @apply mt-10 max-w-screen mx-auto;
 }
 @utility c-space {
-    @apply sm:px-10 px-5;
+    @apply w-full md:w-3/4 lg:w-4/5 mx-auto px-4 md:px-10 ;
+}
+@utility hero_tag {
+    /* hero section */
+    @apply text-center xl:text-5xl md:text-4xl sm:text-3xl text-2xl font-black leading-normal!;
 }
 @utility head-text {
     @apply sm:text-3xl text-4xl text-left font-extrabold;
@@ -175,10 +217,10 @@ html {
     @apply text-3xl sm:text-4xl md:text-5xl text-text font-bold font-display;
 }
 @utility gradient-text {
-    @apply bg-gradient-to-r from-pink-700 via-purple-800 to-sky-700 font-extrabold text-transparent bg-clip-text text-5xl sm:text-6xl/normal md:text-7xl/relaxed font-accent sm:px-6;
+    @apply bg-transparent font-extrabold text-transparent bg-clip-text text-5xl sm:text-6xl/normal md:text-7xl/relaxed font-accent sm:px-6;
 }
 @utility gradient-text-2 {
-    @apply bg-gradient-to-r from-pink-800 via-indigo-700 to-sky-600 font-extrabold text-transparent bg-clip-text text-6xl sm:text-7xl/normal md:text-8xl/relaxed font-display sm:px-10;
+    @apply bg-transparent font-extrabold text-transparent bg-clip-text text-6xl sm:text-7xl/normal md:text-8xl/relaxed font-display sm:px-10;
 }
 
 @utility header-navbar {
@@ -214,14 +256,9 @@ html {
     @apply relative inline-flex rounded-full h-3 w-3 bg-brand;
 }
 
-@utility hero_tag {
-    /* hero section */
-    @apply text-center xl:text-5xl md:text-4xl sm:text-3xl text-2xl font-black leading-normal!;
-}
-
 @utility grid-container {
     /* about section */
-    @apply w-full h-full text-text rounded-lg sm:p-7 p-4 flex flex-col gap-5;
+    @apply h-full text-text rounded-lg sm:p-7 p-4 flex flex-col gap-5;
 }
 
 @utility grid-headtext {
@@ -243,44 +280,6 @@ html {
 
 @utility tech-logo {
     @apply w-12 h-12 rounded-md p-2 bg-grey backdrop-filter backdrop-blur-lg flex justify-center items-center;
-}
-
-@utility client-container {
-    /* clients section */
-    @apply grid md:grid-cols-2 grid-cols-1 gap-5 mt-12;
-}
-
-@utility client-review {
-    @apply rounded-lg md:p-10 p-5 col-span-1;
-}
-
-@utility client-content {
-    @apply flex lg:flex-row flex-col justify-between lg:items-center items-start gap-5 mt-7;
-}
-
-@utility work-container {
-    /*  work experience section */
-    @apply grid lg:grid-cols-3 grid-cols-1 gap-5 mt-12;
-}
-
-@utility work-canvas {
-    @apply col-span-1 rounded-lg border border-border;
-}
-
-@utility work-content {
-    @apply col-span-2 rounded-lg border border-border;
-}
-
-@utility work-content_container {
-    @apply grid grid-cols-[auto_1fr] items-start gap-5  transition-all ease-in-out duration-500 cursor-pointer  rounded-lg sm:px-5 px-2.5;
-}
-
-@utility work-content_logo {
-    @apply rounded-3xl w-16 h-16 p-2;
-}
-
-@utility work-content_bar {
-    @apply flex-1 w-0.5 mt-4 h-full  group-hover:bg-accent group-last:hidden;
 }
 
 @utility contact-container {
