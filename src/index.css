@@ -134,13 +134,13 @@ html {
     background-color: var(--glass-bg);
 }
 .headlines {
-    stroke-color:white; 
-    stroke-width: 0.5px;
+    stroke-color:pink; 
+    stroke-width: 2px;
 
    
     -webkit-text-fill-color: transparent;
-    -webkit-text-stroke-width: 0.5px;
-    -webkit-text-stroke-color:var(--color-text); 
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color:pink;
 
     animation: textAnimate 5s infinite alternate;
     -webkit-animation: textAnimateWebkit 5s infinite alternate;
@@ -150,7 +150,7 @@ html {
 
 @-webkit-keyframes textAnimateWebkit {
   0% {
-    -webkit-text-fill-color: hsl(189, 68%, 75%);
+    -webkit-text-fill-color: hsla(223, 49.40%, 15.50%, 0.80);
     stroke-dasharray: 0 50%;
     stroke-dashoffset:  20%;
   }
@@ -163,11 +163,9 @@ html {
 
 @keyframes textAnimate {
   0% {
-    stroke-color: white;
-    stroke-width: 2px;
     stroke-dasharray: 0 50%;
     stroke-dashoffset:  20%;
-    fill:hsl(189, 68%, 75%);
+    fill:hsla(223, 49.40%, 15.50%, 0.80);
   }
   100% {
     stroke-dasharray: 50% 0;
