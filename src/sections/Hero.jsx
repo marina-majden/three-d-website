@@ -2,18 +2,13 @@ import { Leva } from "leva";
 import React, { Suspense, useMemo } from "react";
 import { Canvas } from "@react-three/fiber";
 import { useMediaQuery } from "react-responsive";
-import { OrbitControls, PerspectiveCamera } from "@react-three/drei";
+import { PerspectiveCamera } from "@react-three/drei";
 import { useControls } from "leva";
 import Button from "../components/Button.jsx";
 import CanvasLoader from "../components/CanvasLoader.jsx";
 import HeroCamera from "../components/HeroCamera.jsx";
 import { calculateSizes } from "../constants/index.js";
 import Statue from "../components/Statue.jsx";
-import { useFrame } from '@react-three/fiber'
-import { easing } from 'maath'
-
-
-
 
 
 const Hero = () => {
@@ -50,12 +45,12 @@ const Hero = () => {
             id='home'>
             <div className='w-full mx-auto h-max min-h-[600px] flex flex-col justify-between items-start c-space gap-4'>
                 <div className='self-start mb-10'>
-                    <p className='hero-head'>
+                    <p className=' headlines hero-head'>
                         minimalism is dead <span className='waving-hand'>💀</span>
                     </p>
                 </div>
                 <div className='z-50'>
-                    <p className='gradient-text headlines'>
+                    <p className='headlines gradient-text'>
                         very mure
                     </p>
 
@@ -80,9 +75,14 @@ const Hero = () => {
                         <ambientLight intensity={1} />
                         <directionalLight
                             position={[10, 10, 10]}
-                            intensity={0.5}
+                            intensity={0.8}
                         />
-
+                        {/*  <hemisphereLight
+                            intensity={1}
+                            groundColor='white'
+                            position={[10, 20, 10]}
+                        />
+ */}
                     </Suspense>
                 </Canvas>
             </div>

@@ -2,7 +2,7 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <footer className="c-space pt-7 pb-3 bg-text-dark flex justify-between items-center flex-wrap gap-5">
+    <footer className="w-full pt-7 pb-3 px-4 bg-text-dark flex justify-between items-center flex-wrap gap-5">
       <div className="flex gap-2">
         <p>Terms & Conditions</p>
         <p>|</p>

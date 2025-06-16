@@ -7,15 +7,14 @@
 
 @theme {
     --font-body: General Sans, sans-serif;
-    --font-display: display, sans-serif;
+    --font-display: 'Display', sans-serif;
     --font-accent: Comfortaa, sans-serif;
- 
-   
-    --text: #f7fdfd;
-  --background: #102221;
-  --color-primary: #6fe7dd;
-  --color-secondary: #3490de;
-  --color-accent: #6639a6;
+
+    --color-primary: #6fe7dd;
+    --color-secondary: #3490de;
+    --color-accent: #6639a6;
+    --color-pink:rgb(194, 25, 118);
+
   
   --text: #102221;
   --background: #f7fdfd;
@@ -37,47 +36,59 @@
     --color-border-dark:hsla(227, 42.90%, 73.90%, 0.85);
     --color-background: hsl(210, 61.30%, 87.80%);
     --color-background-lighter: hsl(210, 30%, 93%);
-    --color-background-darker: hsl(208, 34.90%, 91.60%);
+    --color-background-darker: hsl(208, 91.50%, 90.80%);
 
     --glass-bg: rgba(255, 255, 255, 0.27);
     --glass-border: 1px solid rgba(131, 234, 248, 0.43);
 
-    --image-background: background-image: linear-gradient(45deg, var(--color-brand-2), var(--color-brand-3), var(--color-brand-4));
-
     --color-primary:rgb(143, 236, 229);
-    --colorsecondary:rgb(124, 190, 247);
+    --color-secondary:rgb(124, 190, 247);
     --color-accent:rgb(179, 133, 243);
-}
-
-html[data-theme="dark"] {
-
-    --color-text: rgb(189, 201, 204);
-    --color-text-mild: rgb(211, 214, 219);
-    --color-text-dark: hsla(240, 12.50%, 9.40%, 0.57);
-    --color-grey: hsl(227, 5%, 29%);
-    --color-heading: rgb(229, 223, 250);
-    --color-brand-2: hsl(263, 25%, 9%);
-    --color-brand-3: hsl(210, 55%, 7%);
-    --color-brand-4: hsl(247, 30%, 9%);
-    --color-brand-2-bg: hsl(269, 65.90%, 8.00%);
-    --color-brand-3-bg: hsl(200, 100.00%, 0.60%);
-    --color-brand-4-bg: hsl(248, 71.40%, 8.20%);
-    --color-border: hsl(247, 30%, 35%);
-    --color-border-dark: hsla(183, 80.40%, 18.00%, 0.45);
-    --color-background: hsl(203, 18.20%, 8.60%);
-    --color-background-lighter: hsl(210, 5%, 18%);
-    --color-background-darker: hsl(210, 5%, 6%);
---glass-bg: rgba(17, 25, 40, 0.5);
---glass-border: 1px solid  rgba(5, 83, 94, 0.46);
     
-    --color-secondary:rgb(1, 21, 22);
-    --color-accent:rgb(49, 5, 58);
---color-primary:rgb(7, 12, 58);
+    --color-primary:rgb(130, 199, 245);
+    --color-secondary:rgb(146, 153, 248);
+    --color-accent:rgb(248, 154, 243);
+    --color-primary-invert:hsl(204, 85.20%, 13.50%);
+--color-secondary-invert:hsl(236, 87.90%, 15.30%);
+--color-primary-invert: hsl(204, 85.20%, 13.50%);
+--color-secondary-invert: hsl(236, 87.90%, 15.30%);
+--color-accent-invert: hsl(303, 87.00%, 14.80%);
+html[data-theme="dark"] {
+--color-text: rgb(189, 201, 204);
+--color-text-mild: rgb(211, 214, 219);
+--color-text-dark: hsla(240, 12.5%, 9.4%, 0.57);
+--color-grey: hsl(227, 5%, 29%);
+--color-heading: rgb(229, 223, 250);
+--color-brand-2: hsl(263, 25%, 9%);
+--color-brand-3: hsl(210, 55%, 7%);
+--color-brand-4: hsl(247, 30%, 9%);
+--color-brand-2-bg: hsl(269, 65.9%, 8%);
+--color-brand-3-bg: hsl(200, 100%, 0.6%);
+--color-brand-4-bg: hsl(248, 71.4%, 8.2%);
+--color-border: hsl(247, 30%, 35%);
+--color-border-dark: hsla(183, 80.4%, 18%, 0.45);
+--color-background: hsl(203, 18.2%, 8.6%);
+--color-background-lighter: hsl(210, 32.3%, 12.2%);
+--color-background-darker: hsl(210, 5%, 6%);
+--glass-bg: rgba(17, 25, 40, 0.5);
+--glass-border: 1px solid rgba(5, 83, 94, 0.46);
+
+--color-secondary: rgb(1, 21, 22);
+--color-accent: rgb(49, 5, 58);
+--color-primary: rgb(7, 12, 58);
+--color-primary: hsl(204, 85.2%, 13.5%);
+--color-secondary: hsl(236, 87.9%, 15.3%);
+--color-accent: hsl(303, 87%, 14.8%);
+--color-primary-invert: rgb(130, 199, 245);
+--color-secondary-invert: rgb(146, 153, 248);
+--color-primary-invert: rgb(130, 199, 245);
+--color-secondary-invert: rgb(146, 153, 248);
+--color-accent-invert: rgb(248, 154, 243);
 
 }
-
 * {
     scroll-behavior: smooth;
+    
 }
 *,
 ::before,
@@ -86,13 +97,13 @@ html[data-theme="dark"] {
 }
 html {
     color-scheme: light dark;
-    accent-color: var(--color-brand);
+    accent-color: var(--color-accent);
     color: var(--color-text);
     background-color: var(--color-background-darker);
 	height: 100vh;
     font-family: var(--font-body);
     font-weight: 400;
-    background: radial-gradient(at 20.851293103448278% 17.708333333333336%,var(--color-primary) 0px, transparent 20%), radial-gradient(at 59.752155172413794% 80%,var(--color-secondary) 0px, transparent 20%), radial-gradient(at 65.67887931034483% 31.25%, var(--color-accent) 0px, transparent 20%), radial-gradient(at 18.049568965517242% 71.04166666666667%,var(--color-primary) 0px, transparent 20%), var(--color-background-darker);
+    background: radial-gradient(at 20% 30%,var(--color-primary) 0px, transparent 60%), radial-gradient(at 60% 80%,var(--color-primary) 0px, transparent 60%), radial-gradient(at 55% 30%, var(--color-accent) 0px, transparent 80%), radial-gradient(at 10% 70%,var(--color-secondary) 0px, transparent 80%), var(--color-background-darker);
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -101,11 +112,11 @@ html {
 .bg-color {
     background: radial-gradient(at 20.851293103448278% 17.708333333333336%, #2f1b41 0px, transparent 50%), radial-gradient(at 59.752155172413794% 80%, #872341 0px, transparent 50%), radial-gradient(at 65.67887931034483% 31.25%, #be3144 0px, transparent 50%), radial-gradient(at 18.049568965517242% 71.04166666666667%, #f05941 0px, transparent 50%), #2f1b41;
 }
-.bg-noide {
+.bg-canvas {
      background: 
     repeating-radial-gradient(#777676 0 0.0001%,#a9a7a7 0 0.0002%) 50% 0/2500px 2500px,
     repeating-conic-gradient(#838282 0 0.0001%,#c3c0c0 0 0.0002%) 60% 60%/2500px 2500px;
-  background-blend-mode: screen; 
+  background-blend-mode: lighten; 
 }
 
 @keyframes b{
@@ -136,15 +147,9 @@ html {
 .headlines {
     stroke-color:pink; 
     stroke-width: 2px;
-
-   
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color:pink;
-
-    animation: textAnimate 5s infinite alternate;
-    -webkit-animation: textAnimateWebkit 5s infinite alternate;
-  
+    -webkit-text-stroke-color:var(--color-accent-invert);
 }
 
 
@@ -170,7 +175,7 @@ html {
   100% {
     stroke-dasharray: 50% 0;
     stroke-dashoffset: -20%;
-    fill: hsla(189, 68%, 75%,00%);
+    fill: hsla(189, 68%, 75%, 0%);
   }
 }
 
@@ -202,7 +207,7 @@ html {
     @apply mt-10 max-w-screen mx-auto;
 }
 @utility c-space {
-    @apply w-full md:w-3/4 lg:w-4/5 mx-auto px-4 md:px-10 ;
+    @apply w-full md:w-3/4 lg:w-4/5 mx-auto px-4 md:px-10;
 }
 @utility hero_tag {
     /* hero section */

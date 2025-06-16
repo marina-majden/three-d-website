@@ -98,7 +98,6 @@ const About = () => {
                 </div>
                 <div className="xl:col-span-2 xl:row-span-3 ">
                     <div className="grid-container glass-light">
-                        <img src="/assets/grid3.png" alt="grid-3" className="w-full sm:h-[266px] h-fit object-contain" />
                         <div>
                             <p className="grid-headtext">Marina Majdenić</p>
                             <p className="grid-subtext">I'm a front-end and web developer with a strong focus on building responsive, dynamic interfaces using React. I also have experience connecting front-end applications with various back-end technologies to create seamless, full-featured web solutions. Whether you're looking for a freelancer for your next project or a developer to join your team, I'm open to both opportunities.
@@ -115,7 +114,7 @@ const About = () => {
                             </a>
                             <div className="copy-container" onClick={handleCopy}>
                                 <img src={hasCopied ? 'assets/tick.svg' : 'assets/copy.svg'} alt="copy" />
-                                <p className="lg:text-2xl md:text-xl font-medium text-gray_gradient text-text">marina.majden@gmail.com</p>
+                                <p className="lg:text-2xl md:text-xl font-medium text-text">marina.majden@gmail.com</p>
                             </div>
                         </div>
                     </div>
