@@ -52,21 +52,21 @@ const Gallery = ({ images }) => {
             </div>
 
             {/* Thumbnails Row */}
-            <div className="flex gap-3 overflow-x-auto scrollbar-thin scrollbar-thumb-gray-400 pb-2">
+            <div className="flex gap-2 overflow-x-auto scrollbar-thin pb-2">
                 {images.map((img) => {
                     const isActive = img.path === selectedImage.path;
                     return (
                         <div
                             key={img.path}
-                            className={`flex-shrink-0 w-[100px] h-[70px] border-2 rounded-md cursor-pointer overflow-hidden transition-all duration-200 
-                ${isActive ? "border-blue-500 scale-105" : "border-transparent opacity-70 hover:opacity-100"}`}
+                            className="w-1/3"
                             onClick={() => setSelectedImage(img)}
                         >
                             <img
                                 src={img.path}
                                 alt={img.name}
                                 loading="lazy"
-                                className="w-full h-full object-cover"
+                                className={`object-contain border-1 rounded-md cursor-pointer overflow-hidden transition-all duration-200 
+                ${isActive ? "border-blue-500" : "border-transparent opacity-70 hover:opacity-100"}`}
                             />
                         </div>
                     );
