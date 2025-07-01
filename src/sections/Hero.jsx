@@ -50,11 +50,11 @@ const Hero = () => {
                     </p>
                 </div>
                 <div className='z-50'>
-                    <p className='headlines gradient-text'>
+                    <p className='hero-head headlines'>
                         very mure
                     </p>
 
-                    <p className='gradient-text-2 headlines'>
+                    <p className='hero-head headlines'>
                         very opscure
                     </p>
                 </div>
@@ -101,3 +101,4 @@ const Hero = () => {
 };
 
 export default Hero;
+
