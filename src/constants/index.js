@@ -25,9 +25,9 @@ export const myProjects = [
    
     {
         title: "Chat App",
-        desc: "LiveDoc is a powerful collaborative app that elevates the capabilities of real-time document editing. As an enhanced version of Google Docs, It supports millions of collaborators simultaneously, ensuring that every change is captured instantly and accurately.",
+        desc: "Developed a real-time chat application using React.js, TailwindCSS, and TypeScript, leveraging Liveblocks for real-time collaboration. The app features user authentication, message history, and a responsive design for seamless communication across devices. Deployed on Netlify.",
         subdesc:
-            "With LiveDoc, users can experience the future of collaboration, where multiple contributors work together in real time without any lag, by using Next.js and Liveblocks newest features.",
+            "A real-time chat application built with React.js, TailwindCSS, and TypeScript, utilizing Liveblocks for real-time collaboration.",
         href: "https://oldschool-chatroom.netlify.app",
         texture: "/textures/project/project2.mp4",
         logo: "/assets/project-logo2.png",
@@ -240,10 +240,10 @@ export const myProjects = [
         ],
     },
     {
-        title: "Imaginify - AI Photo Manipulation App",
-        desc: "Imaginify is a groundbreaking Software-as-a-Service application that empowers users to create stunning photo manipulations using AI technology. With features like AI-driven image editing, a payments system, and a credits-based model.",
+        title: "Chores for ADHDers",
+        desc: "Not so much task organization app, but a fun way to gamify your chores! You write the chores you need to do, assign them time blocks, and the app will spin the wheel in a wheel-of-fortune style, randomly selecting a chore for you to do next. Built with React.js, TailwindCSS, and TypeScript, this app is designed to help ADHDers stay focused and motivated.",
         subdesc:
-            "Built with Next.js 14, Cloudinary AI, Clerk, and Stripe, Imaginify combines cutting-edge technology with a user-centric approach. It can be turned into a side income or even a full-fledged business.",
+            "A fun way to gamify your chores! Spin the wheel and get a random chore to do next",
         href: "https://www.youtube.com/watch?v=Ahwoks_dawU",
         texture: "/textures/project/project5.mp4",
         logo: "/assets/project-logo5.png",

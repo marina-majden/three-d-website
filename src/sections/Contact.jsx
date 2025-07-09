@@ -1,15 +1,21 @@
-import emailjs from '@emailjs/browser';
 import React, { useRef, useState } from 'react';
-import useAlert from '../hooks/useAlert.js';
 import Alert from '../components/Alert.jsx';
 
 const Contact = () => {
   const formRef = useRef();
 
-  const { alert, showAlert, hideAlert } = useAlert();
   const [loading, setLoading] = useState(false);
   const [form, setForm] = useState({ name: '', email: '', message: '' });
 
+  const [alert, setAlert] = useState({ show: false, text: '', type: 'success' });
+
+  const showAlert = ({ text, type = 'success' }) => {
+    setAlert({ show: true, text, type });
+  };
+
+  const hideAlert = () => {
+    setAlert({ show: false, text: '', type: 'success' });
+  };
 
   const handleChange = ({ target: { name, value } }) => {
     setForm({ ...form, [name]: value });
@@ -25,42 +31,30 @@ const Contact = () => {
         import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
         {
           from_name: form.name,
-          to_name: 'Marina',
+          to_name: 'Marina Majdenić',
           from_email: form.email,
-          to_email: 'marina.majden@gmail.com',
+          to_email: 'mila.mashinica@gmail.com',
           message: form.message,
         },
-        import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY,
+        import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
       )
-      .then(
-        () => {
-          setLoading(false);
-          showAlert({
-            show: true,
-            text: 'Thank you for your message 😃',
-            type: 'success',
-          });
+      .then(() => {
+        setLoading(false);
+        showAlert({ text: 'Thank you for your message!', type: 'success' });
 
-          setTimeout(() => {
-            hideAlert(false);
-            setForm({
-              name: '',
-              email: '',
-              message: '',
-            });
-          }, [3000]);
-        },
-        (error) => {
-          setLoading(false);
-          console.error(error);
+        setTimeout(() => {
+          hideAlert();
+          setForm({ name: '', email: '', message: '' });
+        }, 3000);
+      })
+      .catch((error) => {
+        setLoading(false);
+        console.error(error);
 
-          showAlert({
-            show: true,
-            text: "I didn't receive your message 😢",
-            type: 'danger',
-          });
-        },
-      );
+        showAlert({ text: "The message was not sent.", type: 'danger' });
+      });
+    console.log('alert:', alert);
+
   };
 
   return (
@@ -73,8 +67,8 @@ const Contact = () => {
         <div className="contact-container rounded-2xl p-8 sm:p-12 lg:p-16">
           <h3 className="head-text">Let's talk</h3>
           <p className="text-lg mt-3">
-            Whether you’re looking to build a new website, improve your existing platform, or bring a unique project to
-            life, I’m here to help.
+            Whether you’re looking to build a new website, bring a unique project to
+            life, or you need another member in your team, I’m here to help.
           </p>
 
           <form ref={formRef} onSubmit={handleSubmit} className="mt-12 flex flex-col space-y-7">
@@ -113,7 +107,7 @@ const Contact = () => {
                 required
                 rows={5}
                 className="field-input"
-                placeholder="Share your thoughts or inquiries..."
+                placeholder="ex., Wow, your portfolio is amazing! You are hired!"
               />
             </label>
 
