@@ -61,9 +61,7 @@ const Contact = () => {
     <section className="c-space my-20" id="contact">
       {alert.show && <Alert {...alert} />}
 
-      <div className="relative min-h-screen flex items-center justify-center flex-col">
-
-
+      <div className="flex items-center justify-center flex-col">
         <div className="contact-container rounded-2xl p-8 sm:p-12 lg:p-16">
           <h3 className="head-text">Let's talk</h3>
           <p className="text-lg mt-3">

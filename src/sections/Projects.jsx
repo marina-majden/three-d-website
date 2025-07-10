@@ -65,9 +65,9 @@ const Projects = () => {
     return (
         <section ref={containerRef} className="c-space my-20">
             <p className="head-text gradient-text">My work and PROJECTS</p>
-            <div className="grid lg:grid-cols-2 grid-cols-1 mt-12 gap-10">
+            <div className="grid lg:max-h-screen lg:h-[70vh] lg:grid-cols-2 grid-cols-1 mt-12 gap-0 lg:gap-10 md:glass-light-no-border  sm:glass-light-no-border">
                 {/* LEFT PANEL */}
-                <div className="flex flex-col justify-between gap-6 relative sm:p-10 py-10 px-5 rounded-md shadow-md glass-light-no-border">
+                <div className="h-full flex flex-col justify-between gap-6 relative sm:p-10 py-10 px-5 rounded-md shadow-md lg:glass-light-no-border">
                     <div className="absolute top-0 right-0 opacity-10 pointer-events-none">
                         <img
                             src={currentProject.spotlight}
@@ -87,11 +87,12 @@ const Projects = () => {
                     </div>
 
                     <div className="flex flex-col gap-4 my-4 z-10">
-                        <p className="text-2xl font-semibold animatedText gradient-text">
+                        <p className="text-2xl font-semibold animatedText">
                             {currentProject.title}
                         </p>
-                        <p className="animatedText">{currentProject.desc}</p>
                         <p className="animatedText">{currentProject.subdesc}</p>
+                        <p className="animatedText object-contain max-h-[300px]">{currentProject.desc}</p>
+
                     </div>
 
                     <div className="flex items-center justify-between flex-wrap gap-4 z-10">
