@@ -36,7 +36,6 @@ export const myProjects = [
             border: "0.2px solid #17293E",
             boxShadow: "0px 0px 60px 0px #2F6DB54D",
         },
-        spotlight: "/assets/spotlight2.png",
         tags: [
             {
                 id: 1,
@@ -62,7 +61,7 @@ export const myProjects = [
         images:
             {
                 name: "Chat App",
-                path: "/assets/chatapp-desktop.jpg",
+                path: "/assets/chatapp-desktop.webp",
             },
     },
     {
@@ -78,7 +77,6 @@ export const myProjects = [
             border: "0.2px solid #36201D",
             boxShadow: "0px 0px 60px 0px #AA3C304D",
         },
-        spotlight: "/assets/spotlight1.png",
         tags: [
             {
                 id: 1,
@@ -104,7 +102,7 @@ export const myProjects = [
           images:
             {
             name: "Song Finder Desktop",
-                     path: "/assets/song-finder-pc.jpeg",
+                     path: "/assets/song-finder-pc.webp",
             },
     
     },
@@ -122,7 +120,6 @@ export const myProjects = [
             border: "0.2px solid rgba(208, 213, 221, 1)",
             boxShadow: "0px 0px 60px 0px rgba(35, 131, 96, 0.3)",
         },
-        spotlight: "/assets/spotlight3.png",
         tags: [
             {
                 id: 1,
@@ -143,7 +140,7 @@ export const myProjects = [
         images: 
             {
                 name: "quizzy desktop",
-                path: "/assets/quizgame-interface.jpg",
+                path: "/assets/quizgame-interface.webp",
             },
     },
     {
@@ -158,12 +155,11 @@ export const myProjects = [
             border: "0.2px solid #0E2D58",
             boxShadow: "0px 0px 60px 0px #2F67B64D",
         },
-        spotlight: "/assets/spotlight4.png",
         tags: [
             {
                 id: 1,
                 name: "HTML",
-                path: "/assets/html.svg",
+                path: "/assets/html5.svg",
             },
             {
                 id: 2,
@@ -189,7 +185,7 @@ export const myProjects = [
         images: 
             {
                 name: "QotD desktop",
-                path: "/assets/quote-interface.jpg",
+                path: "/assets/quote-interface.webp",
             },
     },
     /* {
