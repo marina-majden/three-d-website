@@ -9,27 +9,31 @@
   --font-display: 'Display', sans-serif;
   --font-accent: Comfortaa, sans-serif;
   
+--color-brand: #067ca0ff;
+
   --color-text: #102221;
   --color-text-mild: #494b52;
-  --color-heading: #626773;
+  --color-heading: #202736ff;
+  --color-heading-2:rgba(31, 38, 63, 1);
   --color-border: hsl(228, 82.4%, 80.2%);
-  --color-background: hsl(210, 61.3%, 87.8%);
-  --color-background-darker: hsl(208, 91.5%, 90.8%);
-  
+  --color-background: hsl(210, 62.50%, 84.30%);
+  --color-background-darker: hsla(199, 69%, 85%, 1.00);
+  --color-background-lighter: hsl(209, 54.20%, 88.70%);
   --color-primary: rgb(130, 199, 245);
-  --color-secondary: rgb(146, 153, 248);
-  --color-accent: rgb(248, 154, 243);
+  --color-secondary: hsla(236, 88%, 77%, 1.00);
+  --color-accent: #fc7ef5ff;
   
   --glass-bg: rgba(255, 255, 255, 0.27);
+    --glass-bg-navbar: rgba(255, 255, 255, 0.03);
   --glass-border: 1px solid rgba(131, 234, 248, 0.43);
 }
 html {
     accent-color: var(--color-accent);
     color: var(--color-text);
-    background: radial-gradient(at 20% 30%, var(--color-primary) 0px, transparent 60%), 
-                radial-gradient(at 60% 80%, var(--color-primary) 0px, transparent 60%), 
-                radial-gradient(at 55% 30%, var(--color-accent) 0px, transparent 80%), 
-                radial-gradient(at 10% 70%, var(--color-secondary) 0px, transparent 80%), 
+    background: radial-gradient(at 20% 30%, var(--color-primary) 0px, transparent 70%), 
+                radial-gradient(at 85% 80%, var(--color-secondary) 0px, transparent 40%), 
+                radial-gradient(at 65% 30%, var(--color-brand) 0px, transparent 50%), 
+                radial-gradient(at 10% 70%, var(--color-accent) 0px, transparent 60%), 
                 var(--color-background-darker);
     background-size: 100% 100%;
     background-repeat: no-repeat;
@@ -42,17 +46,19 @@ html {
 html[data-theme="dark"] {
   --color-text: rgb(189, 201, 204);
   --color-text-mild: rgb(211, 214, 219);
-  --color-heading: rgb(229, 223, 250);
+  --color-heading: hsla(221, 30%, 48%, 1.00);
+  --color-heading-2:hsla(228, 28%, 61%, 1.00);
   --color-border: hsl(247, 30%, 35%);
-  --color-background: hsl(203, 18.2%, 8.6%);
+  --color-background: hsl(203, 69.20%, 5.10%);
   --color-background-darker: hsl(210, 5%, 6%);
-  
+  --color-background-lighter: hsl(203, 69%, 8%);
   --color-primary: hsl(204, 85.2%, 13.5%);
   --color-secondary: hsl(236, 87.9%, 15.3%);
-  --color-accent: hsl(303, 87%, 14.8%);
+   --color-accent: hsla(288, 78%, 21%, 1.00);
   
   --glass-bg: rgba(17, 25, 40, 0.5);
-  --glass-border: 1px solid rgba(5, 83, 94, 0.46);
+  --glass-bg-navbar: rgba(7, 24, 56, 0.1);
+  --glass-border: 1px solid rgba(7, 65, 73, 0.46);
 }
 
 * {
@@ -82,30 +88,24 @@ html[data-theme="dark"] {
     @apply w-full md:w-4/5 lg:w-3/4 mx-auto px-4 md:px-10;
 }
 
-@utility hero_tag {
-    @apply text-center xl:text-5xl md:text-4xl sm:text-3xl text-2xl font-black leading-normal;
-}
-
-@utility head-text {
-    @apply sm:text-3xl text-4xl text-left font-extrabold;
-}
-
 @utility hero-head {
-    @apply text-3xl sm:text-4xl md:text-5xl font-bold font-display;
+    @apply text-4xl md:text-5xl lg:text-7xl font-bold font-display text-heading mt-8;
 }
 
+@utility headline {
+    @apply text-5xl lg:text-8xl font-extrabold font-accent text-heading-2;
+}
+@utility headline-2 {
+    @apply text-7xl lg:text-9xl font-extrabold font-accent text-heading;
+
+}
 @utility gradient-text {
-    @apply bg-transparent font-extrabold text-transparent bg-clip-text text-5xl sm:text-6xl md:text-7xl font-accent sm:px-6;
+    @apply bg-transparent font-extrabold text-transparent bg-clip-text font-accent;
+     background: linear-gradient(to bottom right, #06a0a2, #694ad9);
 }
 
 @utility gradient-text-2 {
-    @apply bg-transparent font-extrabold text-transparent bg-clip-text text-6xl sm:text-7xl md:text-8xl font-display sm:px-10;
-}
-
-@utility header-navbar {
-    @apply w-screen border-0;
-    font-family: var(--font-accent);
-    color: var(--color-text);
+    @apply bg-transparent font-extrabold text-transparent bg-clip-text font-display;
 }
 
 @utility nav-ul {
@@ -114,12 +114,10 @@ html[data-theme="dark"] {
 
 @utility nav-li {
     @apply max-sm:w-full max-sm:rounded-md py-2 max-sm:px-5;
-    font-family: var(--font-display);
-    font-weight: 600;
 }
 
 @utility nav-li_a {
-    @apply text-2xl sm:text-lg md:text-xl tracking-wide transition-colors duration-200;
+    @apply sm:text-lg md:text-2xl tracking-wide transition-colors duration-200 font-accent font-black lowercase cursor-pointer hover:scale-[1.01] active:scale-[0.97];
     background: linear-gradient(to bottom right, #06a0a2, #694ad9);
     -webkit-background-clip: text;
     background-clip: text;
@@ -127,36 +125,32 @@ html[data-theme="dark"] {
 }
 
 @utility nav-sidebar {
-    @apply absolute left-0 right-0 backdrop-blur-xs transition-all duration-300 ease-in-out overflow-hidden z-20 mx-auto sm:hidden block;
-    font-family: var(--font-accent);
+    @apply absolute h-screen left-0 right-0 backdrop-blur-2xl transition-all duration-300 ease-in-out overflow-hidden z-20 mx-auto sm:hidden block text-right text-2xl;
 }
 
 @utility btn {
-    @apply flex items-center justify-center gap-2 cursor-pointer p-3 rounded-md transition-all hover:scale-[1.01] active:scale-[0.97] text-gray-200 mx-auto;
-    background: linear-gradient(to right, #06a0a2, #694ad9);
+    @apply flex items-center justify-center gap-2 cursor-pointer py-3 px-8 rounded-md hover:scale-[1.01] active:scale-[0.97] transition-all shadow-xl mx-auto text-blue-200;
+    background: linear-gradient(to right, #067ca0, #7439acff);
 }
 
 @utility btn-ping {
-    @apply animate-ping absolute inline-flex h-full w-full rounded-full opacity-75;
-    background-color: var(--color-accent);
+    @apply animate-ping absolute inline-flex h-full w-full rounded-full opacity-75 bg-white;
 }
 
 @utility btn-ping_dot {
-    @apply relative inline-flex rounded-full h-3 w-3;
-    background-color: var(--color-brand);
+    @apply relative inline-flex rounded-full h-3 w-3 bg-accent;
 }
 
 @utility grid-container {
-    @apply h-full text-text rounded-lg p-4 sm:p-7 flex flex-col gap-5;
+    @apply h-full text-text rounded-lg p-4 sm:p-7 flex flex-col gap-5 mx-auto;
 }
 
 @utility grid-headtext {
-    @apply text-xl font-semibold mb-2 gradient-text;
+    @apply text-xl font-semibold mb-2 text-text;
 }
 
 @utility grid-subtext {
-    @apply text-base;
-    color: var(--color-text-mild);
+    @apply text-base text-text-mild;
 }
 
 @utility copy-container {
@@ -164,36 +158,27 @@ html[data-theme="dark"] {
 }
 
 @utility arrow-btn {
-    @apply cursor-pointer hover:scale-[1.01] active:scale-95 transition-all p-5 rounded-full;
-    background: linear-gradient(to right, #06a0a2, #694ad9);
+ 
+    @apply cursor-pointer hover:scale-[1.01] active:scale-95 transition-all p-5 rounded-full flex justify-center items-center;
+  background: linear-gradient(to right, #069fa2d3, #694ad9);
 }
 
 @utility tech-logo {
-    @apply w-12 h-12 rounded-md p-2 flex justify-center items-center;
-    background-color: var(--color-grey);
-    backdrop-filter: blur(12px);
+    @apply w-12 h-12 rounded-md p-2 flex justify-center items-center hover:scale-[1.01] active:scale-95 transition-all duration-200;
+  
 }
 
 @utility contact-container {
-    @apply max-w-xl sm:px-10 px-5 mt-12 rounded-lg shadow-2xl;
-    background-color: var(--color-background);
+    @apply max-w-2xl sm:px-10 px-5 mt-12 rounded-lg shadow-2xl;
 }
 
 @utility field-label {
-    @apply text-lg;
-    color: var(--color-text);
+    @apply text-lg text-text;
+
 }
 
 @utility field-input {
-    @apply w-full px-5 py-2 min-h-14 rounded-lg text-lg shadow-xl focus:outline-none;
-    background-color: var(--color-background-lighter);
-    color: var(--color-text);
-}
-
-@utility field-btn {
-    @apply px-5 py-2 min-h-12 rounded-lg shadow-2xl flex justify-center items-center text-lg gap-3;
-    background-color: var(--color-background-darker);
-    color: var(--color-text);
+    @apply w-full px-5 py-2 min-h-14 rounded-lg text-lg shadow-xl focus:outline-none text-text bg-background;
 }
 
 @utility field-btn_arrow {
@@ -206,9 +191,14 @@ html[data-theme="dark"] {
 }
 
 /* Component Styles */
+.button {
+    @apply px-6 py-3 rounded-md text-lg font-semibold text-text;
+    background: linear-gradient(to right, var(--color-primary), var(--color-secondary));
+    transition: transform 0.2s ease-in-out;
+}
 .glass-light {
-    backdrop-filter: blur(25px) saturate(161%);
-    -webkit-backdrop-filter: blur(25px) saturate(161%);
+    backdrop-filter: blur(25px) saturate(100%);
+    -webkit-backdrop-filter: blur(25px) saturate(100%);
     background-color: var(--glass-bg);
     border-radius: 12px;
     border: var(--glass-border);
@@ -219,10 +209,15 @@ html[data-theme="dark"] {
     -webkit-backdrop-filter: blur(25px) saturate(161%);
     background-color: var(--glass-bg);
 }
+.glass-light-navbar {
+    background-color: var(--glass-bg-navbar);
+    backdrop-filter: blur(40px);
+    -webkit-backdrop-filter: blur(40px);
+}
 
-.headlines {
+.headline-stroke {
     -webkit-text-fill-color: transparent;
-    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-width: 3px;
     -webkit-text-stroke-color: var(--color-accent-invert);
 }
 .noise {

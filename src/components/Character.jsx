@@ -23,7 +23,7 @@ const Character = () => {
     }, []);
 
     return (
-        <div className="character-container mx-auto">
+        <div className="px-0 py-8 mx-auto">
             <div className="character">
                 <div className="profile">
                     <div className="group">
@@ -50,11 +50,11 @@ const Character = () => {
                         <div className="body"></div>
                     </div>
                 </div>
-                <div className="character-bubble desktop text-text">
-                    Hover over me to change my features!
+                <div className="character-bubble hidden md:block text-brand text-2xl text-center font-body mt-6">
+                    Hover me!
                 </div>
-                <div className="character-bubble mobile text-text">
-                    Tap me to change my features!
+                <div className="character-bubble md:hidden text-brand text-2xl text-center font-body mt-4">
+                    Tap me!
                 </div>
             </div>
         </div>

@@ -1,27 +1,40 @@
-import React from 'react'
+import React, { useState } from 'react';
+import PrivacyPolicy from '../components/PrivacyPolicy';
 
 const Footer = () => {
+  const [showPolicy, setShowPolicy] = useState(false);
+
   return (
-    <footer className="w-full pt-7 pb-3 px-4 bg-text-dark glass-light-no-border flex justify-between items-center flex-wrap gap-5">
-      <div className="flex gap-2">
-        <p>Terms & Conditions</p>
-        <p>|</p>
-        <p>Privacy Policy</p>
-      </div>
-
+    <footer className="w-full py-8 px-4 bg-text-dark glass-light-no-border flex flex-col justify-center items-center lg:flex-row lg:justify-between lg:items-center gap-5">
       <div className="flex gap-3">
-        <div className="social-icon">
-          <img src="/assets/github.svg" alt="github" className="w-1/2 h-1/2" />
-        </div>
-        <div className="social-icon">
-          <img src="/assets/twitter.svg" alt="twitter" className="w-1/2 h-1/2" />
-        </div>
-        <div className="social-icon">
-          <img src="/assets/instagram.svg" alt="instagram" className="w-1/2 h-1/2" />
-        </div>
+
+        <a className="social-icon" href="http://www.github.com/marina-majden" target="_blank" rel="noopener noreferrer" aria-label="Link to my Github page">
+          <img src="/assets/github.svg" alt="github" className="w-1/2 h-1/2" /></a>
+
+        <a className="social-icon" href="http://marina.majden.github.io" target="_blank" rel="noopener noreferrer" aria-label='Link to my portfolio'>
+          <img src="/assets/logo.svg" alt="website" className="w-1/2 h-1/2" />
+        </a>
+        <a className="social-icon" href="http://hr.linkedin.com/in/marina-majden" target="_blank" rel="noopener noreferrer" aria-label="Link to my LinkedIn profile">
+          <img src="/assets/linkedin.svg" alt="ilinkedin" className="w-1/2 h-1/2" />
+        </a>
       </div>
 
-      <p className="font-stretch-expanded">Marina Majdenić 2025. All rights reserved.</p>
+      <div>
+        <p className="font-body text-md text-text">designed & developed by Marina Majdenić &copy; 2025</p>
+      </div>
+      <div>
+        <button
+          type="button"
+          onClick={() => setShowPolicy(true)}
+          className="text-text text-md font-body underline underline-offset-2 hover:text-text-mild hover:no-underline transition-colors duration-200 ease-in-out"
+          aria-label="Privacy Policy"
+        >
+          Privacy Policy
+        </button>
+        {showPolicy && <PrivacyPolicy onClose={() => setShowPolicy(false)} />}
+      </div>
+
+
 
     </footer>
   );

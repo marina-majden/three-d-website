@@ -58,12 +58,15 @@ const Contact = () => {
   };
 
   return (
-    <section className="c-space my-20" id="contact">
+    <section className="relative my-20" id="contact">
       {alert.show && <Alert {...alert} />}
+      <div className="hidden isolate md:inline-block absolute top-80 left-20">
+        <h2 className="headline-2 headline-stroke rotate-270">Let's talk!</h2>
+      </div>
+      <h2 className="headline-2 headline-stroke block md:hidden text-center">Let's talk!</h2>
+      <div className="c-space flex flex-col items-center justify-center">
+        <div className="contact-container glass-light rounded-2xl p-8 sm:p-12 lg:p-16">
 
-      <div className="flex items-center justify-center flex-col">
-        <div className="contact-container rounded-2xl p-8 sm:p-12 lg:p-16">
-          <h3 className="head-text">Let's talk</h3>
           <p className="text-lg mt-3">
             Whether you’re looking to build a new website, bring a unique project to
             life, or you need another member in your team, I’m here to help.
@@ -109,7 +112,7 @@ const Contact = () => {
               />
             </label>
 
-            <button className="field-btn" type="submit" disabled={loading}>
+            <button className="btn" type="submit" disabled={loading}>
               {loading ? 'Sending...' : 'Send Message'}
 
               <img src="/assets/arrow-up.png" alt="arrow-up" className="field-btn_arrow" />

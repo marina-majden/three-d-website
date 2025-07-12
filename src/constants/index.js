@@ -11,8 +11,8 @@ export const navLinks = [
     },
     {
         id: 3,
-        name: "Work",
-        href: "#work",
+        name: "Projects",
+        href: "#projects",
     },
     {
         id: 4,
@@ -24,13 +24,13 @@ export const navLinks = [
 export const myProjects = [
    
     {
-        title: "Chat App",
-        desc: "Developed a real-time chat application using React.js, TailwindCSS, and TypeScript, leveraging Liveblocks for real-time collaboration. The app features user authentication, message history, and a responsive design for seamless communication across devices. Deployed on Netlify.",
+        title: "ChatRoom App",
+        desc: "Developed a real-time chat application using React.js for real-time communication. The app features randomized username and avatar with each login for total privacy and a responsive design for seamless communication across devices.",
         subdesc:
-            "A real-time chat application built with React.js, TailwindCSS, and TypeScript, utilizing Liveblocks for real-time collaboration.",
+            "A real-time chat application supporting many users while protecting their anonimity",
         href: "https://oldschool-chatroom.netlify.app",
-        texture: "/textures/project/project2.mp4",
-        logo: "/assets/project-logo2.png",
+        hrefCode: "https://www.github.com/marina-majden",
+        logo: "/assets/chat-app-logo.png",
         logoStyle: {
             backgroundColor: "#13202F",
             border: "0.2px solid #17293E",
@@ -45,13 +45,13 @@ export const myProjects = [
             },
             {
                 id: 2,
-                name: "TailwindCSS",
-                path: "/assets/tailwindcss.png",
+                name: "API",
+                path: "/assets/api-svgrepo-com.svg",
             },
             {
                 id: 3,
-                name: "TypeScript",
-                path: "/assets/typescript.png",
+                name: "JavaScript",
+                path: "/assets/js.svg",
             },
             {
                 id: 4,
@@ -59,31 +59,19 @@ export const myProjects = [
                 path: "/assets/netlify.svg",
             },
         ],
-        images: [
+        images:
             {
-                id: 1,
-                name: "Logo",
-                path: "/assets/chat-app-logo.png",
-            },
-            {
-                id: 2,
-                name: "Chat App Desktop",
+                name: "Chat App",
                 path: "/assets/chatapp-desktop.jpg",
             },
-            {
-                id: 3,
-                name: "Chat App Mobile",
-                path: "/assets/chatapp-mobile.jpg",
-            },
-        ],
     },
     {
-        title: "Song Finder — Music Discovery Web App",
-        desc: "Developed a responsive, user-centric web application leveraging core technologies (HTML5, CSS3, JavaScript) to empower users in exploring music effortlessly. Integrated with the iTunes API to enable real-time searches for tracks, artists, and albums, delivering instant results including song previews, high-quality artwork, and metadata. Features dynamic DOM manipulation for seamless content updates, error handling for robust user feedback, and a clean interface optimized for usability. Demonstrates proficiency in RESTful API integration, asynchronous JavaScript (Fetch API), and modern front-end development practices.",
+        title: "Song Finder",
+        desc: "Web application leveraging core technologies (HTML5, CSS3, JavaScript) to enable users in exploring music effortlessly. Integrated with the iTunes API to enable real-time searches for tracks, artists, and albums, delivering instant results including song previews, artwork, and metadata. Utilized RESTful API integration, asynchronous JavaScript (Fetch API), and modern front-end development practices.",
         subdesc:
-            "One of my first projects made in basic web technologies; HTML, CSS and vanilla JS",
+            "find all the info on your favorite music numbers and artists",
         href: "https://https://song-finder-itunes.netlify.app/",
-        texture: "/textures/project/project1.mp4",
+        hrefCode: "https://www.github.com/marina-majden/song-finder",
         logo: "/assets/project-logo1.png",
         logoStyle: {
             backgroundColor: "#2A1816",
@@ -113,31 +101,20 @@ export const myProjects = [
                 path: "/assets/netlify.svg",
             },
         ],
-        images: [
+          images:
             {
-                id: 1,
-                name: "Song Finder Icon",
-                path: "/assets/songfinder-logo.png",
+            name: "Song Finder Desktop",
+                     path: "/assets/song-finder-pc.jpeg",
             },
-            {
-                id: 2,
-                name: "Song Finder Desktop",
-                path: "/assets/song-finder-pc.jpeg",
-            },
-            {
-                id: 3,
-                name: "Song Finder Mobile",
-                path: "/assets/song-finder-mobile.jpeg",
-            },
-        ],
+    
     },
     {
         title: "Quizzy",
-        desc: "Developed a dynamic single-page quiz application using React Vite, featuring state-driven question flow, real-time answer validation, and score tracking. Implements modern React patterns including hooks (useState, useRef) for state management and DOM interaction. Demonstrates clean component architecture with zero external dependencies. Deployed via GitHub Pages.",
+        desc: "A dynamic single-page quiz application using React Vite, featuring state-driven question flow, real-time answer validation, and score tracking. Implements modern React patterns including hooks (useState, useRef) for state management and DOM interaction. Demonstrates clean component architecture with zero external dependencies. Deployed via GitHub Pages.",
         subdesc: "Cute quizz that tests your general knowledge!",
         href: "https://marina-majden.github.io/quizzy/",
-        texture: "/textures/project/project3.mp4",
-        logo: "/assets/project-logo3.png",
+        hrefCode: "https://www.github.com/marina-majden/quizzy",
+        logo: "/assets/quiz-app-blur.png",
         logoStyle: {
             backgroundColor: "#60f5a1",
             background:
@@ -154,45 +131,28 @@ export const myProjects = [
             },
             {
                 id: 2,
-                name: "TailwindCSS",
-                path: "/assets/tailwindcss.png",
+                name: "React Vite",
+                path: "/assets/vite.svg",
             },
             {
                 id: 3,
-                name: "TypeScript",
-                path: "/assets/typescript.png",
-            },
-            {
-                id: 4,
-                name: "Framer Motion",
-                path: "/assets/framer.png",
+                name: "Github",
+                path: "/assets/github.svg",
             },
         ],
-        images: [
+        images: 
             {
-                id: 1,
-                name: "Logo",
-                path: "/assets/quiz-app-blur.png",
-            },
-            {
-                id: 2,
                 name: "quizzy desktop",
                 path: "/assets/quizgame-interface.jpg",
             },
-            {
-                id: 3,
-                name: "Song Finder Tablet",
-                path: "/assets/song-finder-tablet.jpeg",
-            },
-        ],
     },
     {
         title: "Quote of the Day",
-        desc: "Engineered a modern React application that delivers inspirational quotes through seamless API integration. Leveraged the Quotable API to fetch random quotes with author attribution, implementing clean state management and asynchronous data fetching. Features instant quote generation, error boundary handling, and a minimalist UI focused on content clarity. ",
-        subdesc: "Built with React, deployed with Netlify.",
+        desc: "A simple React application that delivers inspirational quotes through seamless API integration. Leveraged the Quotable API to fetch random quotes with author attribution, implementing clean state management and asynchronous data fetching. Features instant quote generation, error boundary handling, and a minimalist UI focused on content clarity. ",
+        subdesc: "Random quote to inspire you through the day",
         href: "https://cute-quote-today.netlify.app/",
-        texture: "/textures/project/project4.mp4",
-        logo: "/assets/project-logo4.png",
+        hrefCode: "https://www.github.com/marina-majden/quote-of-the-day",
+        logo: "/assets/logo-white.png",
         logoStyle: {
             backgroundColor: "#0E1F38",
             border: "0.2px solid #0E2D58",
@@ -202,44 +162,37 @@ export const myProjects = [
         tags: [
             {
                 id: 1,
-                name: "React.js",
-                path: "/assets/react.svg",
+                name: "HTML",
+                path: "/assets/html.svg",
             },
             {
                 id: 2,
-                name: "TailwindCSS",
-                path: "assets/tailwindcss.png",
+                name: "CSS",
+                path: "assets/css.svg",
             },
-            {
+                {
                 id: 3,
-                name: "REST API",
-                path: "/assets/typescript.png",
+                name: "JavaScript",
+                path: "assets/js.svg",
             },
             {
                 id: 4,
+                name: "REST API",
+                path: "/assets/rest-api-svgrepo-com.svg",
+            },
+            {
+                id: 5,
                 name: "Netlify",
                 path: "/assets/netlify.svg",
             },
         ],
-        images: [
+        images: 
             {
-                id: 1,
-                name: "Logo",
-                path: "/assets/logo-white.png",
-            },
-            {
-                id: 2,
                 name: "QotD desktop",
                 path: "/assets/quote-interface.jpg",
             },
-            {
-                id: 3,
-                name: "Quote Mobile",
-                path: "/assets/squote-interface-mobile.png",
-            },
-        ],
     },
-    {
+    /* {
         title: "Chores for ADHDers",
         desc: "Not so much task organization app, but a fun way to gamify your chores! You write the chores you need to do, assign them time blocks, and the app will spin the wheel in a wheel-of-fortune style, randomly selecting a chore for you to do next. Built with React.js, TailwindCSS, and TypeScript, this app is designed to help ADHDers stay focused and motivated.",
         subdesc:
@@ -292,7 +245,7 @@ export const myProjects = [
                 path: "/assets/song-finder-tablet.jpeg",
             },
         ],
-    },
+    }, */
 ];
 
 export const calculateSizes = (isSmall, isMobile, isTablet) => {

@@ -1,8 +1,12 @@
+
 .character {
   --skin: #f0beaf;
   --pinkish: #f6828c;
+  --orange: #d1c55cff;
   display: block;
   cursor: pointer;
+  padding: 0;
+  margin: 0 auto;
 }
 
 .character,
@@ -31,9 +35,8 @@
 .character {
   position: relative;
 
-  background: var(--blue);
-
-  margin: auto;
+margin: 0 auto;
+  background: var(--color-primary);
   width: 200px;
   height: 200px;
   border: 5px solid inherit;
@@ -49,9 +52,9 @@
   left: 100px;*/
   width: 200px;
   height: 200px;
-  border: 2px solid var(--teal);
+  border: 2px solid var(--color-brand);
   overflow: hidden;
-  background: var(--blue);
+  background: var(--color-primary);
   border-radius: 100%;
   -webkit-border-radius: 100%;
   -moz-border-radius: 100%;

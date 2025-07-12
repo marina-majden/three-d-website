@@ -41,27 +41,27 @@ const Hero = () => {
 
     return (
         <section
-            className='min-h-screen w-full flex flex-col mt-30 relative'
+            className='h-screen w-full flex flex-col justify-between relative top-0 left-0'
             id='home'>
-            <div className='w-full mx-auto h-max min-h-[600px] flex flex-col justify-between items-start c-space gap-4'>
-                <div className='self-start mb-10'>
-                    <p className=' headlines hero-head'>
+            <div className='w-full min-h-[600px] mx-auto flex flex-col sm:items-center lg:items-start justify-between sm:gap-96 lg:gap-60 mt-20 px-8 lg:px-20'>
+                <div className='self-start'>
+                    <p className='hero-head '>
                         minimalism is dead <span className='waving-hand'>💀</span>
                     </p>
                 </div>
-                <div className='z-50'>
-                    <p className='hero-head headlines'>
-                        very mure
+                <div className='z-30'>
+                    <p className='headline'>
+                        no more boring
                     </p>
 
-                    <p className='hero-head headlines'>
-                        very opscure
+                    <p className='headline-2 headline-stroke'>
+                        websites
                     </p>
                 </div>
             </div>
 
             <div className='w-full h-full absolute inset-0'>
-                <Canvas className='w-full h-full z-40'>
+                <Canvas className='w-full h-full mx-auto mt-4'>
 
                     <Suspense fallback={<CanvasLoader />}>
                         <PerspectiveCamera makeDefault position={[0, 0, 30]} />
@@ -87,12 +87,12 @@ const Hero = () => {
                 </Canvas>
             </div>
 
-            <div className='absolute bottom-7 left-0 right-0 w-full z-10 c-space'>
+            <div className='w-full z-10 absolute bottom-20'>
                 <a href='#about' className='w-fit'>
                     <Button
-                        name="Let's create something!"
+                        name="Let's start creating!"
                         isBeam
-                        containerClass='sm:w-fit w-full sm:min-w-96'
+                        containerClass='sm:w-fit px-12'
                     />
                 </a>
             </div>

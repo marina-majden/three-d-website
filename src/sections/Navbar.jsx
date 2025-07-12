@@ -45,40 +45,40 @@ const Navbar = () => {
     };
     // toggle logo image based on the theme mode; logo.svg is the light mode logo and logo-dark.svg is the dark mode logo
 
-    const logoSrc = themeMode === "dark" ? logoDark : logo;
+    const logoSrc = themeMode === "dark" ? logo : logo;
 
 
 
     return (
         <header className='fixed top-0 left-0 right-0 z-40'>
-            <div className='header-navbar glass-light-no-border'>
-                <div className='flex justify-between items-center py-5 mx-auto c-space'>
-                    <img src={logoSrc} alt='logo' className='w-14 h-14' />
-                    <label className='toggle-theme'>
-                        <input
-                            className='input'
-                            type='checkbox'
-                            onClick={toggleTheme}
-                            checked={themeMode === "dark"}
-                            readOnly
-                        />
-                        <span className='slider'></span>
-                    </label>
-                    <button
-                        onClick={toggleMenu}
-                        className='focus:outline-none sm:hidden flex'
-                        aria-label='Toggle menu'>
-                        <img
-                            src={isOpen ? close : menu}
-                            alt='toggle'
-                            className='w-6 h-6'
-                        />
-                    </button>
-                    <nav className='sm:flex hidden'>
-                        <NavItems />
-                    </nav>
-                </div>
+            <div className='w-full flex justify-between items-center py-2 px-6 glass-light-navbar'>
+                <img src={logoSrc} alt='logo' className='w-22 h-22' />
+                <label className='toggle-theme'>
+                    <input
+                        className='input'
+                        type='checkbox'
+                        aria-label='Toggle dark / light mode'
+                        onClick={toggleTheme}
+                        checked={themeMode === "dark"}
+                        readOnly
+                    />
+                    <span className='slider'></span>
+                </label>
+                <button
+                    onClick={toggleMenu}
+                    className='focus:outline-none sm:hidden flex'
+                    aria-label='Toggle menu'>
+                    <img
+                        src={isOpen ? close : menu}
+                        alt='toggle'
+                        className='w-10 h-10'
+                    />
+                </button>
+                <nav className='sm:flex hidden'>
+                    <NavItems />
+                </nav>
             </div>
+
             <div
                 className={`nav-sidebar ${isOpen ? "max-h-screen" : "max-h-0"
                     }`}>
