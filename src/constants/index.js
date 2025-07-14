@@ -228,7 +228,7 @@ export const calculateSizes = (isSmall, isMobile, isTablet) => {
         statuePosition: isSmall
         ? [0, -2, 0]
         : isMobile
-        ? [0, -2.8, 0]
+        ? [0, -2.5, 0]
         : isTablet
         ? [3, -3, 0]
         : [4, -3, 0],

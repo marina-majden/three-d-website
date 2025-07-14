@@ -1,20 +1,14 @@
 
 @font-face {
     font-family: 'Witches Friend Script';
-    font-style: normal;
-    font-weight: 400;
     src: local('Witches Friend Script'), url('https://fonts.cdnfonts.com/s/106653/WitchesFriendScript-gxeZ5.woff') format('woff');
 }
 @font-face {
     font-family: 'Black Side';
-    font-style: normal;
-    font-weight: 400;
     src: local('Black Side'), url('https://fonts.cdnfonts.com/s/107008/BlackSide-nRVKV.woff') format('woff');
 }
 @font-face {
     font-family: 'Comfortaa';
-    font-style: normal;
-    font-weight: 400;
     src: local('Comfortaa'), url('https://fonts.cdnfonts.com/s/20715/Comfortaa-Regular.woff') format('woff');
 }
 
@@ -61,6 +55,7 @@ html {
     font-family: var(--font-body);
     font-weight: normal;
     font-size: 1rem;
+    height: 100vh;
 }
 
 html[data-theme="dark"] {
@@ -112,10 +107,10 @@ html[data-theme="dark"] {
 }
 
 @utility headline {
-    @apply text-2xl sm:text-3xl md:text-5xl lg:text-7xl font-extrabold font-accent text-heading-2 text-right;
+    @apply text-3xl md:text-5xl lg:text-7xl font-extrabold font-accent text-heading-2 text-right md:text-left;
 }
 @utility headline-2 {
-    @apply text-2xl sm:text-3xl md:text-5xl lg:text-9xl font-extrabold font-accent text-heading text-right;
+    @apply text-3xl md:text-5xl lg:text-9xl font-extrabold font-accent text-heading text-right md:text-left;
 }
 @utility headline-section {
     @apply text-7xl lg:text-9xl font-extrabold font-accent text-heading px-4 text-left;
@@ -185,7 +180,7 @@ html[data-theme="dark"] {
 }
 
 @utility contact-container {
-    @apply max-w-3xl sm:px-10 px-5 mt-12 rounded-lg shadow-2xl;
+    @apply max-w-3xl px-5 mt-6 md:mt-12 rounded-lg shadow-2xl;
 }
 
 @utility field-label {

@@ -59,7 +59,7 @@ const Projects = () => {
     }, []);
 
     return (
-        <section ref={containerRef} className="c-space mt-10 md:mt-0" id="projects">
+        <section ref={containerRef} className="c-space mt-14 md:mt-0" id="projects">
             <h2 className="headline-section headline-stroke mb-10">projects</h2>
             <div className="md:hidden flex justify-center items-center gap-3 mt-12 mb-6">
                 {myProjects.map((project, index) => (
@@ -80,7 +80,7 @@ const Projects = () => {
             <div className="grid w-full h-screen lg:h-[70vh] grid-cols-1 lg:grid-cols-2  gap-0 lg:gap-10 ">
 
                 {/* LEFT PANEL */}
-                <div className="h-full md:h-[600px] flex flex-col justify-between gap-2 md:gap-6 sm:p-10 py-10 px-5 rounded-md shadow-md glass-light-no-border">
+                <div className="h-full md:h-[600px] flex flex-col justify-between gap-2 md:gap-4 sm:p-10 py-10 px-5 rounded-md shadow-md glass-light-no-border">
                     <div className="flex flex-row justify-between items-start">
                         <h3 className="text-3xl text-heading-2">
                             {currentProject.title}
