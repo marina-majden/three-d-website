@@ -24,18 +24,18 @@ const TechStackCircle = () => {
 
     return (
         <div className="h-full w-full mx-auto">
-            <div className=" w-full h-full inset-0 mx-auto p-0 m-0 flex flex-row flex-wrap justify-around items-center align-middle">
+            <div className=" w-full h-full inset-0 mx-auto p-0 m-0 flex flex-row flex-wrap justify-between items-center align-middle">
                 {icons.map((icon, index) => {
 
                     return (
                         <div
                             key={index}
-                            className="flex justify-center items-center max-w-1/4 m-2"
+                            className="flex justify-center items-center w-1/3 mb-6"
                         >
                             <img
                                 src={icon.Component}
                                 alt={icon.name}
-                                className="w-12 md:w-14 lg:w-16 h-16 object-contain"
+                                className="object-contain w-14 lg:w-16 h-16 hover:scale-105 hover:rotate-12 transition-all duration-300 ease-in-out"
                             />
 
                         </div>

@@ -1,6 +1,6 @@
-import React, { useRef, useState } from 'react';
-import Alert from '../components/Alert.jsx';
+import React, { useRef, useState, lazy } from 'react';
 
+const Alert = lazy(() => import('../components/Alert.jsx'));
 const Contact = () => {
   const formRef = useRef();
 
@@ -61,9 +61,9 @@ const Contact = () => {
     <section className="relative my-20" id="contact">
       {alert.show && <Alert {...alert} />}
       <div className="hidden isolate md:inline-block absolute top-80 left-20">
-        <h2 className="headline-2 headline-stroke rotate-270">Let's talk!</h2>
+        <h2 className="headline-section headline-stroke rotate-270">contact</h2>
       </div>
-      <h2 className="headline-2 headline-stroke block md:hidden text-center">Let's talk!</h2>
+      <h2 className="headline-section headline-stroke block md:hidden">contact</h2>
       <div className="c-space flex flex-col items-center justify-center">
         <div className="contact-container glass-light rounded-2xl p-8 sm:p-12 lg:p-16">
 

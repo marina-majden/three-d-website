@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import './Character.css';
+
 
 const Character = () => {
     const eyesRef = useRef([]);
@@ -50,11 +50,11 @@ const Character = () => {
                         <div className="body"></div>
                     </div>
                 </div>
-                <div className="character-bubble hidden md:block text-brand text-2xl text-center font-body mt-6">
+                <div className="character-bubble hidden md:block text-brand text-7xl text-center font-written mt-6">
                     Hover me!
                 </div>
-                <div className="character-bubble md:hidden text-brand text-2xl text-center font-body mt-4">
-                    Tap me!
+                <div className="character-bubble md:hidden text-brand text-5xl text-center font-written mt-4">
+                    Tap to change my features!
                 </div>
             </div>
         </div>

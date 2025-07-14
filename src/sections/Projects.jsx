@@ -1,10 +1,9 @@
 import React, { useState, useEffect, useRef } from "react";
-import { myProjects } from "../constants/index";
+import { myProjects } from "../constants/index.js";
 
 const Projects = () => {
     const [selectedProjectIndex, setSelectedProjectIndex] = useState(0);
     const currentProject = myProjects[selectedProjectIndex];
-    const [selectedImage, setSelectedImage] = useState(currentProject.images[0]);
 
     const containerRef = useRef(null);
     const touchStartX = useRef(null);
@@ -16,12 +15,10 @@ const Projects = () => {
                 direction === "previous"
                     ? (prevIndex - 1 + myProjects.length) % myProjects.length
                     : (prevIndex + 1) % myProjects.length;
-            setSelectedImage(myProjects[newIndex].images[0]); // reset main image
+
             return newIndex;
         });
     };
-
-    const handleImageClick = (image) => setSelectedImage(image);
 
     // Keyboard navigation
     useEffect(() => {
@@ -62,42 +59,49 @@ const Projects = () => {
     }, []);
 
     return (
-        <section ref={containerRef} className="c-space my-10" id="projects">
-            <h2 className="headline-2 headline-stroke">Some of my work</h2>
-            <div className="grid lg:max-h-screen lg:h-[70vh] lg:grid-cols-2 grid-cols-1 mt-12 gap-0 lg:gap-10 md:glass-light-no-border sm:glass-light-no-border">
+        <section ref={containerRef} className="c-space mt-10 md:mt-0" id="projects">
+            <h2 className="headline-section headline-stroke mb-10">projects</h2>
+            <div className="md:hidden flex justify-center items-center gap-3 mt-12 mb-6">
+                {myProjects.map((project, index) => (
+                    <button
+                        key={project.title}
+                        onClick={() => {
+                            setSelectedProjectIndex(index);
+
+                        }}
+                        className={`w-4 h-4 rounded-full transition-all duration-300 ${index === selectedProjectIndex
+                            ? 'bg-brand shadow-md scale-110'
+                            : 'bg-gray-300 hover:bg-brand/70'
+                            }`}
+                        aria-label={`Go to ${project.title}`}
+                    />
+                ))}
+            </div>
+            <div className="grid w-full h-screen lg:h-[70vh] grid-cols-1 lg:grid-cols-2  gap-0 lg:gap-10 ">
+
                 {/* LEFT PANEL */}
-                <div className="h-[600px] flex flex-col justify-between gap-6 relative sm:p-10 py-10 px-5 rounded-md shadow-md glass-light">
-                    <div className="absolute top-0 right-0 opacity-10 pointer-events-none">
-                        <img
-                            src={currentProject.spotlight}
-                            alt="spotlight"
-                            className="w-full h-96 object-cover rounded-xl"
-                        />
-                    </div>
-                    <div className="flex flex-row justify-between items-center">
-                        <h3 className="text-3xl font-semibold animatedText font-accent text-text">
+                <div className="h-full md:h-[600px] flex flex-col justify-between gap-2 md:gap-6 sm:p-10 py-10 px-5 rounded-md shadow-md glass-light-no-border">
+                    <div className="flex flex-row justify-between items-start">
+                        <h3 className="text-3xl text-heading-2">
                             {currentProject.title}
                         </h3>
-                        <div
-                            className="p-3 backdrop-filter backdrop-blur-3xl w-fit rounded-lg z-10 "
-                            style={currentProject.logoStyle}>
+                        {/*    <div
+                            className="tech-logo"
+                        >
                             <img
                                 src={currentProject.logo}
                                 alt="logo"
-                                className="w-10 h-10 shadow-sm"
+
                             />
-
                         </div>
+ */}
                     </div>
-
+                    <img src={currentProject.images.path} alt={currentProject.images.name} className="md:hidden mx-auto rounded-md shadow-md animate-fade-in transition-opacity duration-300 object-contain" />
 
                     <div className="flex flex-col gap-4 my-4 z-10">
-
-                        <p className="animatedText text-brand text-xl">{currentProject.subdesc}</p>
-                        <p className="animatedText max-h-300px overflow-y-hidden">{currentProject.desc}</p>
-
+                        <p className="text-brand text-xl">{currentProject.subdesc}</p>
+                        <p className="max-h-300px overflow-y-hidden">{currentProject.desc}</p>
                     </div>
-
                     <div className="w-full flex flex-col items-stretch justify-between gap-2 z-10">
                         <div className="flex items-start gap-3 flex-wrap">
                             {currentProject.tags.map((tag, index) => (
@@ -106,7 +110,7 @@ const Projects = () => {
                                 </div>
                             ))}
                         </div>
-                        <div className=" flex flex-row justify-evenly mt-8 z-10">
+                        <div className="flex flex-row justify-between mt-8 z-10">
                             <a
                                 className="btn"
                                 href={currentProject.href}
@@ -124,20 +128,15 @@ const Projects = () => {
                                 <img src="/assets/arrow-up.png" alt="arrow" width="18px" height="18px" />
                             </a>
                         </div>
-
                     </div>
-
-
                 </div>
-
                 {/* RIGHT PANEL */}
-                {/*  <Gallery key={currentProject.title} images={currentProject.images} /> */}
-                <div className="w-full h-full overflow-hidden">
-                    <img src={currentProject.images.path} alt={currentProject.title} className="glass-light rounded-md shadow-md w-full animate-fade-in transition-opacity duration-300 object-contain" />
+                <div className="hidden md:block w-full h-full overflow-hidden">
+                    <img src={currentProject.images.path} alt={currentProject.images.name} className="glass-light rounded-md shadow-md w-full animate-fade-in transition-opacity duration-300 object-contain" />
                 </div>
 
             </div>
-            <div className="w-3/4 px-2 mx-auto flex flex-row justify-between items-center z-30">
+            <div className="hidden md:flex w-3/4 px-2 mx-auto flex-row justify-between items-center z-30">
                 <button
                     className="arrow-btn"
                     onClick={() => handleNavigation("previous")}>
@@ -163,7 +162,7 @@ const Projects = () => {
                         key={project.title}
                         onClick={() => {
                             setSelectedProjectIndex(index);
-                            setSelectedImage(project.images[0]); // Reset selected image
+
                         }}
                         className={`w-4 h-4 rounded-full transition-all duration-300 ${index === selectedProjectIndex
                             ? 'bg-brand shadow-md scale-110'

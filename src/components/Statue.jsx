@@ -1,15 +1,12 @@
 
 import React, { useRef, useEffect } from 'react'
-import { useGLTF, useAnimations } from '@react-three/drei'
+import { useGLTF } from '@react-three/drei'
 import { useFrame } from '@react-three/fiber'
 import { easing } from 'maath'
-import { useControls } from 'leva'
-
 
 function Statue({ ...props }) {
     const group = useRef()
-    const { nodes, materials, animations } = useGLTF('/models/scene.gltf')
-    const { actions } = useAnimations(animations, group)
+    const { nodes, materials } = useGLTF('/models/scene.gltf')
     const haloRef = useRef()
 
     useFrame((state, delta) => {
@@ -56,33 +53,21 @@ function Statue({ ...props }) {
     else if (props.isMobile) {
         useEffect(() => {
 
-            const handleMouseMove = (event) => {
+            const handleTouchEvent = (event) => {
                 {
-                    const x = event.clientX / window.innerWidth - 0.5; // Normalize to [-0.5, 0.5]
-                    group.current.rotation.y = x * Math.PI; // Rotate based on mouse position and on touch and hold on mobile devices
+                    const touch = event.touches[0];
+                    const x = touch.clientX / window.innerWidth - 0.5; // Normalize to [-0.5, 0.5]
+                    group.current.rotation.y = -x * Math.PI; // Rotate based on touch position
                     group.current.rotation.x = 0; // Keep the x rotation fixed
                 }
+
             };
-            window.addEventListener('mousemove', handleMouseMove);
+
+            window.addEventListener('touchmove', handletouchEvent);
             return () => {
-                window.removeEventListener('mousemove', handleMouseMove);
+                window.removeEventListener('touchmove', handleTouchEvent);
             };
         }, [])
-        /*  const [direction, setDirection] = useState(1);
- 
-         useFrame(() => {
-             if (group.current) {
-                 group.current.rotation.y += 0.002 * direction;
-                 if (group.current.rotation.y > 0.5) {
-                     group.current.rotation.y = 0.5;
-                     setDirection(-1);
-                 } else if (group.current.rotation.y < -0.5) {
-                     group.current.rotation.y = -0.5;
-                     setDirection(1);
-                 }
-             }
-         })
-  */
     }
 
 

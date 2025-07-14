@@ -25,17 +25,12 @@ export const myProjects = [
    
     {
         title: "ChatRoom App",
-        desc: "Developed a real-time chat application using React.js for real-time communication. The app features randomized username and avatar with each login for total privacy and a responsive design for seamless communication across devices.",
+        desc: "A real-time chat application using React.js for real-time communication. The app features randomized username and avatar with each login for total privacy and a responsive design for seamless communication across devices. Utilizing Firebase for real-time data synchronization.",
         subdesc:
             "A real-time chat application supporting many users while protecting their anonimity",
         href: "https://oldschool-chatroom.netlify.app",
         hrefCode: "https://www.github.com/marina-majden",
         logo: "/assets/chat-app-logo.png",
-        logoStyle: {
-            backgroundColor: "#13202F",
-            border: "0.2px solid #17293E",
-            boxShadow: "0px 0px 60px 0px #2F6DB54D",
-        },
         tags: [
             {
                 id: 1,
@@ -49,8 +44,8 @@ export const myProjects = [
             },
             {
                 id: 3,
-                name: "JavaScript",
-                path: "/assets/js.svg",
+                name: "Firebase",
+                path: "/assets/firebase.svg",
             },
             {
                 id: 4,
@@ -68,15 +63,10 @@ export const myProjects = [
         title: "Song Finder",
         desc: "Web application leveraging core technologies (HTML5, CSS3, JavaScript) to enable users in exploring music effortlessly. Integrated with the iTunes API to enable real-time searches for tracks, artists, and albums, delivering instant results including song previews, artwork, and metadata. Utilized RESTful API integration, asynchronous JavaScript (Fetch API), and modern front-end development practices.",
         subdesc:
-            "find all the info on your favorite music numbers and artists",
+            "Find all the info on your favorite music numbers and artists",
         href: "https://https://song-finder-itunes.netlify.app/",
         hrefCode: "https://www.github.com/marina-majden/song-finder",
-        logo: "/assets/project-logo1.png",
-        logoStyle: {
-            backgroundColor: "#2A1816",
-            border: "0.2px solid #36201D",
-            boxShadow: "0px 0px 60px 0px #AA3C304D",
-        },
+        logo: "/assets/songfinder-logo.png",
         tags: [
             {
                 id: 1,
@@ -109,17 +99,10 @@ export const myProjects = [
     {
         title: "Quizzy",
         desc: "A dynamic single-page quiz application using React Vite, featuring state-driven question flow, real-time answer validation, and score tracking. Implements modern React patterns including hooks (useState, useRef) for state management and DOM interaction. Demonstrates clean component architecture with zero external dependencies. Deployed via GitHub Pages.",
-        subdesc: "Cute quizz that tests your general knowledge!",
+        subdesc: "Cute quiz that tests your general knowledge",
         href: "https://marina-majden.github.io/quizzy/",
         hrefCode: "https://www.github.com/marina-majden/quizzy",
         logo: "/assets/quiz-app-blur.png",
-        logoStyle: {
-            backgroundColor: "#60f5a1",
-            background:
-                "linear-gradient(0deg, #60F5A150, #60F5A150), linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, rgba(208, 213, 221, 0.8) 100%)",
-            border: "0.2px solid rgba(208, 213, 221, 1)",
-            boxShadow: "0px 0px 60px 0px rgba(35, 131, 96, 0.3)",
-        },
         tags: [
             {
                 id: 1,
@@ -150,11 +133,6 @@ export const myProjects = [
         href: "https://cute-quote-today.netlify.app/",
         hrefCode: "https://www.github.com/marina-majden/quote-of-the-day",
         logo: "/assets/logo-white.png",
-        logoStyle: {
-            backgroundColor: "#0E1F38",
-            border: "0.2px solid #0E2D58",
-            boxShadow: "0px 0px 60px 0px #2F67B64D",
-        },
         tags: [
             {
                 id: 1,
@@ -246,11 +224,11 @@ export const myProjects = [
 
 export const calculateSizes = (isSmall, isMobile, isTablet) => {
     return {
-        statueScale: isSmall ? 0.75 : isMobile ? 1 : 1.35,
+        statueScale: isSmall ? 1 : isMobile ? 1.2 : 1.35,
         statuePosition: isSmall
-        ? [0, -1, 0]
-        : isMobile
         ? [0, -2, 0]
+        : isMobile
+        ? [0, -2.8, 0]
         : isTablet
         ? [3, -3, 0]
         : [4, -3, 0],
