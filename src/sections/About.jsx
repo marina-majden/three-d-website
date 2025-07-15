@@ -36,26 +36,33 @@ const About = () => {
 
     return (
 
-        <section className="mt-10 relative" id="about">
-            <div className="hidden isolate md:inline-block absolute top-70 -left-40">
+        <section className="my-10 relative" id="about">
+            <div className="hidden md:inline-block absolute top-1/3 -left-50">
                 <h2 className="headline-section headline-stroke rotate-270">about me</h2>
             </div>
             <h2 className="headline-section headline-stroke block md:hidden mb-10">about</h2>
-            <div className="c-space grid xl:grid-cols-3 xl:grid-rows-5 md:grid-cols-2 grid-cols-1 gap-5 h-full  z-20">
+            <div className="c-space grid xl:grid-cols-3 xl:grid-rows-4 md:grid-cols-2 grid-cols-1 gap-5 h-full  z-20">
                 <div className="xl:col-span-2 xl:row-span-2">
                     <div className="grid-container glass-light">
                         <div>
-                            <p className="grid-headtext"> <span className="font-logo text-2xl text-text pr-4 ">TLDR:</span> <br />front-end / web-developer based in Croatia</p>
+                            <p className="grid-headtext"> <span className="font-logo tracking-wider text-2xl text-heading">TLDR:</span> <br />front-end / web-developer freelancer</p>
                             <br />
-                            <p className="grid-subtext">I am Marina Majdenić, a front-end and web developer with a strong focus on building responsive, dynamic interfaces using React. I also have experience connecting front-end applications with various back-end technologies to create seamless, full-featured web solutions. Whether you're looking for a freelancer for your next project or a developer to join your team, I'm open to both opportunities.</p>
+                            <p className="grid-subtext xl:px-10">I am Marina Majdenić, a front-end and web developer with a strong focus on building responsive, dynamic interfaces using React or classics like HTML/CSS/JS. I have experience connecting front-end applications with various back-end technologies to create seamless, full-featured web solutions. Whether you're looking for a freelancer for your next project or a developer to join your team, I'm open to both opportunities.</p>
                             <br />
-                            <p className="grid-subtext"> Let’s build something great together — feel free to reach out!</p>
+                            <p className="grid-headtext xl:px-6"> Let’s build something great together — feel free to reach out!</p>
                             <br />
                             <a href="#contact" className="btn w-1/2">Contact me</a>
                         </div>
                     </div>
                 </div>
 
+                <div className="col-span-1 xl:row-span-2">
+                    <div className="grid-container glass-light items-center justify-center align-middle">
+                        <Character />
+                        <p className="grid-subtext">I'm really stoked about the recent <b>CSS</b> glow-up; love how it can <b>bring websites to life</b> without consuming too much space and energy. Very mindful!</p>
+                    </div>
+
+                </div>
                 <div className="col-span-1 xl:row-span-2">
                     <div className="grid-container glass-light">
                         <div className="rounded-3xl w-full sm:h-[326px] h-fit flex justify-center items-center cursor-grab">
@@ -81,16 +88,8 @@ const About = () => {
                             />
                         </div>
                         <div>
-                            <p className="grid-headtext">Able to work remotely or on-site in Croatia</p>
-
-
+                            <p className="grid-headtext">I am based in Croatia, but available for remote work.</p>
                         </div>
-                    </div>
-                </div>
-                <div className="col-span-1 xl:row-span-2">
-                    <div className="grid-container glass-light items-center justify-center align-middle">
-                        <Character />
-                        <p className="grid-subtext">I'm really enjoying how CSS has been glowing up lately; love how it can make things interactive and animated!  </p>
                     </div>
 
                 </div>
@@ -107,7 +106,10 @@ const About = () => {
                         <div className="space-y-2">
                             <p className="grid-headtext">Currently obsessed with...</p>
                             <p className="grid-subtext">
-                                ...3D models, and finding ways to make them look good and perform great on the web. Three.js is a great tool for that.
+                                3D models, and finding ways to make them look good and perform great on the web. <b>Three.js</b> is a great tool and very helpful when dealing with React apps.
+                            </p>
+                            <p className="grid-subtext">
+                                If you're also interested in exploring <b>3D web development</b>, let's connect!
                             </p>
                         </div>
                     </div>

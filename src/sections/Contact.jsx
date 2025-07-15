@@ -58,13 +58,14 @@ const Contact = () => {
   };
 
   return (
-    <section className="relative my-20" id="contact">
+    <section className="my-20" id="contact">
       {alert.show && <Alert {...alert} />}
-      <div className="hidden isolate md:inline-block absolute top-80 left-10 xl:left-30">
-        <h2 className="headline-section headline-stroke rotate-270">contact</h2>
-      </div>
-      <h2 className="headline-section headline-stroke block md:hidden">contact</h2>
-      <div className="c-space flex flex-col items-center justify-center">
+
+      <h2 className="headline-section headline-stroke block text-center md:hidden">contact</h2>
+      <div className="c-space flex flex-col items-center justify-center relative ">
+        <div className="hidden md:block absolute top-1/3 -left-10 xl:-left-20">
+          <h2 className="headline-section headline-stroke rotate-270">contact</h2>
+        </div>
         <div className="contact-container glass-light rounded-2xl p-8 sm:p-12 lg:p-16">
 
           <p className="text-lg mt-3">
