@@ -1,5 +1,5 @@
 
-import React, { Suspense, useMemo } from "react";
+import React, { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
 import { useMediaQuery } from "react-responsive";
 import { PerspectiveCamera } from "@react-three/drei";
@@ -23,16 +23,16 @@ const Hero = () => {
             id='home'>
             <div className='w-full h-11/12 md:h-5/6 mt-8 md:mt-12 md:min-h-[600px] mx-auto flex flex-col justify-between px-2 md:px-4 lg:px-8 xl:px-20'>
                 <div className='self-start mx-2'>
-                    <h2 className='hero-head'>
+                    <h2 className='hero-head stroke'>
                         minimalism is dead
                     </h2>
                 </div>
                 <div className='z-30 mb-4 mx-2'>
                     <p className='headline headline-stroke'>
-                        no more boring websites
+                        less boring
                     </p>
-                    <p className='headline '>
-                        just web we can vibe with
+                    <p className='headline text-brand-2 stroke'>
+                        more vibes
                     </p>
                 </div>
             </div>

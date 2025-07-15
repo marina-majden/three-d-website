@@ -41,18 +41,19 @@ const About = () => {
                 <h2 className="headline-section headline-stroke rotate-270">about me</h2>
             </div>
             <h2 className="headline-section headline-stroke block md:hidden mb-10">about</h2>
-            <div className="c-space grid xl:grid-cols-3 xl:grid-rows-6 md:grid-cols-2 grid-cols-1 gap-5 h-full z-20">
+            <div className="c-space grid xl:grid-cols-3 xl:grid-rows-5 md:grid-cols-2 grid-cols-1 gap-5 h-full z-20">
                 <div className="xl:col-span-2 xl:row-span-2">
                     <div className="grid-container glass-light">
                         <div>
                             <p className="grid-headtext"> <span className="font-logo text-2xl text-text pr-4 ">TLDR:</span> <br />front-end / web-developer based in Croatia</p>
                             <p className="grid-subtext">I am Marina Majdenić, a front-end and web developer with a strong focus on building responsive, dynamic interfaces using React. I also have experience connecting front-end applications with various back-end technologies to create seamless, full-featured web solutions. Whether you're looking for a freelancer for your next project or a developer to join your team, I'm open to both opportunities.</p>
                             <p className="grid-subtext"> Let’s build something great together — feel free to reach out!</p>
+                              <a href="#contact" className="btn  w-full">Contact me</a>
                         </div>
                     </div>
                 </div>
 
-                <div className="col-span-1 xl:row-span-3">
+                <div className="col-span-1 xl:row-span-2">
                     <div className="grid-container glass-light">
                         <div className="rounded-3xl w-full sm:h-[326px] h-fit flex justify-center items-center cursor-grab">
                             <Globe
@@ -79,18 +80,18 @@ const About = () => {
                         <div>
                             <p className="grid-headtext">Able to work remotely or on-site in Croatia</p>
 
-                            <a href="#contact" className="btn  w-full">Contact me</a>
+                          
                         </div>
                     </div>
                 </div>
-                <div className="col-span-1 xl:row-span-3">
+                <div className="col-span-1 xl:row-span-2">
                     <div className="grid-container glass-light items-center justify-center align-middle">
                         <Character />
                         <p className="grid-subtext">I'm really enjoying how CSS has been glowing up lately; love how it can make things interactive and animated!  </p>
                     </div>
 
                 </div>
-                <div className="col-span-1 xl:row-span-3">
+                <div className="col-span-1 xl:row-span-2">
                     <div className="grid-container glass-light">
                         <TechStackCircle
                         />

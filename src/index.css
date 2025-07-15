@@ -1,4 +1,8 @@
 
+@import url('https://fonts.cdnfonts.com/css/stars-dream');
+@import url('https://fonts.cdnfonts.com/css/varvara');
+@import url('https://fonts.cdnfonts.com/css/vilanders-script');
+@import url('https://fonts.cdnfonts.com/css/piglet');
 @font-face {
     font-family: 'Witches Friend Script';
     src: local('Witches Friend Script'), url('https://fonts.cdnfonts.com/s/106653/WitchesFriendScript-gxeZ5.woff') format('woff');
@@ -20,6 +24,11 @@
   --font-accent: Comfortaa, sans-serif;
   --font-logo: 'Black Side', sans-serif;
   --font-written: 'Witches Friend Script', sans-serif;
+  --font-accent: 'Stars Dream', sans-serif;
+  --font-accentt: 'Varvara', sans-serif;
+  --font-accentt: 'Vilanders Script', sans-serif;
+  --font-logo: 'Piglet', sans-serif;
+
 
   --color-text: #102221;
   --color-text-mild: #2a2c33ff;
@@ -30,12 +39,13 @@
   --color-primary: rgba(143, 209, 212, 1);
   --color-secondary: hsla(236, 88%, 77%, 1.00);
   --color-accent: #f7b0f3ff;
-  --color-brand: #067ca0ff;
+  --color-brand: #0293beff;
   --color-theme: #3a4b70;
+  --color-brand-2: #94258eff;
   
   --glass-bg: rgba(255, 255, 255, 0.27);
     --color-glass-bg: rgba(255, 255, 255, 0.27);
-  --color-glass-bg-navbar: rgba(255, 255, 255, 0.03);
+  --color-glass-bg-navbar: rgba(255, 255, 255, 0.14);
   --glass-border: 1px solid rgba(131, 234, 248, 0.43);
    
   
@@ -71,12 +81,13 @@ html[data-theme="dark"] {
   
   --glass-bg: rgba(17, 25, 40, 0.5);
     --color-glass-bg: rgba(17, 25, 40, 0.5);
-  --color-glass-bg-navbar: rgba(7, 24, 56, 0.1);
+  --color-glass-bg-navbar: rgba(7, 24, 56, 0.28);
   --glass-border: 1px solid rgba(7, 65, 73, 0.46);
 }
 
 * {
     scroll-behavior: smooth;
+    scroll-margin-top: 11vh;
 }
 *,
 ::before,
@@ -103,24 +114,24 @@ html[data-theme="dark"] {
 }
 
 @utility hero-head {
-    @apply text-7xl lg:text-9xl text-theme font-logo mt-8 p-0;
+    @apply text-7xl lg:text-9xl text-brand font-logo mt-8 p-0;
 }
 
 @utility headline {
-    @apply text-3xl md:text-5xl lg:text-7xl font-extrabold font-accent text-heading-2 text-right md:text-left;
+    @apply text-6xl lg:text-9xl font-accent text-brand text-right md:text-left;
 }
 @utility headline-2 {
-    @apply text-3xl md:text-5xl lg:text-9xl font-extrabold font-accent text-heading text-right md:text-left;
+    @apply text-4xl md:text-5xl lg:text-9xl font-extrabold font-accent text-heading text-right md:text-left;
 }
 @utility headline-section {
-    @apply text-7xl lg:text-9xl font-extrabold font-accent text-heading px-4 text-left;
+    @apply text-7xl lg:text-9xl font-extrabold font-accent text-theme px-4 text-left tracking-wider;
 }
 @utility gradient-text {
     @apply bg-transparent font-extrabold text-transparent bg-clip-text font-accent;
      background: linear-gradient(to bottom right, #06a0a2, #694ad9);
 }
 @utility glass-light-navbar {
-  @apply bg-glass-bg-navbar backdrop-blur-2xl;
+  @apply bg-glass-bg-navbar backdrop-blur-3xl;
 }
 
 @utility nav-ul {
@@ -132,7 +143,7 @@ html[data-theme="dark"] {
 }
 
 @utility nav-li_a {
-    @apply sm:text-lg md:text-2xl tracking-wide transition-colors duration-200 font-accent font-bold lowercase cursor-pointer hover:scale-[1.01] active:scale-[0.97];
+    @apply sm:text-lg md:text-2xl tracking-wider transition-all duration-200 font-accent font-bold lowercase cursor-pointer hover:scale-[1.04] active:scale-[0.97];
     background: linear-gradient(to bottom right, #06a0a2, #694ad9);
     -webkit-background-clip: text;
     background-clip: text;
@@ -222,9 +233,14 @@ html[data-theme="dark"] {
 }
 .headline-stroke {
     -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: var(--text-brand);
+    font-weight: 500;
+}
+.stroke {
     -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: var(--text-heading);
-    font-weight: bold;
+    -webkit-text-stroke-color: var(--color-theme);
+  font-weight: 500;
 }
 
 

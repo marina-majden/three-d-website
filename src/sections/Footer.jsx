@@ -25,7 +25,7 @@ const Footer = () => {
         <button
           type="button"
           onClick={() => setShowPolicy(true)}
-          className="text-text text-md font-body underline underline-offset-2 hover:text-text-mild hover:no-underline transition-colors duration-200 ease-in-out"
+          className="text-text text-md font-body underline underline-offset-2 cursor-pointer hover:text-text-mild hover:no-underline transition-colors duration-200 ease-in-out"
           aria-label="Privacy Policy"
         >
           Privacy Policy
