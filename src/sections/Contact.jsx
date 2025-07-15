@@ -60,7 +60,7 @@ const Contact = () => {
   return (
     <section className="relative my-20" id="contact">
       {alert.show && <Alert {...alert} />}
-      <div className="hidden isolate md:inline-block absolute top-80 left-20 xl:left-30">
+      <div className="hidden isolate md:inline-block absolute top-80 left-10 xl:left-30">
         <h2 className="headline-section headline-stroke rotate-270">contact</h2>
       </div>
       <h2 className="headline-section headline-stroke block md:hidden">contact</h2>

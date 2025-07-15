@@ -82,7 +82,7 @@ const Projects = () => {
                 {/* LEFT PANEL */}
                 <div className="h-full md:h-[600px] flex flex-col justify-between gap-2 md:gap-4 sm:p-10 py-10 px-5 rounded-md shadow-md glass-light-no-border">
                     <div className="flex flex-row justify-between items-start">
-                        <h3 className="text-3xl text-heading-2">
+                        <h3 className="text-3xl text-heading font-logo font-normal">
                             {currentProject.title}
                         </h3>
                         {/*    <div
@@ -136,7 +136,7 @@ const Projects = () => {
                 </div>
 
             </div>
-            <div className="hidden md:flex w-3/4 px-2 mx-auto flex-row justify-between items-center z-30">
+            <div className="hidden md:flex w-3/4 px-2 mx-auto flex-row justify-between items-center z-30 mt-6 xl:mt-3">
                 <button
                     className="arrow-btn"
                     onClick={() => handleNavigation("previous")}>
@@ -156,7 +156,7 @@ const Projects = () => {
                     />
                 </button>
             </div>
-            <div className="mt-6 flex justify-center items-center gap-3">
+            <div className="mt-6 xl:mt-2 flex justify-center items-center gap-3">
                 {myProjects.map((project, index) => (
                     <button
                         key={project.title}

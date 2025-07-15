@@ -64,7 +64,7 @@ export const myProjects = [
         desc: "Web application leveraging core technologies (HTML5, CSS3, JavaScript) to enable users in exploring music effortlessly. Integrated with the iTunes API to enable real-time searches for tracks, artists, and albums, delivering instant results including song previews, artwork, and metadata. Utilized RESTful API integration, asynchronous JavaScript (Fetch API), and modern front-end development practices.",
         subdesc:
             "Find all the info on your favorite music numbers and artists",
-        href: "https://https://song-finder-itunes.netlify.app/",
+        href: "https://song-finder-itunes.netlify.app/",
         hrefCode: "https://www.github.com/marina-majden/song-finder",
         logo: "/assets/songfinder-logo.png",
         tags: [
@@ -226,9 +226,9 @@ export const calculateSizes = (isSmall, isMobile, isTablet) => {
     return {
         statueScale: isSmall ? 1 : isMobile ? 1.2 : 1.35,
         statuePosition: isSmall
-        ? [0, -2, 0]
+        ? [0, -1.9, 0]
         : isMobile
-        ? [0, -2.5, 0]
+        ? [0, -2.1, 0]
         : isTablet
         ? [3, -3, 0]
         : [4, -3, 0],

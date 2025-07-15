@@ -24,14 +24,14 @@ const Hero = () => {
             <div className='w-full h-11/12 md:h-5/6 mt-8 md:mt-12 md:min-h-[600px] mx-auto flex flex-col justify-between px-2 md:px-4 lg:px-8 xl:px-20'>
                 <div className='self-start mx-2'>
                     <h2 className='hero-head stroke'>
-                        minimalism is dead
+                        minimalism is out
                     </h2>
                 </div>
                 <div className='z-30 mb-4 mx-2'>
                     <p className='headline headline-stroke'>
-                        less boring
+                        less boring web
                     </p>
-                    <p className='headline text-brand-2 stroke'>
+                    <p className='headline text-brand-2 font-grow stroke'>
                         more vibes
                     </p>
                 </div>

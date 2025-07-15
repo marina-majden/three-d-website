@@ -1,47 +1,38 @@
 
 @import url('https://fonts.cdnfonts.com/css/stars-dream');
-@import url('https://fonts.cdnfonts.com/css/varvara');
-@import url('https://fonts.cdnfonts.com/css/vilanders-script');
-@import url('https://fonts.cdnfonts.com/css/piglet');
+@import url('https://fonts.cdnfonts.com/css/vilanders-sans');
+@import url('https://fonts.cdnfonts.com/css/grow-west');
+@import url('https://fonts.cdnfonts.com/css/h-hias-sans');
+
+
 @font-face {
     font-family: 'Witches Friend Script';
     src: local('Witches Friend Script'), url('https://fonts.cdnfonts.com/s/106653/WitchesFriendScript-gxeZ5.woff') format('woff');
-}
-@font-face {
-    font-family: 'Black Side';
-    src: local('Black Side'), url('https://fonts.cdnfonts.com/s/107008/BlackSide-nRVKV.woff') format('woff');
-}
-@font-face {
-    font-family: 'Comfortaa';
-    src: local('Comfortaa'), url('https://fonts.cdnfonts.com/s/20715/Comfortaa-Regular.woff') format('woff');
 }
 
 
 @import "tailwindcss";
 
 @theme {
-  --font-body: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Oxygen, Cantarell, sans-serif;
-  --font-accent: Comfortaa, sans-serif;
-  --font-logo: 'Black Side', sans-serif;
+  --font-body: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
   --font-written: 'Witches Friend Script', sans-serif;
   --font-accent: 'Stars Dream', sans-serif;
-  --font-accentt: 'Varvara', sans-serif;
-  --font-accentt: 'Vilanders Script', sans-serif;
-  --font-logo: 'Piglet', sans-serif;
-
+--font-logo: 'h Hias Sans', sans-serif; /*  nije loše */
+--font-grow: 'Grow West', sans-serif; 
+--font-logo: 'Stars Dream', sans-serif;
 
   --color-text: #102221;
   --color-text-mild: #2a2c33ff;
-  --color-heading: rgba(27, 42, 73, 1);
+  --color-heading: hsla(194, 70%, 37%, 1);
   --color-heading-2:rgba(37, 48, 80, 1);
   --color-border: hsl(228, 82.4%, 80.2%);
-  --color-background: hsla(210, 65%, 83%, 1.00);
+  --color-background: hsla(210, 65%, 89%, 1.00);
   --color-primary: rgba(143, 209, 212, 1);
   --color-secondary: hsla(236, 88%, 77%, 1.00);
-  --color-accent: #f7b0f3ff;
-  --color-brand: #0293beff;
-  --color-theme: #3a4b70;
-  --color-brand-2: #94258eff;
+  --color-accent: #ce85caff;
+  --color-brand: #017ba0ff;
+  --color-theme: hsla(194, 70%, 20%, 1);
+  --color-brand-2: #9c3b97ff;
   
   --glass-bg: rgba(255, 255, 255, 0.27);
     --color-glass-bg: rgba(255, 255, 255, 0.27);
@@ -71,7 +62,6 @@ html {
 html[data-theme="dark"] {
   --color-text: rgb(189, 201, 204);
   --color-text-mild: rgb(211, 214, 219);
-  --color-heading: hsl(221, 30%, 48%);
   --color-heading-2: hsl(228, 28%, 61%);
   --color-border: hsl(247, 30%, 35%);
   --color-background: hsl(203, 69.20%, 5.10%);
@@ -110,21 +100,21 @@ html[data-theme="dark"] {
 }
 
 @utility c-space {
-    @apply w-full md:w-4/5 lg:w-3/4 mx-auto px-2 md:px-10;
+    @apply w-full md:w-5/6 xl:w-4/5 mx-auto px-2 md:px-6;
 }
 
 @utility hero-head {
-    @apply text-7xl lg:text-9xl text-brand font-logo mt-8 p-0;
+    @apply text-5xl md:text-6xl lg:text-7xl xl:text-9xl text-heading font-logo mt-8 p-0;
 }
 
 @utility headline {
-    @apply text-6xl lg:text-9xl font-accent text-brand text-right md:text-left;
+    @apply text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-accent text-heading text-right md:text-left;
 }
 @utility headline-2 {
     @apply text-4xl md:text-5xl lg:text-9xl font-extrabold font-accent text-heading text-right md:text-left;
 }
 @utility headline-section {
-    @apply text-7xl lg:text-9xl font-extrabold font-accent text-theme px-4 text-left tracking-wider;
+    @apply text-7xl lg:text-9xl font-extrabold font-accent text-heading px-4 text-left tracking-wider;
 }
 @utility gradient-text {
     @apply bg-transparent font-extrabold text-transparent bg-clip-text font-accent;
@@ -143,11 +133,7 @@ html[data-theme="dark"] {
 }
 
 @utility nav-li_a {
-    @apply sm:text-lg md:text-2xl tracking-wider transition-all duration-200 font-accent font-bold lowercase cursor-pointer hover:scale-[1.04] active:scale-[0.97];
-    background: linear-gradient(to bottom right, #06a0a2, #694ad9);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
+    @apply sm:text-lg md:text-2xl tracking-wider font-logo font-thin lowercase cursor-pointer hover:scale-[1.04] active:scale-[0.97] transition-all duration-200 text-brand;
 }
 
 @utility nav-sidebar {
@@ -172,11 +158,11 @@ html[data-theme="dark"] {
 }
 
 @utility grid-headtext {
-    @apply text-xl lg:text-2xl font-semibold mb-2 text-heading-2;
+    @apply text-sm lg:text-xl font-semibold mb-2 text-heading-2;
 }
 
 @utility grid-subtext {
-    @apply text-lg lg:text-xl text-text-mild;
+    @apply tetx-md lg:text-lg text-text-mild;
 }
 
 @utility arrow-btn {
@@ -233,14 +219,14 @@ html[data-theme="dark"] {
 }
 .headline-stroke {
     -webkit-text-fill-color: transparent;
-    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-width: 2.5px;
     -webkit-text-stroke-color: var(--text-brand);
     font-weight: 500;
 }
 .stroke {
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: var(--color-theme);
-  font-weight: 500;
+    -webkit-text-stroke-width: 0.7px;
+    -webkit-text-stroke-color: var(--color-heading);
+  font-weight: 400;
 }
 
 
