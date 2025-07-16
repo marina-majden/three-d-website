@@ -175,7 +175,7 @@ html[data-theme='dark'] {
 }
 
 @utility tech-logo {
-  @apply w-12 h-12 bg-theme rounded-md p-2 flex justify-center items-center hover:scale-[1.01] active:scale-95 transition-all duration-200;
+  @apply w-12 h-12 bg-theme/40 rounded-md p-2 flex justify-center items-center hover:scale-[1.01] active:scale-95 transition-all duration-200;
 }
 
 @utility contact-container {

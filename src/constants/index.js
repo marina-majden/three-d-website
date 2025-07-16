@@ -27,7 +27,7 @@ export const myProjects = [
         title: "ChatRoom App",
         desc: "A real-time chat application using React.js for real-time communication. The app features randomized username and avatar with each login for total privacy and a responsive design for seamless communication across devices. Utilizing Firebase for real-time data synchronization.",
         subdesc:
-            "A real-time chat application supporting many users while protecting their anonimity",
+            "A real-time chatroom web-application",
         href: "https://oldschool-chatroom.netlify.app",
         hrefCode: "https://www.github.com/marina-majden",
         logo: "/assets/chat-app-logo.png",
@@ -61,9 +61,9 @@ export const myProjects = [
     },
     {
         title: "Song Finder",
-        desc: "Web application leveraging core technologies (HTML5, CSS3, JavaScript) to enable users in exploring music effortlessly. Integrated with the iTunes API to enable real-time searches for tracks, artists, and albums, delivering instant results including song previews, artwork, and metadata. Utilized RESTful API integration, asynchronous JavaScript (Fetch API), and modern front-end development practices.",
+        desc: "Web-app built with basic web-technologies, integrated with the iTunes API to enable real-time searches for tracks, artists, and albums, delivers instant results including song previews, artwork, and metadata. Utilized RESTful API integration, asynchronous JavaScript, and modern front-end practices.",
         subdesc:
-            "Find all the info on your favorite music numbers and artists",
+            "Search and check out your favorite music",
         href: "https://song-finder-itunes.netlify.app/",
         hrefCode: "https://www.github.com/marina-majden/song-finder",
         logo: "/assets/songfinder-logo.png",
@@ -98,7 +98,7 @@ export const myProjects = [
     },
     {
         title: "Quizzy",
-        desc: "A dynamic single-page quiz application using React Vite, featuring state-driven question flow, real-time answer validation, and score tracking. Implements modern React patterns including hooks (useState, useRef) for state management and DOM interaction. Demonstrates clean component architecture with zero external dependencies. Deployed via GitHub Pages.",
+        desc: "Interactive quiz game as one of my first projects implements modern React patterns including hooks for state management and DOM interaction. Demonstrates clean component architecture with zero external dependencies. Deployed via GitHub Pages.",
         subdesc: "Cute quiz that tests your general knowledge",
         href: "https://marina-majden.github.io/quizzy/",
         hrefCode: "https://www.github.com/marina-majden/quizzy",
@@ -128,8 +128,8 @@ export const myProjects = [
     },
     {
         title: "Quote of the Day",
-        desc: "A simple React application that delivers inspirational quotes through seamless API integration. Leveraged the Quotable API to fetch random quotes with author attribution, implementing clean state management and asynchronous data fetching. Features instant quote generation, error boundary handling, and a minimalist UI focused on content clarity. ",
-        subdesc: "Random quote to inspire you through the day",
+        desc: "Classic appy that delivers inspirational quotes through seamless API integration. Using the Quotable API to fetch random quotes with author attribution, implementing clean state management and asynchronous data fetching. Trying to win you over with warm and romantic UI!",
+        subdesc: "Random quote generator",
         href: "https://cute-quote-today.netlify.app/",
         hrefCode: "https://www.github.com/marina-majden/quote-of-the-day",
         logo: "/assets/logo-white.png",
