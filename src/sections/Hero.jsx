@@ -1,12 +1,12 @@
-
 import React, { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
 import { useMediaQuery } from "react-responsive";
 import { PerspectiveCamera } from "@react-three/drei";
 import CanvasLoader from "../components/CanvasLoader.jsx";
 import HeroCamera from "../components/HeroCamera.jsx";
-import { calculateSizes } from "../constants/index.js";
 import Statue from "../components/Statue.jsx";
+import { calculateSizes } from "../constants/index.js";
+
 
 
 const Hero = () => {
@@ -22,16 +22,17 @@ const Hero = () => {
             className='h-dvh w-full flex flex-col justify-between relative top-0 left-0'
             id='home'>
             <div className='w-full h-11/12 md:h-5/6 mt-8 md:mt-12 md:min-h-[600px] mx-auto flex flex-col justify-between px-2 md:px-4 lg:px-8 xl:px-20'>
-                <div className='self-start mx-2'>
-                    <h2 className='hero-head'>
-                        minimalism is out
+                <div className='flex flex-row max-w-screen w-fit align-baseline items-baseline justify-start'>
+                    <h2 className='hero-head font-grow text-brand mx-2'>
+                        web
                     </h2>
+                    <a className='hero-head font-grow text-brand-2 underline mx-2 z-30 uppercase cursor-pointer hover:lowercase hover:no-underline active:lowercase active:no-underline transition-all ease-in-out duration-300'>reborn</a>
                 </div>
                 <div className='z-30 mb-4 mx-2'>
-                    <p className='headline headline-stroke uppercase'>
+                    <p className='headline headline-stroke uppercase cursor-none'>
                         less boring
                     </p>
-                    <p className='headline text-brand-2 font-grow stroke'>
+                    <p className='headline text-brand-2 font-grow animate-zig-zag cursor-none'>
                         more vibing
                     </p>
                 </div>

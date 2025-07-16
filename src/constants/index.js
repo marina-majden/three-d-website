@@ -1,4 +1,4 @@
-export const navLinks = [
+export const navItems = [
     {
         id: 1,
         name: "Home",
@@ -224,11 +224,11 @@ export const myProjects = [
 
 export const calculateSizes = (isSmall, isMobile, isTablet) => {
     return {
-        statueScale: isSmall ? 1 : isMobile ? 1.2 : 1.35,
+        statueScale: isSmall ? 1.1 : isMobile ? 1.2 : 1.35,
         statuePosition: isSmall
-        ? [0, -1.9, 0]
+        ? [0, -1.4, 0]
         : isMobile
-        ? [0, -2.1, 0]
+        ? [0, -2, 0]
         : isTablet
         ? [3, -3, 0]
         : [4, -3, 0],

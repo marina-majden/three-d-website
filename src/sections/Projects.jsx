@@ -60,39 +60,30 @@ const Projects = () => {
     }, []);
 
     return (
-        <section ref={containerRef} className="c-space mt-18" id="projects">
+        <section ref={containerRef} className="mt-18" id="projects">
             <h2 className="headline-section headline-stroke mb-5 text-center">projects</h2>
-            <div className=" w-full flex items-center justify-center align-middle gap-2 mt-6 xl:hidden">
+            <div className=" w-full flex items-center justify-center align-middle gap-2 mt-6 md:hidden">
                 <img src={rightArrow} alt="arrow" className="w-16 h-16 rotate-180 translate-1.5 animate-translate-x" />
                 <p className="font-written text-6xl text-heading">swipe</p>
                 <img src={rightArrow} alt="arrow" className="w-16 h-16 animate-translate-x" />
             </div>
-            <div className="grid h-full w-full lg:w-11/12 xl:w-5/6 grid-cols-1 xl:grid-cols-2 gap-0 lg:gap-4 mx-auto relative">
+            <div className="grid w-full sm:w-11/12 md:w-5/6 xl:w-4/5 grid-cols-1 xl:grid-cols-2 gap-0 lg:gap-4 mx-auto relative">
 
                 {/* LEFT PANEL */}
-                <div className="h-full xl:h-[600px] flex flex-col justify-between gap-2 lg:gap-4 sm:p-10 py-10 px-5 rounded-md shadow-md glass-light">
-                    <div className="flex flex-row justify-between items-start animate-fade-in transition-opacity duration-300">
+                <div className="h-full flex flex-col justify-between gap-2 lg:gap-4 sm:p-10 py-10 px-5 rounded-md shadow-md glass-light">
+                    <div className="h-1/5 flex flex-row justify-between items-start animate-fade-in transition-opacity duration-300">
                         <h3 className="text-3xl text-heading font-logo font-light">
                             {currentProject.title}
                         </h3>
-                        {/*    <div
-                            className="tech-logo"
-                        >
-                            <img
-                                src={currentProject.logo}
-                                alt="logo"
 
-                            />
-                        </div>
- */}
                     </div>
-                    <img src={currentProject.images.path} alt={currentProject.images.name} className="xl:hidden h-full mx-auto rounded-md shadow-md animate-fade-in transition-opacity duration-300 object-contain" />
+                    <img src={currentProject.images.path} alt={currentProject.images.name} className="xl:hidden mx-auto rounded-md shadow-md animate-fade-in transition-opacity duration-300 object-contain" />
 
-                    <div className="flex flex-col gap-4 my-4 z-10 animate-fade-in transition-opacity duration-300">
-                        <p className="text-brand line-clamp-2 text-xl">{currentProject.subdesc}</p>
-                        <p className="line-clamp-5 overflow-y-hidden">{currentProject.desc}</p>
+                    <div className="h-2/5 flex flex-col gap-4 my-4 z-10 animate-fade-in transition-opacity duration-300">
+                        <p className="text-brand text-xl">{currentProject.subdesc}</p>
+                        <p className="text-balance">{currentProject.desc}</p>
                     </div>
-                    <div className="w-full flex flex-col items-stretch justify-between gap-2 z-10 animate-fade-in transition-opacity duration-300">
+                    <div className="h-2/5 w-full flex flex-col items-stretch justify-between gap-2 z-10 animate-fade-in transition-opacity duration-300">
                         <div className="flex items-start gap-3 flex-wrap">
                             {currentProject.tags.map((tag, index) => (
                                 <div key={index} className="tech-logo">
@@ -121,10 +112,10 @@ const Projects = () => {
                     </div>
                 </div>
                 {/* RIGHT PANEL */}
-                <div className="hidden xl:block w-full h-full overflow-hidden">
-                    <img src={currentProject.images.path} alt={currentProject.images.name} className="glass-light rounded-md shadow-md animate-fade-in transition-opacity duration-300 object-contain" />
+                <div className="hidden xl:block overflow-hidden">
+                    <img src={currentProject.images.path} alt={currentProject.images.name} className="glass-light rounded-md shadow-md animate-fade-in transition-opacity duration-300 object-cover" />
                 </div>
-                <div className="hidden lg:flex w-full px-2 mx-auto flex-row justify-between items-center mt-6 xl:mt-3 z-50">
+                <div className="hidden lg:flex w-full px-2 mx-auto flex-row justify-between items-center mt-6 xl:mt-3 z-20">
                     <button
                         className="arrow-btn absolute top-1/3 -left-20"
                         onClick={() => handleNavigation("previous")}>

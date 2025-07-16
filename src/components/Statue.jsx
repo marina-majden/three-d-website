@@ -33,22 +33,51 @@ function Statue({ ...props }) {
         }
     }, [])
 
-    // Rotate the whole model left-right on user mouse interaction
+    // Rotate the whole model left-right on user interaction
 
     useEffect(() => {
-
         const handleMouseMove = (event) => {
-            {
-                const x = event.clientX / window.innerWidth - 0.5; // Normalize to [-0.5, 0.5]
-                group.current.rotation.y = -x * Math.PI; // Rotate based on mouse position and on touch and hold on mobile devices
-                group.current.rotation.x = 0; // Keep the x rotation fixed
+            const x = event.clientX / window.innerWidth - 0.5;
+            group.current.rotation.y = -x * Math.PI;
+            group.current.rotation.x = 0;
+        };
+
+        let touchStartX = null;
+
+        const handleTouchStart = (event) => {
+            if (event.touches.length === 1) {
+                touchStartX = event.touches[0].clientX;
             }
         };
+
+        const handleTouchMove = (event) => {
+            if (event.touches.length === 1 && touchStartX !== null) {
+                const currentX = event.touches[0].clientX;
+                const deltaX = currentX - touchStartX;
+                const normalized = deltaX / window.innerWidth;
+
+                group.current.rotation.y = -normalized * Math.PI;
+                group.current.rotation.x = 0;
+            }
+        };
+
+        const handleTouchEnd = () => {
+            touchStartX = null;
+        };
+
         window.addEventListener('mousemove', handleMouseMove);
+        window.addEventListener('touchstart', handleTouchStart);
+        window.addEventListener('touchmove', handleTouchMove);
+        window.addEventListener('touchend', handleTouchEnd);
+
         return () => {
             window.removeEventListener('mousemove', handleMouseMove);
+            window.removeEventListener('touchstart', handleTouchStart);
+            window.removeEventListener('touchmove', handleTouchMove);
+            window.removeEventListener('touchend', handleTouchEnd);
         };
-    }, [])
+    }, []);
+
 
 
     return (

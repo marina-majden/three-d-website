@@ -37,9 +37,9 @@ const TechStackCircle = () => {
                             <img
                                 src={icon.Component}
                                 alt={icon.name}
-                                className="object-contain w-14 lg:w-16 h-16 hover:scale-105 hover:rotate-12 transition-all duration-300 ease-in-out "
+                                className="object-contain w-14 lg:w-16 h-16 hover:scale-105 hover:rotate-12 active:rotate-12 transition-all duration-300 ease-in-out "
                             />
-                            <span className="absolute bottom-10 lg:bottom-15 scale-0 p-2 text-brand lg:text-lg font-logo group-hover:scale-100 transition-all duration-300 ease-in-out ">{icon.name}</span>
+                            <span className="absolute bottom-10 lg:bottom-15 scale-0 p-2 text-brand lg:text-lg font-accent group-hover:scale-100 group-active:scale-90 transition-all duration-300 ease-in-out ">{icon.name}</span>
 
                         </div>
                     );

@@ -36,12 +36,13 @@ const About = () => {
 
     return (
 
-        <section className="my-10 relative" id="about">
-            <div className="hidden md:inline-block absolute top-1/3 -left-50">
-                <h2 className="headline-section headline-stroke rotate-270">about me</h2>
-            </div>
-            <h2 className="headline-section headline-stroke block md:hidden mb-10">about</h2>
-            <div className="c-space grid xl:grid-cols-3 xl:grid-rows-4 md:grid-cols-2 grid-cols-1 gap-5 h-full  z-20">
+        <section className="my-14" id="about">
+
+            <h2 className="headline-section headline-stroke block xl:hidden mb-10 text-center">about</h2>
+            <div className="w-full sm:w-11/12 md:w-11/12 xl:w-4/5 px-2 md:px-8 lg:px-8 xl:px-10 mx-auto grid xl:grid-cols-3 xl:grid-rows-4 md:grid-cols-2 grid-cols-1 gap-5 h-full z-20 relative">
+                <div className="hidden xl:block absolute top-1/3 xl:-left-70">
+                    <h2 className="headline-section headline-stroke rotate-270">about me</h2>
+                </div>
                 <div className="xl:col-span-2 xl:row-span-2">
                     <div className="grid-container glass-light">
                         <div>

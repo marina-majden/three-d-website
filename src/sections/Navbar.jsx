@@ -2,12 +2,13 @@ import React, { useState, useEffect } from "react";
 import menu from "../assets/menu.svg";
 import close from "../assets/close.svg";
 import logo from "../assets/logo.svg";
-import { navLinks } from "../constants/index.js";
+import { navItems } from "../constants/index.js";
+import NavLinks from "../components/NavLinks.jsx";
 
 const NavItems = () => {
     return (
         <ul className='nav-ul'>
-            {navLinks.map(({ id, href, name }) => (
+            {navItems.map(({ id, href, name }) => (
                 <li key={id} className='nav-li'>
                     <a href={href} className='nav-li_a'>
                         {name}
@@ -76,7 +77,7 @@ const Navbar = () => {
                 className={`nav-sidebar ${isOpen ? "max-h-screen" : "max-h-0"
                     }`}>
                 <nav className='p-5'>
-                    <NavItems />
+                    <NavLinks onLinkClick={() => setIsOpen(false)} />
                 </nav>
             </div>
         </header>
